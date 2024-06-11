@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chessboard with Vue</title>
+    <style>
+        #app {
+            text-align: center;
+        }
+
+        .chessboard {
+            display: inline-grid;
+            grid-template-columns: repeat(7, 70px);
+            gap: 2px;
+            background-color: #eee;
+        }
+
+        .cell {
+            width: 70px;
+            height: 70px;
+            background-color: #fff;
+            background-image: url('../img/qipan_1.png');
+            background-size: 100%;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .cell.selected {
+            background-image: url('../img/qipan_2.png');
+        }
+
+        span {
+            cursor: pointer;
+        }
+
+        .enemy {
+            color: red;
+        }
+
+        .player {
+            color: blue;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        /* 父容器样式 */
+        .container {
+            display: flex;
+            flex-direction: column;
+            /* 垂直方向排列 */
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 350px;
+            /* 宽度固定 */
+            height: 400px;
+            /* 高度固定 */
+        }
+
+        /* 每个记录容器的样式 */
+        .record-container {
+            overflow: auto;
+            /* 自动显示滚动条 */
+            border: 1px solid #ccc;
+            /* 边框 */
+            padding: 10px;
+            /* 内边距 */
+            margin-bottom: 20px;
+            /* 底部边距 */
+            /* max-height: calc(50% - 20px); */
+            /* 设置最大高度为父容器的一半减去边距 */
+            height: 100%;
+        }
+
+        /* 每条记录的样式 */
+        .record {
+            margin-bottom: 10px;
+            /* 记录之间的间距 */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h2>当前回合：{{roundCount}}</h2>
+        <h2 :class="{ 'player': currentTurn === 'player', 'enemy': currentTurn === 'enemy' }">{{iscurrentTurn()}}<span
+                style="color: black;">移动</span></h2>
+
+        <div class="chessboard">
+            <div v-for="(row, rowIndex) in chessboard" :key="rowIndex">
+                <div v-for="(cell, cellIndex) in row" :key="cellIndex"
+                    :class="{ cell: true, selected: selectedCell === `${rowIndex}-${cellIndex}` }"
+                    @click="selectCell(rowIndex, cellIndex)">
+                    <!-- 显示玩家棋子及生命值 -->
+                    <span class="player" v-for="(piece, index) in playerPieces" :key="index"
+                        v-if="piece.position === `${rowIndex}-${cellIndex}`">{{ piece.name }}<br>❤:{{
+                        piece.health}}</span>
+                    <!-- 显示敌方棋子及生命值 -->
+                    <!-- enemy: isEnemyPiece(rowIndex, cellIndex) -->
+                    <span class="enemy" v-for="(piece, index) in enemyPieces" :key="index"
+                        v-if="piece.position === `${rowIndex}-${cellIndex}`">{{ piece.name }}<br>❤:{{
+                        piece.health}}</span>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <!-- 移动记录容器 -->
+            <h3>移动记录：</h3>
+            <div class="record-container">
+                <!-- 遍历移动记录数组 -->
+                <template v-for="(move, index) in moveHistory">
+                    <!-- 每回合的第一个移动记录显示 roundCount -->
+                    <template v-if="index === 0 || move.roundCount !== moveHistory[index - 1].roundCount">
+                        <div class="record">
+                            <p>第 {{ move.roundCount }} 回合</p>
+                        </div>
+                    </template>
+                    <div :key="move.roundCount + move.zhenyin + move.role + move.from + move.to" class="record">
+                        <p>{{ move.zhenyin }}的{{ move.role }}从（{{ move.from }}）移动到（{{ move.to }}）</p>
+                    </div>
+                </template>
+            </div>
+
+            <!-- 攻击记录容器 -->
+            <h3>攻击记录：</h3>
+            <div class="record-container">
+                <!-- 遍历攻击记录数组 -->
+                <template v-for="(attack, index) in attackHistory">
+                    <!-- 每回合的第一个攻击记录显示 roundCount -->
+                    <template v-if="index === 0 || attack.roundCount !== attackHistory[index - 1].roundCount">
+                        <div class="record">
+                            <p>第 {{ attack.roundCount }} 回合</p>
+                        </div>
+                    </template>
+                    <div :key="attack.roundCount + attack.zhenyin + attack.attacker + attack.defender + attack.damage"
+                        class="record">
+                        <p>{{ attack.zhenyin }}{{ attack.attacker }}攻击了敌方{{ attack.defender }}，造成{{ attack.damage }}点伤害
+                        </p>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        // 定义棋子类
+        class Piece {
+            constructor(name, position, health, attack, defense, attackRange, movementRange, attackTurns) {
+                this.name = name;
+                this.position = position;
+                this.health = health;
+                this.attack = attack;
+                this.defense = defense;
+                this.attackRange = attackRange;
+                this.movementRange = movementRange;
+                this.attackTurns = attackTurns;
+                this.attackRangeCoords = [];
+            }
+        }
+
+        const vm = new Vue({
+            el: '#app',
+            data: {
+                // 棋盘
+                // chessboard: [
+                //   [0, 0, 0, 0, 0],
+                //   [0, 0, 0, 0, 0],
+                //   [0, 0, 0, 0, 0],
+                //   [0, 0, 0, 0, 0],
+                //   [0, 0, 0, 0, 0],
+                // ],
+                chessboard: [
+                    [0, 0, 0, 0, 0, 0, 0, ],
+                    [0, 0, 0, 0, 0, 0, 0, ],
+                    [0, 0, 0, 0, 0, 0, 0, ],
+                    [0, 0, 0, 0, 0, 0, 0, ],
+                    [0, 0, 0, 0, 0, 0, 0, ],
+                    [0, 0, 0, 0, 0, 0, 0, ],
+                    [0, 0, 0, 0, 0, 0, 0, ],
+                ],
+                // 当前选中的格子
+                selectedCell: null,
+                // 玩家棋子数组
+                playerPieces: [
+                    new Piece('射手', '0-6', 100, 20, 2, 2, 1, 1),
+                    new Piece('战士', '2-6', 200, 15, 5, 1, 1, 1),
+                    new Piece('坦克', '3-5', 300, 8, 7, 1, 1, 1),
+                    new Piece('刺客', '4-6', 150, 20, 1, 0, 1, 2),
+                    new Piece('射手', '6-6', 100, 25, 2, 2, 1, 1)
+                ],
+                // 敌方棋子数组
+                enemyPieces: [
+                    new Piece('射手', '0-0', 100, 25, 2, 2, 1, 1),
+                    new Piece('刺客', '2-0', 150, 20, 1, 0, 1, 2),
+                    new Piece('坦克', '3-1', 300, 8, 7, 1, 1, 1),
+                    new Piece('战士', '4-0', 200, 15, 5, 1, 1, 1),
+                    new Piece('射手', '6-0', 100, 20, 2, 2, 1, 1)
+                ],
+                // 当前轮到谁行动，'player'表示玩家行动，'enemy'表示敌方行动
+                currentTurn: 'player', // 'player' or 'enemy'
+                roundCount: 1, // 记录回合数
+                moveCounter: 0, //记录一回合步数
+                // 移动历史
+                moveHistory: [],
+                // 攻击历史
+                attackHistory: [],
+
+            },
+            mounted() {
+                this.initPieceAttributes(); // 初始化棋子属性
+            },
+            methods: {
+                // 初始化棋子属性
+                initPieceAttributes() {
+                    // 计算玩家棋子的攻击范围坐标
+                    this.playerPieces.forEach(piece => {
+                        this.computeAttackRangeCoords(piece.position, piece.attackRange, piece);
+                    });
+                    // 计算敌方棋子的攻击范围坐标
+                    this.enemyPieces.forEach(piece => {
+                        this.computeAttackRangeCoords(piece.position, piece.attackRange, piece);
+                    });
+                },
+                // // 计算棋子的攻击范围坐标
+                // computeAttackRangeCoords(piecePosition, range, piece) {
+                //     const [row, col] = piecePosition.split('-').map(Number);
+                //     const attackRangeCoords = [];
+                //     // 如果攻击范围为0，则只包括自身坐标
+                //     if (range === 0) {
+                //         attackRangeCoords.push(`${row}-${col}`);
+                //     } else {
+                //         // 添加正左、正右、正上、正下四个坐标
+                //         for (let i = -range; i <= range; i++) {
+                //             // 忽略斜线方向的坐标
+                //             if (Math.abs(i) <= range && i !== 0) {
+                //                 const newRow = row + i;
+                //                 const newCol = col;
+                //                 if (newRow >= 0 && newRow < this.chessboard.length && newCol >= 0 && newCol < this.chessboard[0].length) {
+                //                     attackRangeCoords.push(`${newRow}-${newCol}`);
+                //                 }
+                //             }
+                //             if (Math.abs(i) <= range && i !== 0) {
+                //                 const newRow = row;
+                //                 const newCol = col + i;
+                //                 if (newRow >= 0 && newRow < this.chessboard.length && newCol >= 0 && newCol < this.chessboard[0].length) {
+                //                     attackRangeCoords.push(`${newRow}-${newCol}`);
+                //                 }
+                //             }
+                //         }
+                //     }
+                //     // 更新棋子的攻击范围坐标
+                //     Vue.set(piece, 'attackRangeCoords', attackRangeCoords);
+                // },
+                computeAttackRangeCoords(piecePosition, range, piece) {
+                    const [row, col] = piecePosition.split('-').map(Number);
+                    const attackRangeCoords = [];
+
+                    // 如果攻击范围为 0，则只包括自身坐标
+                    if (range === 0) {
+                        attackRangeCoords.push(`${row}-${col}`);
+                    } else {
+                        // 添加正上、正下、正左、正右四个方向的坐标
+                        if (row - range >= 0) {
+                            attackRangeCoords.push(`${row - range}-${col}`); // 上方
+                        }
+                        if (row + range < this.chessboard.length) {
+                            attackRangeCoords.push(`${row + range}-${col}`); // 下方
+                        }
+                        if (col - range >= 0) {
+                            attackRangeCoords.push(`${row}-${col - range}`); // 左侧
+                        }
+                        if (col + range < this.chessboard[0].length) {
+                            attackRangeCoords.push(`${row}-${col + range}`); // 右侧
+                        }
+                    }
+
+                    // 更新棋子的攻击范围坐标
+                    Vue.set(piece, 'attackRangeCoords', attackRangeCoords);
+                },
+
+
+
+                // 判断是否为敌方棋子
+                isEnemyPiece(rowIndex, cellIndex) {
+                    const position = `${rowIndex}-${cellIndex}`;
+                    return this.enemyPieces.some(piece => piece.position === position);
+                },
+                iscurrentTurn() {
+                    if (this.currentTurn === 'player') {
+                        return '蓝色方'
+                    }
+                    else {
+                        return '红色方'
+                    }
+                },
+                // 点击格子触发的事件处理方法
+                selectCell(rowIndex, cellIndex) {
+                    // 获取当前点击格子的位置坐标
+                    const position = `${rowIndex}-${cellIndex}`;
+
+                    // 如果没有格子被选中并且轮到玩家行动，则选中点击的格子
+                    if (this.selectedCell === null && this.currentTurn === 'player') {
+                        this.selectedCell = position;
+                    }
+                    // 如果选中的格子是玩家棋子且轮到玩家行动，则移动棋子到点击的格子
+                    else if (this.playerPieces.some(piece => piece.position === this.selectedCell) && this.currentTurn === 'player') {
+                        // 调用移动棋子的函数，传入玩家棋子数组、目标位置、下一回合行动方
+                        this.movePiece(this.playerPieces, position, 'enemy');
+                    }
+                    // 如果没有格子被选中并且轮到敌方行动，则选中点击的格子
+                    else if (this.selectedCell === null && this.currentTurn === 'enemy') {
+                        this.selectedCell = position;
+                    }
+                    // 如果选中的格子是敌方棋子且轮到敌方行动，则移动棋子到点击的格子
+                    else if (this.enemyPieces.some(piece => piece.position === this.selectedCell) && this.currentTurn === 'enemy') {
+                        // 调用移动棋子的函数，传入敌方棋子数组、目标位置、下一回合行动方
+                        this.movePiece(this.enemyPieces, position, 'player');
+                    }
+                    // 其他情况，重置选中的格子
+                    else {
+                        this.selectedCell = null;
+                    }
+                },
+
+                // 移动棋子的函数
+                movePiece(pieces, position, nextTurn) {
+                    // 获取选中棋子在数组中的索引
+                    const pieceIndex = pieces.findIndex(piece => piece.position === this.selectedCell);
+                    // 获取选中的棋子对象
+                    const piece = pieces[pieceIndex];
+                    // 获取选中棋子的当前位置的行列坐标
+                    const [row, col] = piece.position.split('-').map(Number);
+                    // 获取目标位置的行列坐标
+                    const [targetRow, targetCol] = position.split('-').map(Number);
+                    // 计算选中棋子移动到目标位置的距离
+                    const distance = Math.abs(row - targetRow) + Math.abs(col - targetCol);
+                    // 检查目标位置是否为空地
+                    const targetCellIsEmpty = !this.playerPieces.some(p => p.position === position) && !this.enemyPieces.some(p => p.position === position);
+                    // 检查目标位置是否为自己的阵营
+                    const targetCellIsOwnCamp = pieces.some(p => p.position === position);
+                    // 检查攻击范围是否为0
+                    const attackRangeIsZero = piece.attackRange === 0;
+
+                    // 如果移动距离在移动范围内，且目标位置不是当前选中的格子且为空地
+                    if (distance <= piece.movementRange && position !== this.selectedCell && (targetCellIsEmpty || (attackRangeIsZero && !targetCellIsOwnCamp))) {
+                        // 更新移动历史
+                        this.moveHistory.push({
+                            roundCount: this.roundCount,
+                            zhenyin: this.iscurrentTurn(),
+                            role: piece.name,
+                            from: this.selectedCell,
+                            to: position
+                        });
+                        // 更新棋子的位置为目标位置
+                        piece.position = position;
+                        // 重置选中的格子
+                        this.selectedCell = null;
+                        // 增加移动步数
+                        this.moveCounter++;
+                        // 切换到下一回合的行动方
+                        this.currentTurn = nextTurn;
+                        // 重新计算棋子的攻击范围坐标
+                        this.initPieceAttributes();
+                        // 如果移动步数达到2，则执行攻击并重置计数器
+                        if (this.moveCounter === 2) {
+                            this.attack();
+                            // 如果下一回合是玩家行动，则增加回合数
+                            if (nextTurn === 'player') {
+                                this.roundCount++;
+                            }
+                            // 重置移动步数
+                            this.moveCounter = 0;
+                        }
+                    }
+                    // 否则，重置选中的格子
+                    else {
+                        this.selectedCell = null;
+                    }
+                },
+                // 检查两方是否都已经移动
+                checkBothSidesMoved() {
+                    return this.playerPieces.some(piece => piece.position !== piece.originalPosition) && this.enemyPieces.some(piece => piece.position !== piece.originalPosition);
+                },
+
+                // 攻击函数
+                attack() {
+                    // 检查敌方棋子是否在玩家棋子的攻击范围内
+                    this.playerPieces.forEach(playerPiece => {
+                        this.enemyPieces.forEach(enemyPiece => {
+                            if (playerPiece.attackRangeCoords.includes(enemyPiece.position)) {
+                                if (playerPiece.attackTurns === 1) {
+                                    this.attackEnemy(enemyPiece); // 玩家攻击敌方
+                                }
+                                else if (this.roundCount % playerPiece.attackTurns === 0){
+                                    this.attackEnemy(enemyPiece); // 玩家攻击敌方
+                                }
+                            }
+                        });
+                    });
+                    // 检查玩家棋子是否在敌方棋子的攻击范围内
+                    this.enemyPieces.forEach(enemyPiece => {
+                        this.playerPieces.forEach(playerPiece => {
+                            if (enemyPiece.attackRangeCoords.includes(playerPiece.position)) {
+                                if (enemyPiece.attackTurns === 1) {
+                                    this.attackPlayer(playerPiece); // 敌方攻击玩家
+                                }
+                                else if (this.roundCount % enemyPiece.attackTurns === 0){
+                                    this.attackPlayer(playerPiece); // 敌方攻击玩家
+                                }
+                            }
+                        });
+                    });
+                },
+
+                // 在 attackEnemy 和 attackPlayer 函数中调用 endGame 函数判断游戏是否结束
+                attackEnemy(enemyPiece) {
+                    const playerPiece = this.playerPieces.find(piece => piece.attackRangeCoords.includes(enemyPiece.position));
+                    const damage = Math.max(0, playerPiece.attack - enemyPiece.defense);
+                    enemyPiece.health -= damage; // 减少敌方棋子生命值
+                    // 添加攻击历史
+                    this.attackHistory.push({
+                        roundCount: this.roundCount,
+                        zhenyin: '蓝色方',
+                        attacker: playerPiece.name,
+                        defender: enemyPiece.name,
+                        damage: damage
+                    });
+                    if (enemyPiece.health <= 0) {
+                        this.enemyPieces.splice(this.enemyPieces.indexOf(enemyPiece), 1); // 从敌方棋子数组中移除已被消灭的棋子
+                        if (this.enemyPieces.length === 0) {
+                            this.endGame('player'); // 如果敌方棋子数量为0，玩家获胜
+                        }
+                    }
+                },
+                attackPlayer(playerPiece) {
+                    const enemyPiece = this.enemyPieces.find(piece => piece.attackRangeCoords.includes(playerPiece.position));
+                    const damage = Math.max(0, enemyPiece.attack - playerPiece.defense);
+                    playerPiece.health -= damage; // 减少玩家棋子生命值
+                    // 添加攻击历史
+                    this.attackHistory.push({
+                        roundCount: this.roundCount,
+                        zhenyin: '红色方',
+                        attacker: enemyPiece.name,
+                        defender: playerPiece.name,
+                        damage: damage
+                    });
+                    if (playerPiece.health <= 0) {
+                        this.playerPieces.splice(this.playerPieces.indexOf(playerPiece), 1); // 从玩家棋子数组中移除已被消灭的棋子
+                        if (this.playerPieces.length === 0) {
+                            this.endGame('enemy'); // 如果玩家棋子数量为0，敌方获胜
+                        }
+                    }
+                },
+                endGame(winner) {
+                    let message;
+                    if (winner === 'player') {
+                        message = '恭喜蓝色方，你赢了！';
+                    } else {
+                        message = '恭喜红色方，你赢了！';
+                    }
+                    if (confirm(`${message} 是否重新开始游戏？`)) {
+                        // 重新开始游戏的逻辑，可以重新初始化游戏数据等操作
+                        location.reload();
+                    } else {
+                        // 游戏结束，可以执行其他操作，例如返回到主菜单等
+                        location.reload();
+                    }
+                }
+
+
+            }
+        });
+
+    </script>
+</body>
+
+</html>
