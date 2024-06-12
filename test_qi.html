@@ -406,37 +406,42 @@
 
                 // 攻击函数
                 attack() {
-                    // 检查敌方棋子是否在玩家棋子的攻击范围内
+                    let attackPairs = [];
+                
+                    // 收集玩家棋子的攻击目标
                     this.playerPieces.forEach(playerPiece => {
                         this.enemyPieces.forEach(enemyPiece => {
                             if (playerPiece.attackRangeCoords.includes(enemyPiece.position)) {
-                                if (playerPiece.attackTurns === 1) {
-                                    this.attackEnemy(enemyPiece); // 玩家攻击敌方
-                                }
-                                else if (this.roundCount % playerPiece.attackTurns === 0){
-                                    this.attackEnemy(enemyPiece); // 玩家攻击敌方
+                                if (playerPiece.attackTurns === 1 || this.roundCount % playerPiece.attackTurns === 0) {
+                                    attackPairs.push({ attacker: playerPiece, defender: enemyPiece, side: 'player' });
                                 }
                             }
                         });
                     });
-                    // 检查玩家棋子是否在敌方棋子的攻击范围内
+                
+                    // 收集敌方棋子的攻击目标
                     this.enemyPieces.forEach(enemyPiece => {
                         this.playerPieces.forEach(playerPiece => {
                             if (enemyPiece.attackRangeCoords.includes(playerPiece.position)) {
-                                if (enemyPiece.attackTurns === 1) {
-                                    this.attackPlayer(playerPiece); // 敌方攻击玩家
-                                }
-                                else if (this.roundCount % enemyPiece.attackTurns === 0){
-                                    this.attackPlayer(playerPiece); // 敌方攻击玩家
+                                if (enemyPiece.attackTurns === 1 || this.roundCount % enemyPiece.attackTurns === 0) {
+                                    attackPairs.push({ attacker: enemyPiece, defender: playerPiece, side: 'enemy' });
                                 }
                             }
                         });
                     });
+                
+                    // 执行所有收集到的攻击
+                    attackPairs.forEach(pair => {
+                        if (pair.side === 'player') {
+                            this.attackEnemy(pair.attacker, pair.defender);
+                        } else {
+                            this.attackPlayer(pair.attacker, pair.defender);
+                        }
+                    });
                 },
-
+                
                 // 在 attackEnemy 和 attackPlayer 函数中调用 endGame 函数判断游戏是否结束
-                attackEnemy(enemyPiece) {
-                    const playerPiece = this.playerPieces.find(piece => piece.attackRangeCoords.includes(enemyPiece.position));
+                attackEnemy(playerPiece, enemyPiece) {
                     const damage = Math.max(0, playerPiece.attack - enemyPiece.defense);
                     enemyPiece.health -= damage; // 减少敌方棋子生命值
                     // 添加攻击历史
@@ -454,8 +459,8 @@
                         }
                     }
                 },
-                attackPlayer(playerPiece) {
-                    const enemyPiece = this.enemyPieces.find(piece => piece.attackRangeCoords.includes(playerPiece.position));
+                
+                attackPlayer(enemyPiece, playerPiece) {
                     const damage = Math.max(0, enemyPiece.attack - playerPiece.defense);
                     playerPiece.health -= damage; // 减少玩家棋子生命值
                     // 添加攻击历史
@@ -473,6 +478,7 @@
                         }
                     }
                 },
+                
                 endGame(winner) {
                     let message;
                     if (winner === 'player') {
