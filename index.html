@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page with Vue.js</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- 引入样式表 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- 图片预览框 -->
+        <div class="image-preview" @click="uploadFile">
+            <img v-if="imageUrl" :src="imageUrl" alt="Preview Image" class="preview-image">
+            <span v-else>点击上传图片</span>
+        </div>
+        <input type="file" id="fileUpload" @change="previewImage" accept="image/*" style="display: none;">
+        <br>
+        <!-- 输入文本框 -->
+        <textarea v-model="textInput" placeholder="在此处输入文本..."></textarea>
+        <div class="qr">
+            <!-- 生成二维码按钮 -->
+            <button @click="generateQRCodeFromText">生成文本二维码</button>
+            <br>
+            <button @click="generateQRCodeFromURL">生成网页二维码</button>
+
+            <!-- 二维码显示区域 -->
+            <div id="qrcode" class="qrcode"></div>
+
+        </div>
+        <!-- 弹窗组件 -->
+        <popup v-if="showPopups" :key="popup.id" v-for="popup in popups" :popup="popup" @close="closePopup(popup.id)">
+        </popup>
+
+        <!-- 主要内容区域 -->
+        <div class="main-content">
+            <h1>JX</h1>
+            <p>这是你的主要内容。这可以包括文本、图像和其他元素。</p>
+        </div>
+    </div>
+
+    <!-- Vue.js 库 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <!-- QRCode.js 库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- Vue 组件 -->
+    <script src="components/components.js"></script>
+    <!-- Vue 实例 -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>

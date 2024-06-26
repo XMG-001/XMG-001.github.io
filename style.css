@@ -1,0 +1,155 @@
+/* 基础样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 输入框和按钮样式 */
+textarea {
+    margin-bottom: 10px;
+    width: 95%;
+    padding: 8px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* 图片预览框样式 */
+.image-preview {
+    margin: auto;
+    
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    width: 300px; /* 设置预览框的宽度 */
+    height: 200px; /* 设置预览框的高度 */
+}
+
+.image-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.qr{
+    margin: auto;
+    text-align: center;
+}
+
+/* 二维码显示区域样式 */
+.qrcode {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.qrcode img {
+    margin:auto;
+}
+
+
+
+
+/* 弹窗样式 */
+.popup {
+    display: block; /* 默认显示 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 75%;
+    width: 400px; /* 设置最大宽度和固定宽度 */
+    max-height: 80vh; /* 最大高度为视窗的80% */
+    overflow-y: auto; /* 内容超出高度时启用滚动条 */
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.popup-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: -18px;
+    left: 99%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #999;
+    transition: color 0.3s ease;
+
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.popup-content {
+    margin-bottom: 10px;
+}
+
+.popup p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.popup button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.popup button:hover {
+    background-color: #0056b3;
+}
+
+/* 主要内容区域样式 */
+.main-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content h1 {
+    margin-top: 0;
+}
+
+.main-content p {
+    margin-bottom: 20px;
+}
+
+/* 静态二维码样式 */
+.qrcode {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
