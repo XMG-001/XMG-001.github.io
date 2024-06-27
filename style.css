@@ -153,3 +153,30 @@ button:hover {
     height: auto;
     margin-top: 20px;
 }
+
+/* 推文组件样式 */
+.post {
+    margin-bottom: 20px;
+}
+
+.post h2 {
+    margin-bottom: 10px;
+}
+
+.post .post-images {
+    margin-top: 10px;
+}
+
+.post .post-image {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+/* 居中图片 */
+.centered-image {
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    width: 90%;
+    height: auto;
+}
