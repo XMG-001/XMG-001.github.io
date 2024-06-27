@@ -1,3 +1,13 @@
+Vue.component('post', {
+    props: ['title', 'content', 'images'],
+    template: `
+        <div class="post">
+            <h2>{{ title }}</h2>
+            <div v-html="content"></div>
+        </div>
+    `,
+});
+
 // 定义弹窗组件
 Vue.component('popup', {
     props: ['popup'],
@@ -13,3 +23,4 @@ Vue.component('popup', {
         </div>
     `
 });
+
