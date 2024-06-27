@@ -10,7 +10,36 @@ const app = new Vue({
             { id: 1, title: '欢迎您！', content: '这是弹窗3' },
             { id: 2, title: '欢迎您！', content: '这是弹窗2' },
             { id: 3, title: '欢迎您！', content: '这是弹窗1' }
-        ]
+        ],
+        postTitle: '你的文章标题',
+        postContent: `
+            这是你的文章内容。你可以在这里包括文本、图片和其他元素。
+            <br><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <br><br>
+            <img src="https://via.placeholder.com/300x200" alt="占位符图片" class="centered-image">
+            <br><br>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <br><br>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            <br><br>
+            <img src="https://via.placeholder.com/300x200" alt="占位符图片" class="centered-image">
+            <br><br>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <br><br>
+            这是你的文章内容。你可以在这里包括文本、图片和其他元素。
+            <br><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <br><br>
+            <img src="https://via.placeholder.com/300x200" alt="占位符图片" class="centered-image">
+            <br><br>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <br><br>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            <br><br>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        `,
+        postImages: [],
     },
     methods: {
         // 关闭弹窗方法
