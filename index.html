@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JX</title>
-    <link rel="stylesheet" href="style.css"> <!-- 引入样式表 -->
+    <link rel="stylesheet" href="css/style.css"> <!-- 引入样式表 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
 </head>
 
 <body>
 
     <div id="app">
+        <!-- 推文组件 -->
+        <post :title="postTitle" :content="postContent"></post>
         <!-- 图片预览框 -->
         <div class="image-preview" @click="uploadFile">
             <img v-if="imageUrl" :src="imageUrl" alt="Preview Image" class="preview-image">
@@ -48,7 +50,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
     <!-- Vue 组件 -->
-    <script src="components.js"></script>
+    <script src="components/components.js"></script>
     <!-- Vue 实例 -->
     <script src="app.js"></script>
 
