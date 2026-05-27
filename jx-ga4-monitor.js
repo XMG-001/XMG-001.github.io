@@ -71,7 +71,7 @@
             { key: 'en', label: 'en (事件)', width: '25%', class: 'c-en', color: false },
             { key: 'gcs', label: 'gcs', width: '8%', class: 'c-gcs', color: true },
             { key: 'cid', label: 'cid (客户端ID)', width: '20%', class: 'c-mono', color: true },
-            { key: 'sid', label: 'sid (会话)', width: '12%', class: 'c-mono', color: true },
+            { key: 'sid', label: 'sid (会话ID)', width: '12%', class: 'c-mono', color: true },
             { key: 'tfd', label: 'tfd', width: '8%', class: '', color: false },
             { key: 'status', label: '返回状态码', width: '12%', class: 'c-status', color: false }
         ]
@@ -257,7 +257,7 @@
             box.innerHTML = `
                 <div id="ga4-head">
                     <button class="ga4-btn" id="ga4-toggle" style="padding: 4px 8px;">+</button>
-                    <span id="ga4-title">GA4 请求监测remote (<span id="ga4-count">0</span>)</span>
+                    <span id="ga4-title">GA4 请求监测 (<span id="ga4-count">0</span>)</span>
                     <input type="text" id="ga4-domain-match" class="ga4-input hide-on-mini" placeholder="域名(例:google)" title="匹配URL中的域名" />
                     <input type="text" id="ga4-path-match" class="ga4-input hide-on-mini" placeholder="路径(例:collect?v=2)" title="匹配URL或Body中的路径" />
                     <select id="ga4-filter-tid" class="ga4-select hide-on-mini"><option value="all">全部 TID</option></select>
