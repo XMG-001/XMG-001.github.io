@@ -1,15 +1,3 @@
-// ==UserScript==
-// @name         JX - Shopify隐私检测器(jx-shopify-customerPrivacy-inspector)
-// @namespace    http://tampermonkey.net/
-// @version      2026-02-03
-// @description  可视化审计 Shopify customerPrivacy，Data 默认展开 (仅在检测到 Shopify 时激活)
-// @author       JaysonJin
-// @match        *://*/*
-// @exclude      *://*/web-pixels*
-// @exclude      *://*/*web-pixels*
-// @grant        none
-// ==/UserScript==
-
 (function () {
     'use strict';
 
