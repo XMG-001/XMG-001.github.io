@@ -1,26 +1,3 @@
-// ==UserScript==
-// @name         JX - 页面跳转拦截器(jx-nav-blocker)
-// @namespace    http://tampermonkey.net/
-// @version      2026-03-02
-// @description  拦截所有跳转事件并弹出美化确认框，支持键盘快捷键及状态识别
-// @author       JaysonJin
-// @match        *://*.roborock.com/*
-// @match        *://*.roborock.cn/*
-// @match        *://*.racetopprint.ca/*
-// @match        *://*.myshopify.com/*
-// @match        *://*.ai5yue.com/*
-// @match        *://*.dji.com/*
-// @match        *://*.vesync.com/*
-// @match        *://*.tealiumdemo.com/*
-// @match        *://*.speediance.com/*
-// @match        *://*.x-sense.com/*
-// @match        *://*.navimow.com/*
-// @match        *://*.xtool.com/*
-// @exclude      *://*/web-pixels*
-// @exclude      *://*/*web-pixels*
-// @grant        none
-// ==/UserScript==
-
 (function() {
     'use strict';
 
