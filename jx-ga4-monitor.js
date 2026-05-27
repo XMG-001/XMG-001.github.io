@@ -1,13 +1,3 @@
-// ==UserScript==
-// @name         JX - GA4请求监测器(jx-ga4-monitor)
-// @namespace    http://tampermonkey.net/
-// @version      19.3
-// @description  域名与路径解耦，增加沙盒环境阻断，展示状态码为中性色。架构重构：高内聚低耦合，支持动态切换渲染方向。
-// @author       JaysonJin
-// @match        *://*/*
-// @grant        none
-// ==/UserScript==
-
 (function () {
     'use strict';
 
