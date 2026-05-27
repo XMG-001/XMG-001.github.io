@@ -6,7 +6,6 @@
 // @author       JaysonJin
 // @match        *://*/*
 // @grant        none
-// @run-at       document-start
 // ==/UserScript==
 
 (function () {
@@ -258,7 +257,7 @@
             box.innerHTML = `
                 <div id="ga4-head">
                     <button class="ga4-btn" id="ga4-toggle" style="padding: 4px 8px;">+</button>
-                    <span id="ga4-title">GA4 请求监测 (<span id="ga4-count">0</span>)</span>
+                    <span id="ga4-title">GA4 请求监测remote (<span id="ga4-count">0</span>)</span>
                     <input type="text" id="ga4-domain-match" class="ga4-input hide-on-mini" placeholder="域名(例:google)" title="匹配URL中的域名" />
                     <input type="text" id="ga4-path-match" class="ga4-input hide-on-mini" placeholder="路径(例:collect?v=2)" title="匹配URL或Body中的路径" />
                     <select id="ga4-filter-tid" class="ga4-select hide-on-mini"><option value="all">全部 TID</option></select>
