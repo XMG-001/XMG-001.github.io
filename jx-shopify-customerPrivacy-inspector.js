@@ -39,8 +39,8 @@
         ],
         // 表头与数据列配置
         tableCols: [
-            { key: 'event', label: 'Event', width: '75px' },
-            { key: 'geo', label: 'Region', width: '75px' },
+            { key: 'event', label: 'Event', width: '60px' },
+            { key: 'geo', label: 'Region & Law', width: '75px' },
             { key: 'preferences', label: 'Preferences', width: '65px' },
             { key: 'analytics', label: 'Analytics', width: '65px' },
             { key: 'marketing', label: 'Marketing', width: '65px' },
@@ -150,7 +150,7 @@
                     .trigger-btn:active { transform: scale(0.95); }
 
                     .panel {
-                        display: none; position: absolute; right: 0; top: 60px; width: 750px;
+                        display: none; position: absolute; right: 0; top: 60px; width: 720px;
                         background: rgba(255, 255, 255, 0.95); backdrop-filter: saturate(180%) blur(16px);
                         border-radius: 12px; border: 1px solid rgba(0,0,0,0.08);
                         box-shadow: 0 20px 40px rgba(0,0,0,0.15); padding: 16px; cursor: default;
@@ -283,7 +283,7 @@
             this.shadow.querySelector('#table-body').innerHTML = records.map(r => `
                 <tr>${CONFIG.tableCols.map(col => {
                     const val = r[col.key];
-                    if (col.key === 'event') return `<td><div style="font-size:11px;font-weight:600;color:#111;">${r.time}</div><div style="font-size:10px;color:#888;text-transform:uppercase;">${r.type}</div></td>`;
+                    if (col.key === 'event') return `<td><div style="font-size:11px;font-weight:600;color:#111;">${r.time}</div><div style="padding:0 1px;font-size:10px;font-weight:600;color:#888;text-transform:uppercase;">${r.type}</div></td>`;
                     if (col.key === 'geo') return `<td><div class="geo-box"><span class="geo-region">${r.region}</span>${r.law ? `<span class="geo-law">${r.law}</span>` : ''}</div></td>`;
                     if (col.key === 'cvConsent') return `<td><details open><summary>Details</summary><pre>${JSON.stringify(val, null, 2)}</pre></details></td>`;
                     return `<td>${getBadge(val)}</td>`;
@@ -327,7 +327,7 @@
             const $ = selector => UI.shadow.querySelector(selector);
 
             $('#btn-query').onclick = () => this.recordSnapshot('query');
-            $('#btn-load-api').onclick = () => ShopifyAPI.loadConsentAPI(err => !err && this.recordSnapshot('api_loaded'));
+            $('#btn-load-api').onclick = () => ShopifyAPI.loadConsentAPI(err => !err && this.recordSnapshot('load'));
             $('#btn-submit-consent').onclick = () => ShopifyAPI.setConsent(UI.getConsentFormData(), () => {});
 
             document.addEventListener('visitorConsentCollected', () => {
