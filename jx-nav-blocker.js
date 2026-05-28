@@ -40,6 +40,7 @@
                 z-index: 2147483647; font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
             }
             .jx-modal-card {
+                letter-spacing: normal; line-height: normal;
                 background: #ffffff; padding: 28px; border-radius: 16px;
                 box-shadow: 0 12px 32px rgba(0,0,0,0.15); width: 400px;
                 text-align: center; border: 1px solid #f0f0f0;
