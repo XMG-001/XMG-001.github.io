@@ -286,8 +286,8 @@
             this.shadow.querySelector('#table-body').innerHTML = records.map(r => `
                 <tr>${CONFIG.tableCols.map(col => {
                     const val = r[col.key];
-                    if (col.key === 'event') return `<td><div class="inline-flex-box"><span style="font-size:11px;font-weight:600;color:#111;">${r.time}</span><span class="badge-neutral badge-purple">${r.type}</span></div></td>`;
-                    if (col.key === 'geo') return `<td><div class="inline-flex-box"><span style="font-weight:600; color:#111; font-size:12px;">${r.region}</span><span class="badge-neutral">${r.law}</span></div></td>`;
+                    if (col.key === 'event') return `<td><div class="inline-flex-box"><span style="font-size:12px;font-weight:600;color:#111;">${r.time}</span><span class="badge-neutral badge-purple">${r.type}</span></div></td>`;
+                    if (col.key === 'geo') return `<td><div class="inline-flex-box"><span style="font-size:12px;font-weight:600;color:#111;">${r.region}</span><span class="badge-neutral">${r.law}</span></div></td>`;
                     if (col.key === 'cvConsent') return `<td><details open><summary>Details</summary><pre>${JSON.stringify(val, null, 2)}</pre></details></td>`;
                     return `<td>${getBadge(val)}</td>`;
                 }).join('')}</tr>
