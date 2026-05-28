@@ -185,16 +185,14 @@
 
                     /* Flex Box Modification */
                     .inline-flex-box { display: inline-flex; align-items: center; flex-direction: column;}
-                    
+
                     /* Badges & Text Formatting */
                     .badge-true { color: #059669; background: #d1fae5; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 10px;}
                     .badge-false { color: #dc2626; background: #fee2e2; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 10px;}
                     .badge-neutral { color: #4b5563; background: #f3f4f6; padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 10px;}
-                    
+
                     /* Purple Tint Modifier */
                     .badge-purple { color: #6b21a8; background: #f3e8ff; text-transform: uppercase; }
-
-                    .geo-region { font-weight: 600; color: #111; font-size: 12px; }
 
                     details summary { cursor: pointer; color: #2563eb; outline: none; font-weight: 500; font-size: 12px;}
                     pre { background: #f4f6f8; color: #333333; padding: 10px; border-radius: 6px; overflow: auto; max-height: 120px; margin: 6px 0 0; font-size: 11px; font-family: ui-monospace, monospace; }
@@ -289,7 +287,7 @@
                 <tr>${CONFIG.tableCols.map(col => {
                     const val = r[col.key];
                     if (col.key === 'event') return `<td><div class="inline-flex-box"><span style="font-size:11px;font-weight:600;color:#111;">${r.time}</span><span class="badge-neutral badge-purple">${r.type}</span></div></td>`;
-                    if (col.key === 'geo') return `<td><div class="inline-flex-box"><span class="geo-region">${r.region}</span><span class="badge-neutral">${r.law}</span></div></td>`;
+                    if (col.key === 'geo') return `<td><div class="inline-flex-box"><span style="font-weight:600; color:#111; font-size:12px;">${r.region}</span><span class="badge-neutral">${r.law}</span></div></td>`;
                     if (col.key === 'cvConsent') return `<td><details open><summary>Details</summary><pre>${JSON.stringify(val, null, 2)}</pre></details></td>`;
                     return `<td>${getBadge(val)}</td>`;
                 }).join('')}</tr>
