@@ -135,7 +135,7 @@
             this.shadow.innerHTML = `
                 <style>
                     :host { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
-                    .root-container { position: relative; }
+                    .root-container { position: relative;letter-spacing: normal; line-height: normal;}
 
                     /* Components */
                     .trigger-btn {
