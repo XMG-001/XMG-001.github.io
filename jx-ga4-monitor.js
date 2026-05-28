@@ -4,28 +4,24 @@
     // ==========================================
     // 🛡️ 0. 环境防御阻断层
     // ==========================================
-    const Environment = {
-        ignoredDomains: [
-            'web-pixels',
-            'checkout.shopify.com',
-            'pay.google.com',
-            'js.stripe.com',
-            'paypal.com',
-        ],
-        shouldIgnore() {
-            try {
-                const url = window.location.href;
-                const hostname = window.location.hostname;
-                if (!url || url === 'about:blank') return true;
-                if (this.ignoredDomains.some(domain => hostname.includes(domain) || url.includes(domain))) return true;
-                if (window.self !== window.top) return true;
-                return false;
-            } catch (e) {
-                return true;
-            }
+    const ENV = {
+        extensionName: 'JX - GA4请求监测器',
+        ignoreURL: ['web-pixels', 'checkout.shopify.com', 'pay.google.com', 'js.stripe.com', 'paypal.com'],
+        logLoaded() {
+            console.log(
+                `%c${this.extensionName || 'JX - 插件'} %c已加载 ▶`,
+                'background:linear-gradient(90deg, #00d2ff, #3a7bd5); color:#fff; padding:4px 8px; border-radius:4px 0 0 4px; font-weight:bold;',
+                'background:linear-gradient(90deg, #3a7bd5, #6a11cb); color:#fff; padding:4px 8px; border-radius:0 4px 4px 0; font-weight:bold;'
+            );
+        },
+        check() {
+            const { href, hostname } = window.location;
+            const block = !href || href === 'about:blank' || window.self !== window.top || this.ignoreURL.some(d => hostname.includes(d) || href.includes(d));
+            if (!block) this.logLoaded();
+            return !block;
         }
     };
-    if (Environment.shouldIgnore()) return;
+    if (!ENV.check()) return;
 
     // ==========================================
     // 📦 1. 数据持久层 (Storage) - 提前声明供配置使用
@@ -61,7 +57,7 @@
             { key: 'en', label: 'en (事件)', width: '25%', class: 'c-en', color: false },
             { key: 'gcs', label: 'gcs', width: '8%', class: 'c-gcs', color: true },
             { key: 'cid', label: 'cid (客户端ID)', width: '20%', class: 'c-mono', color: true },
-            { key: 'sid', label: 'sid (会话ID)', width: '12%', class: 'c-mono', color: true },
+            { key: 'sid', label: 'sid (会话)', width: '12%', class: 'c-mono', color: true },
             { key: 'tfd', label: 'tfd', width: '8%', class: '', color: false },
             { key: 'status', label: '返回状态码', width: '12%', class: 'c-status', color: false }
         ]
