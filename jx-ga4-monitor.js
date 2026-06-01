@@ -46,7 +46,16 @@
         },
         formatDate: (ts) => {
             const d = new Date(ts);
-            return `${d.getFullYear()}/${(d.getMonth()+1).toString().padStart(2,'0')}/${d.getDate().toString().padStart(2,'0')} ${d.getHours().toString().padStart(2,'0')}:${d.getMinutes().toString().padStart(2,'0')}:${d.getSeconds().toString().padStart(2,'0')}`;
+            if (isNaN(d.getTime())) return '-';
+            return [
+                d.getFullYear(),
+                (d.getMonth() + 1).toString().padStart(2, '0'),
+                d.getDate().toString().padStart(2, '0')
+            ].join('/') + ' ' + [
+                d.getHours().toString().padStart(2, '0'),
+                d.getMinutes().toString().padStart(2, '0'),
+                d.getSeconds().toString().padStart(2, '0')
+            ].join(':');
         }
     };
 
