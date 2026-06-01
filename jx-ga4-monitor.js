@@ -11,6 +11,11 @@
         ignoreURL: ['checkout.shopify.com', 'pay.google.com', 'js.stripe.com', 'paypal.com'],
         sandboxURL: ['web-pixels'],
         isTop: window.self === window.top,
+        isSameOrigin() {
+            if (this.isTop) return true;
+            const host = (() => { try { return window.top.location.hostname } catch { return new URL(document.referrer || '').hostname } })();
+            return host === window.location.hostname;
+        },
         isSandbox() { return !this.isTop && this.sandboxURL.some(d => window.location.href.includes(d)); },
         logLoaded(mode) {
             console.log(
@@ -20,10 +25,11 @@
             );
         },
         check() {
+            if (this.isTop) this.logLoaded();
             const { href, hostname } = window.location;
             if (!href || href === 'about:blank' || this.ignoreURL.some(d => hostname.includes(d) || href.includes(d))) return false;
-            if (this.isTop) this.logLoaded();
-            return this.isTop || this.isSandbox();
+            const valid = this.isTop || (this.isSameOrigin() || this.isSandbox());
+            return valid;
         }
     };
     if (!ENV.check()) return;
