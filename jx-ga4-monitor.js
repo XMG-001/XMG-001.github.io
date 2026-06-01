@@ -239,7 +239,7 @@
             renderLayout() {
                 const style = document.createElement('style');
                 style.textContent = `
-                    #ga4-box { letter-spacing: normal; line-height: normal; width: 1000px; max-height: 650px; background: rgba(255,255,255,0.75); color: #1d1d1f; font-family: sans-serif; font-size: 12px; border-radius: 14px; box-shadow: 0 20px 40px rgba(0,0,0,0.1), inset 0 0 0 1px rgba(255,255,255,0.6); display: flex; flex-direction: column; overflow: hidden; backdrop-filter: blur(24px) saturate(180%); transition: width 0.3s, height 0.3s; }
+                    #ga4-box { letter-spacing: normal; line-height: normal; width: 1000px; max-height: 650px; background: rgba(255,255,255,0.8); color: #1d1d1f; font-family: sans-serif; font-size: 12px; border-radius: 14px; box-shadow: 0 20px 40px rgba(0,0,0,0.1), inset 0 0 0 1px rgba(255,255,255,0.6); display: flex; flex-direction: column; overflow: hidden; backdrop-filter: blur(24px) saturate(180%); transition: width 0.3s, height 0.3s; }
                     #ga4-box.mini { width: 180px; max-height: 45px!important; border: 1px solid rgba(230,81,0,0.3); }
                     #ga4-box.mini #ga4-body, #ga4-box.mini .hide-on-mini { display: none; }
                     #ga4-head { padding: 8px 12px; background: linear-gradient(135deg, rgba(255,149,0,0.85), rgba(255,59,48,0.85)); display: flex; gap: 8px; align-items: center; cursor: move; user-select: none; color: #fff; border-bottom: 1px solid rgba(0,0,0,0.05); }
