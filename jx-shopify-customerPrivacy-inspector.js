@@ -2,23 +2,26 @@
     'use strict';
 
     // ==========================================
-    // 🛡️ 0. 环境防御阻断层
+    // 🛡️ 0. 环境感知与防御层
     // ==========================================
     const ENV = {
         extensionName: 'JX - Shopify隐私检测器',
-        ignoreURL: ['web-pixels', 'checkout.shopify.com', 'pay.google.com', 'js.stripe.com', 'paypal.com'],
-        logLoaded() {
+        ignoreURL: ['checkout.shopify.com', 'pay.google.com', 'js.stripe.com', 'paypal.com'],
+        sandboxURL: ['web-pixels'],
+        isTop: window.self === window.top,
+        isSandbox() { return !this.isTop && this.sandboxURL.some(d => window.location.href.includes(d)); },
+        logLoaded(mode) {
             console.log(
-                `%c${this.extensionName || 'JX - 插件'} %c已加载 ▶`,
+                `%c${this.extensionName || 'JX - 插件'} %c${mode || '已加载'} ▶`,
                 'background:linear-gradient(90deg, #00d2ff, #3a7bd5); color:#fff; padding:4px 8px; border-radius:4px 0 0 4px; font-weight:bold;',
                 'background:linear-gradient(90deg, #3a7bd5, #6a11cb); color:#fff; padding:4px 8px; border-radius:0 4px 4px 0; font-weight:bold;'
             );
         },
         check() {
             const { href, hostname } = window.location;
-            const block = !href || href === 'about:blank' || window.self !== window.top || this.ignoreURL.some(d => hostname.includes(d) || href.includes(d));
-            if (!block) this.logLoaded();
-            return !block;
+            if (!href || href === 'about:blank' || this.ignoreURL.some(d => hostname.includes(d) || href.includes(d))) return false;
+            if (this.isTop) this.logLoaded();
+            return this.isTop && !this.isSandbox();
         }
     };
     if (!ENV.check()) return;
