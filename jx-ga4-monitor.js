@@ -142,15 +142,16 @@
         CONFIG = {
             MAX_LOGS: 200,
             IS_APPEND: Storage.get(KEYS.APPEND, 'false') === 'true',
+            // FIELDS 参数说明: key(字段名), label(表头文本), width(宽度%), class(CSS类名), color(是否启用颜色哈希), parse(是否从请求参数中解析, 默认true)
             FIELDS: [
-                { key: 'tid', label: 'tid (衡量ID)', width: '12%', class: 'c-tid', color: false },
-                { key: 'en', label: 'en (事件)', width: '25%', class: 'c-en', color: false },
+                { key: 'tid', label: 'tid (衡量ID)', width: '12%', class: 'c-tid' },
+                { key: 'en', label: 'en (事件)', width: '25%', class: 'c-en' },
                 { key: 'gcs', label: 'gcs', width: '6%', class: 'c-gcs', color: true },
                 { key: 'cid', label: 'cid (客户端ID)', width: '18%', class: 'c-mono', color: true },
                 { key: 'sid', label: 'sid (会话)', width: '10%', class: 'c-mono', color: true },
-                { key: 'tfd', label: 'tfd', width: '9%', class: '', color: false },
-                { key: 'meta', label: '时间/环境', width: '10%', class: 'c-meta', color: false },
-                { key: 'status', label: '返回状态码', width: '10%', class: 'c-status', color: false },
+                { key: 'tfd', label: 'tfd', width: '9%', class: '' },
+                { key: 'meta', label: '时间/环境', width: '10%', class: 'c-meta', parse: false },
+                { key: 'status', label: '返回状态码', width: '10%', class: 'c-status', parse: false },
             ]
         };
 
@@ -215,8 +216,8 @@
             },
             buildRecord(primaryParams, fallbackParams, meta, isBatch) {
                 const data = { _capturedAtUrl: meta.capturedAtUrl || window.location.href, _isSandbox: meta._isSandbox || false, timestamp: meta.timestamp || Date.now(), _rowId: meta.rowId, status: meta.status, _isBatch: isBatch };
-                CONFIG.FIELDS.forEach(f => {
-                    if (f.key !== 'status') data[f.key] = primaryParams.get(f.key) || fallbackParams.get(f.key) || '-';
+                CONFIG.FIELDS.filter(f => f.parse !== false).forEach(f => {
+                    data[f.key] = primaryParams.get(f.key) || fallbackParams.get(f.key) || '-';
                 });
                 return (data.en === '-' && data.tid === '-') ? null : data;
             }
