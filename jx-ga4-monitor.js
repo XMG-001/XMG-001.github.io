@@ -283,7 +283,7 @@
                     .inline-flex-box { display: inline-flex; align-items: center; flex-direction: column; font-size: 9px; line-height: 1; }
                     .meta-time { color: #86868b; }
                     .ga4-sandbox-indicator{display:inline-flex;align-items:center;font-size:10px;font-weight:bold;margin-top:4px;border-left:4px solid #8b5cf6;background:#ede9fe;color:#7c3aed;padding:3px 15px;cursor:pointer}
-                    .ga4-batch-tag { color: #f57c00; font-size: 10px; margin-left: 4px; font-style: italic; }
+                    .ga4-batch-tag { color: #f57c00; font-size: 10px; margin-left: 4px; font-style: italic; white-space: nowrap;}
                     .ga4-flash { animation: shadow-flash 0.4s ease-out; }
                     @keyframes shadow-flash { 0% { background: #ffe0b2; } 100% { background: transparent; } }
                     .ga4-row-nav { background: rgba(242, 242, 247, 0.6)!important; box-shadow: inset 0px 0px 3px 0px #ddd;}
