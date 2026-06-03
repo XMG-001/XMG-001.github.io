@@ -246,7 +246,7 @@
                 const style = document.createElement('style');
                 style.textContent = `
                     /* 基础布局与磨砂玻璃底座 */
-                    #ga4-box { letter-spacing: normal; line-height: normal; width: 1000px; max-height: 650px; background: rgba(255,255,255,0.8); color: #1d1d1f; font-family: sans-serif; font-size: 12px; border-radius: 14px; box-shadow: 0 20px 40px rgba(0,0,0,0.1), inset 0 0 0 1px rgba(255,255,255,0.6); display: flex; flex-direction: column; overflow: hidden; backdrop-filter: blur(24px) saturate(180%); transition: width 0.3s, height 0.3s; }
+                    #ga4-box {letter-spacing:normal;line-height:normal;font-weight:normal;width:1000px;max-height:650px;background:rgba(255,255,255,0.8);color:#1d1d1f;font-family:sans-serif;font-size:12px;border-radius:14px;box-shadow: 0 20px 40px rgba(0,0,0,0.1), inset 0 0 0 1px rgba(255,255,255,0.6);display:flex;flex-direction:column;overflow:hidden;backdrop-filter:blur(24px) saturate(180%);transition: width 0.3s, height 0.3s;}
                     #ga4-box.mini { width: 175px; max-height: 40px!important; }
                     #ga4-box.mini #ga4-body, #ga4-box.mini .hide-on-mini { display: none; }
 
@@ -282,7 +282,7 @@
                     .c-mono { color: #1a252f; }
                     .c-meta { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
                     .inline-flex-box { display: inline-flex; align-items: center; flex-direction: column; font-size: 9px; line-height: 1; }
-                    .meta-time { color: #86868b; }
+                    .meta-time { color: #86868b; white-space: nowrap; }
                     .ga4-sandbox-indicator{display:inline-flex;align-items:center;font-size:10px;font-weight:bold;margin-top:4px;border-left:4px solid #8b5cf6;background:#ede9fe;color:#7c3aed;padding:3px 15px;cursor:pointer}
                     .ga4-batch-tag { color: #f57c00; font-size: 10px; margin-left: 4px; font-style: italic; white-space: nowrap;}
                     .ga4-flash { animation: shadow-flash 0.4s ease-out; }
