@@ -352,17 +352,23 @@
                 els.filterSelect.addEventListener('change', () => { Storage.set(KEYS.FILTER, els.filterSelect.value); this.applyFilter(); });
                 els.toggleBtn.addEventListener('click', (e) => { e.stopPropagation(); els.box.classList.toggle('mini'); els.toggleBtn.innerText = els.box.classList.contains('mini') ? '+' : '-'; });
 
-                els.head.addEventListener('mousedown', (e) => {
+                els.head.style.touchAction = 'none';
+                els.head.addEventListener('pointerdown', (e) => {
                     if (['BUTTON', 'SELECT', 'INPUT'].includes(e.target.tagName)) return;
                     e.preventDefault();
+                    // PointerEvent 会自动把鼠标 clientX 和触摸 clientX 统一
                     const dx = e.clientX - this.host.offsetLeft, dy = e.clientY - this.host.offsetTop;
                     this.host.style.right = this.host.style.bottom = 'auto';
                     const onMove = ev => {
                         this.host.style.left = Math.max(0, Math.min(ev.clientX - dx, window.innerWidth - els.box.offsetWidth)) + 'px';
                         this.host.style.top = Math.max(0, Math.min(ev.clientY - dy, window.innerHeight - els.box.offsetHeight)) + 'px';
                     };
-                    document.addEventListener('mousemove', onMove);
-                    document.addEventListener('mouseup', () => document.removeEventListener('mousemove', onMove), { once: true });
+                    document.addEventListener('pointermove', onMove);
+                    const onEnd = () => {
+                        document.removeEventListener('pointermove', onMove);
+                    };
+                    document.addEventListener('pointerup', onEnd, { once: true });
+                    document.addEventListener('pointercancel', onEnd, { once: true }); // 移动端必加：防系统手势中断
                 });
             },
             getFilters() { return { domain: this.els.domainInput.value, path: this.els.pathInput.value }; },
