@@ -150,12 +150,14 @@
             IS_APPEND: Storage.get(KEYS.APPEND, 'false') === 'true',
             // FIELDS 参数说明: key(字段名), label(表头文本), width(宽度%), class(CSS类名), color(是否启用颜色哈希), parse(是否从请求参数中解析, 默认true)
             FIELDS: [
-                { key: 'tid', label: 'tid (衡量ID)', width: '12%', class: 'c-tid' },
-                { key: 'en', label: 'en (事件)', width: '25%', class: 'c-en' },
+                { key: 'tid', label: 'tid (衡量ID)', width: '10%', class: 'c-tid' },
+                { key: 'en', label: 'en (事件)', width: '22%', class: 'c-en' },
                 { key: 'gcs', label: 'gcs', width: '6%', class: 'c-gcs', color: true },
-                { key: 'cid', label: 'cid (客户端ID)', width: '18%', class: 'c-mono', color: true },
-                { key: 'sid', label: 'sid (会话)', width: '10%', class: 'c-mono', color: true },
-                { key: 'tfd', label: 'tfd', width: '9%', class: '' },
+                { key: 'cid', label: 'cid (客户端ID)', width: '16%', class: 'c-mono', color: true },
+                { key: 'sid', label: 'sid (会话)', width: '8%', class: 'c-mono', color: true },
+                { key: '_fv', label: '_fv', width: '5%', class: 'c-mono', color: true }, // 新增：首次访问
+                { key: '_ss', label: '_ss', width: '5%', class: 'c-mono', color: true }, // 新增：新会话开始
+                { key: 'tfd', label: 'tfd', width: '8%', class: '' },
                 { key: 'meta', label: '时间/环境', width: '10%', class: 'c-meta', parse: false },
                 { key: 'status', label: '返回状态码', width: '10%', class: 'c-status', parse: false },
             ]
