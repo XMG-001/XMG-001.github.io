@@ -62,6 +62,15 @@
                 d.getMinutes().toString().padStart(2, '0'),
                 d.getSeconds().toString().padStart(2, '0')
             ].join(':');
+        },
+        // [修复核心1] 增加强大的 Body 字符串化工具，解决二进制流丢数据问题
+        stringifyBody: (body) => {
+            if (!body) return '';
+            if (typeof body === 'string') return body;
+            if (body instanceof ArrayBuffer || ArrayBuffer.isView(body)) {
+                try { return new TextDecoder('utf-8').decode(body); } catch (e) { return ''; }
+            }
+            try { return JSON.stringify(body); } catch (e) { return String(body); }
         }
     };
 
@@ -148,15 +157,14 @@
         CONFIG = {
             MAX_LOGS: 200,
             IS_APPEND: Storage.get(KEYS.APPEND, 'false') === 'true',
-            // FIELDS 参数说明: key(字段名), label(表头文本), width(宽度%), class(CSS类名), color(是否启用颜色哈希), parse(是否从请求参数中解析, 默认true)
             FIELDS: [
                 { key: 'tid', label: 'tid (衡量ID)', width: '12%', class: 'c-tid' },
                 { key: 'en', label: 'en (事件)', width: '20%', class: 'c-en' },
                 { key: 'gcs', label: 'gcs', width: '6%', class: 'c-gcs', color: true },
                 { key: 'cid', label: 'cid (客户端ID)', width: '16%', class: 'c-mono', color: true },
                 { key: 'sid', label: 'sid (会话)', width: '8%', class: 'c-mono', color: true },
-                { key: '_fv', label: '_fv', width: '5%', class: 'c-mono', color: true }, // 新增：首次访问
-                { key: '_ss', label: '_ss', width: '5%', class: 'c-mono', color: true }, // 新增：新会话开始
+                { key: '_fv', label: '_fv', width: '5%', class: 'c-mono', color: true },
+                { key: '_ss', label: '_ss', width: '5%', class: 'c-mono', color: true },
                 { key: 'tfd', label: 'tfd', width: '8%', class: '' },
                 { key: 'meta', label: '时间/环境', width: '10%', class: 'c-meta', parse: false },
                 { key: 'status', label: '返回状态码', width: '10%', class: 'c-status', parse: false },
@@ -198,7 +206,8 @@
             extract(url, body, filters, meta) {
                 if (!url || typeof url !== 'string') return null;
                 const { domain: targetDomain, path: targetPath } = filters;
-                const bodyStr = typeof body === 'string' ? body : '';
+                // [修复点2] 使用统一工具将不同格式的 body 安全转化为字符串
+                const bodyStr = Utils.stringifyBody(body);
 
                 if (targetDomain && !url.includes(targetDomain)) return null;
                 if (targetPath && !url.includes(targetPath) && !bodyStr.includes(targetPath)) return null;
@@ -207,17 +216,23 @@
                 const baseParams = new URLSearchParams(urlQs);
                 const extractedLogs = [];
 
-                if (bodyStr.includes('\n')) {
-                    bodyStr.split('\n').map(l => l.trim()).filter(Boolean).forEach((line, index) => {
+                // [修复点3] 统一使用 \r?\n 切割，抹平系统差异。合并单行和多行的处理逻辑，确保不管 Batch 还是 Single Event 都能稳定提取
+                const lines = bodyStr.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+
+                if (lines.length > 0) {
+                    // 当有 payload 时（包含 batch 和 单个 payload）
+                    lines.forEach((line, index) => {
                         const lineParams = new URLSearchParams(line);
                         if (lineParams.has('en') || baseParams.has('en')) {
-                            const record = this.buildRecord(lineParams, baseParams, { ...meta, rowId: `${meta.rowId}_${index}` }, true);
+                            // lines.length > 1 代表是真实的 batch 批量请求
+                            const isBatch = lines.length > 1;
+                            const record = this.buildRecord(lineParams, baseParams, { ...meta, rowId: `${meta.rowId}_${index}` }, isBatch);
                             if (record) extractedLogs.push(record);
                         }
                     });
                 } else {
-                    const qs = urlQs + (bodyStr ? (urlQs ? '&' : '') + bodyStr : '');
-                    const record = this.buildRecord(new URLSearchParams(qs), baseParams, meta, false);
+                    // GET 请求，没有任何 Body 的情况
+                    const record = this.buildRecord(baseParams, baseParams, meta, false);
                     if (record) extractedLogs.push(record);
                 }
                 return extractedLogs.length ? extractedLogs : null;
@@ -225,6 +240,7 @@
             buildRecord(primaryParams, fallbackParams, meta, isBatch) {
                 const data = { _capturedAtUrl: meta.capturedAtUrl || window.location.href, _isSandbox: meta._isSandbox || false, timestamp: meta.timestamp || Date.now(), _rowId: meta.rowId, status: meta.status, _isBatch: isBatch };
                 CONFIG.FIELDS.filter(f => f.parse !== false).forEach(f => {
+                    // 优先从 payload 当中提取（primaryParams），取不到再从 url 基础参数里提取（fallbackParams）
                     data[f.key] = primaryParams.get(f.key) || fallbackParams.get(f.key) || '-';
                 });
                 return (data.en === '-' && data.tid === '-') ? null : data;
@@ -494,8 +510,9 @@
             // 沙盒完全抛弃业务逻辑，化身为纯粹的盲发代理
             NetworkProxy.init({
                 onRequest: (url, body, rowId, defaultStatus) => {
-                    // 防止跨域克隆对象报错（DataCloneError），确保 body 仅为字符串
-                    const safeBody = typeof body === 'string' ? body : '';
+                    // [修复点4] 在通信前将 body 安全转为字符串，防止 DataCloneError
+                    // 因为 Sandbox 传过来的 body 也可能是 ArrayBuffer（Shopify WebPixel 常用 sendBeacon 发送二进制流）
+                    const safeBody = Utils.stringifyBody(body);
                     window.parent.postMessage({
                         type: CHANNEL_ID,
                         action: 'request',
