@@ -129,8 +129,9 @@
             this.host.id = 'jx-shopify-cp-inspector';
             this.host.innerHTML = '<i hidden></i>'; // 避免shopify css判空不显示
             this.host.style.cssText = `position: fixed; top: 20px; right: 20px; z-index: 2147483647;`;
-            document.body.appendChild(this.host);
             this.shadow = this.host.attachShadow({ mode: 'open' });
+            const inject = () => document.body ? document.body.appendChild(this.host) : false;
+            if (!inject()) new MutationObserver((_, obs) => inject() && obs.disconnect()).observe(document.documentElement, { childList: true });
             this.renderLayout();
             this.bindDrag();
         },
