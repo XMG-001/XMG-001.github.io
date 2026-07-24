@@ -241,44 +241,37 @@
             const el = this.host;
             const panel = this.shadow.querySelector('#main-panel');
             let isDragging = false, offset = { x: 0, y: 0 }, clickTime;
-
             const start = (e) => {
                 isDragging = true;
-                const event = e.type.includes('touch') ? e.touches[0] : e;
                 const rect = el.getBoundingClientRect();
-                offset = { x: event.clientX - rect.left, y: event.clientY - rect.top };
+                offset = { x: e.clientX - rect.left, y: e.clientY - rect.top };
             };
-
             const move = (e) => {
                 if (!isDragging) return;
                 e.preventDefault();
-                const event = e.type.includes('touch') ? e.touches[0] : e;
-                const x = Math.max(0, Math.min(event.clientX - offset.x, window.innerWidth - el.offsetWidth));
-                const y = Math.max(0, Math.min(event.clientY - offset.y, window.innerHeight - el.offsetHeight));
+                const x = Math.max(0, Math.min(e.clientX - offset.x, window.innerWidth - el.offsetWidth));
+                const y = Math.max(0, Math.min(e.clientY - offset.y, window.innerHeight - el.offsetHeight));
                 el.style.left = `${x}px`;
                 el.style.top = `${y}px`;
                 el.style.right = 'auto';
             };
-
-            const stop = () => { isDragging = false; };
-
+            const stop = () => {
+                isDragging = false;
+            };
             this.shadow.querySelectorAll('#btn-toggle, #panel-header').forEach(handle => {
-                handle.addEventListener('mousedown', start);
-                handle.addEventListener('touchstart', start, { passive: false });
+                handle.style.touchAction = 'none';
+                handle.addEventListener('pointerdown', start);
             });
-
-            document.addEventListener('mousemove', move);
-            document.addEventListener('touchmove', move, { passive: false });
-            document.addEventListener('mouseup', stop);
-            document.addEventListener('touchend', stop);
-
+            document.addEventListener('pointermove', move, { passive: false });
+            document.addEventListener('pointerup', stop);
+            document.addEventListener('pointercancel', stop);
             const toggleBtn = this.shadow.querySelector('#btn-toggle');
-            toggleBtn.onmousedown = () => { clickTime = Date.now(); };
-            toggleBtn.onmouseup = () => {
+            toggleBtn.addEventListener('pointerdown', () => { clickTime = Date.now(); });
+            toggleBtn.addEventListener('pointerup', () => {
                 if (Date.now() - clickTime < 200) {
                     panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
                 }
-            };
+            });
         },
 
         updateView(records, globalState) {
@@ -321,7 +314,7 @@
                 if (ShopifyAPI.isBaseLoaded) {
                     clearInterval(timer);
                     this.start();
-                } else if (++attempts > 10) clearInterval(timer);
+                } else if (++attempts > 30) clearInterval(timer);
             }, 1000);
         },
 
