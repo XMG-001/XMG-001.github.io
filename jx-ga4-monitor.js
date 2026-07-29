@@ -264,7 +264,7 @@
                 const style = document.createElement('style');
                 style.textContent = `
                     /* 基础布局与磨砂玻璃底座 */
-                    #ga4-box {letter-spacing:normal;line-height:normal;font-weight:normal;width:1000px;max-height:650px;background:rgba(255,255,255,0.8);color:#1d1d1f;font-family:sans-serif;font-size:12px;border-radius:14px;box-shadow: 0 20px 40px rgba(0,0,0,0.1), inset 0 0 0 1px rgba(255,255,255,0.6);display:flex;flex-direction:column;overflow:hidden;backdrop-filter:blur(24px) saturate(180%);transition: width 0.3s, height 0.3s;}
+                    #ga4-box {letter-spacing:normal;line-height:normal;font-weight:normal;width:1000px;max-height:650px;background:rgba(255,255,255,0.8);color:#1d1d1f;font-family:sans-serif;font-size:12px;border-radius:14px;box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.6);display:flex;flex-direction:column;overflow:hidden;backdrop-filter:blur(24px) saturate(180%);transition: width 0.3s, height 0.3s;}
                     #ga4-box.mini { width: 80px; max-height: 40px!important; }
                     #ga4-box.mini #ga4-body, #ga4-box.mini .hide-on-mini { display: none; }
 
