@@ -149,10 +149,9 @@
 
                     /* Components */
                     .trigger-btn {
-                        width: 48px; height: 48px; border-radius: 14px; background: #fff;
+                        width: 40px; height: 40px; border-radius: 12px; background: #fff;
                         display: flex; align-items: center; justify-content: center; cursor: move;
-                        box-shadow: 0 6px 16px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.05);
-                        user-select: none; transition: transform 0.2s ease;
+                        box-shadow: 0 6px 16px rgba(0,0,0,0.12); user-select: none; transition: transform 0.2s ease;
                     }
                     .trigger-btn:active { transform: scale(0.95); }
 
