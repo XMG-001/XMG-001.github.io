@@ -265,24 +265,24 @@
                 style.textContent = `
                     /* 基础布局与磨砂玻璃底座 */
                     #ga4-box {letter-spacing:normal;line-height:normal;font-weight:normal;width:1000px;max-height:650px;background:rgba(255,255,255,0.8);color:#1d1d1f;font-family:sans-serif;font-size:12px;border-radius:14px;box-shadow: 0 20px 40px rgba(0,0,0,0.1), inset 0 0 0 1px rgba(255,255,255,0.6);display:flex;flex-direction:column;overflow:hidden;backdrop-filter:blur(24px) saturate(180%);transition: width 0.3s, height 0.3s;}
-                    #ga4-box.mini { width: 175px; max-height: 40px!important; }
+                    #ga4-box.mini { width: 80px; max-height: 40px!important; }
                     #ga4-box.mini #ga4-body, #ga4-box.mini .hide-on-mini { display: none; }
 
-                    /* 头部润色：更高级的暖橙微渐变与精简布局 */
-                    #ga4-head { box-sizing: border-box; height: 40px; padding: 8px 12px; background: linear-gradient(135deg, rgba(234,88,12,0.9), rgba(220,38,38,0.85)); display: flex; gap: 8px; align-items: center; cursor: move; user-select: none; color: #fff; border-bottom: 1px solid rgba(0,0,0,0.05); box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1); }
-                    #ga4-title { font-weight: 600; flex: 1; font-size: 13px; text-shadow: 0 1px 2px rgba(0,0,0,0.15); white-space: nowrap;}
+                    #ga4-head { box-sizing: border-box; height: 40px; padding: 8px 12px; display: flex; gap: 8px; align-items: center; cursor: move; user-select: none; color: #1d1d1f; border-bottom: 1px solid rgba(0,0,0,0.08); }
+                    #ga4-title { font-weight: 600; flex: 1; font-size: 13px; color: #ea580c; white-space: nowrap;}
                     .hide-on-mini { animation: ga4FadeIn 0.25s ease-out forwards; }
                     @keyframes ga4FadeIn { from {opacity: 0; transform: translateX(-5px);} to {opacity: 1; transform: translateX(0);} }
-                    /* 头部输入框与选择框的精致感优化 */
-                    input.ga4-input { background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.25); border-radius: 6px; padding: 4px 10px; font-size: 11px; outline: none; width: 110px; transition: all 0.2s; }
-                    input.ga4-input:focus { background: #fff; color: #1d1d1f; box-shadow: 0 0 0 3px rgba(234,88,12,0.4); border-color: transparent; }
-                    input.ga4-input::placeholder { color: rgba(255,255,255,0.6); }
-                    select.ga4-select { background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.25); border-radius: 6px; padding: 4px 8px; font-size: 11px; outline: none; cursor: pointer; transition: all 0.2s; }
+
+                    input.ga4-input { color: #ea580c; border: 1px solid rgba(234, 88, 12, 0.25); border-radius: 6px; padding: 4px 10px; font-size: 11px; outline: none; width: 110px; transition: all 0.2s; }
+                    input.ga4-input:focus { background: #fff; color: #ea580c; box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.25); border-color: #ea580c; }
+                    input.ga4-input::placeholder { color: #94a3b8; }
+
+                    select.ga4-select { color: #ea580c; border: 1px solid rgba(234, 88, 12, 0.25); border-radius: 6px; padding: 4px 8px; font-size: 11px; outline: none; cursor: pointer; transition: all 0.2s; }
+                    select.ga4-select:focus { background: #fff; border-color: #ea580c; }
                     select.ga4-select option { color: #1d1d1f; background: #fff; }
 
-                    /* 功能按钮优化 */
-                    .ga4-btn { background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.25); padding: 4px 12px; border-radius: 5px; cursor: pointer; font-size: 11px; font-weight: 500; transition: all 0.2s; }
-                    .ga4-btn:hover { background: #fff; color: #ea580c; transform: translateY(-1px); box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+                    .ga4-btn { background: rgba(255, 255, 255, 0.15); color: #ea580c; border: 1px solid rgba(234, 88, 12, 0.25); padding: 4px 12px; border-radius: 5px; cursor: pointer; font-size: 11px; font-weight: 600; transition: all 0.2s; }
+                    .ga4-btn:hover { background: #f97316; color: #ffffff; border-color: #ea580c; transform: translateY(-1px); box-shadow: 0 2px 8px rgba(234, 88, 12, 0.3); }
 
                     /* 表格与数据展示区（保持原样） */
                     #ga4-body { flex: 1; overflow-y: auto; min-height: 50px; background: transparent; }
@@ -321,7 +321,8 @@
                 box.innerHTML = `
                     <div id="ga4-head">
                         <button class="ga4-btn" id="ga4-toggle" style="padding: 3px 8px;min-width: 25px;">+</button>
-                        <span id="ga4-title">GA4 请求监测 <span style="font-size: 11px; font-weight: normal; margin-left: 4px; color: rgba(255,255,255,0.9);">(<span id="ga4-count">0</span><span class="hide-on-mini" style="opacity: 0.65;">/${CONFIG.MAX_LOGS} 行</span>)</span></span>
+                        <span style="display: inline-block; width: 20px; height: 20px; vertical-align: middle; background: url('https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg') no-repeat center/contain;"></span>
+                        <span id="ga4-title" class="hide-on-mini">GA4 请求监测 <span class="hide-on-mini" style="font-size: 11px; font-weight: normal; margin-left: 4px; color: #ea580c;">(<span id="ga4-count">0</span><span class="hide-on-mini" style="opacity: 0.65;">/${CONFIG.MAX_LOGS} 行</span>)</span></span>
                         <input type="text" id="ga4-domain-match" class="ga4-input hide-on-mini" placeholder="域名(例:google)" title="匹配URL中的域名" />
                         <input type="text" id="ga4-path-match" class="ga4-input hide-on-mini" placeholder="路径(例:collect?v=2)" title="匹配URL或Body中的路径" />
                         <select id="ga4-filter-tid" class="ga4-select hide-on-mini"><option value="all">全部 TID</option></select>
