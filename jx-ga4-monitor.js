@@ -1,8 +1,6 @@
 (function () {
     'use strict';
 
-    const CHANNEL_ID = 'JX_GA4_CAPTURE_SYNC';
-
     // ==========================================
     // 🛡️ 0. 环境感知与防御层
     // ==========================================
@@ -33,6 +31,8 @@
         }
     };
     if (!ENV.check()) return;
+
+    const CHANNEL_ID = 'JX_GA4_CAPTURE_SYNC';
 
     // ==========================================
     // 🛠️ 1. 核心工具与底层代理层 (跨环境通用)
@@ -203,17 +203,19 @@
             handleNavigation(overrideType, syncUI = true) {
                 const currentUrl = window.location.href;
                 const navType = overrideType || this.getNavType();
-                
-                let ref = this._lastUrl;
-                if (!overrideType && navType === 'reload') {
-                    ref = currentUrl;
-                } else if (!ref) {
-                    const back = window.history.state?.back;
-                    ref = back ? (URL.canParse?.(back, location.origin) ? new URL(back, location.origin).href : back) : (document.referrer || '');
+                let ref = '';
+                if (overrideType === 'spa') {
+                    ref = this._lastUrl;
+                } else {
+                    ref = document.referrer || '';
                 }
-
-                const last = this.logs[this.logs.length - 1] || {};
-                if (last.to !== currentUrl || last.from !== ref || last.type !== navType) {
+                // 格式化处理 history.state.back 的异常边界
+                if (!ref && window.history.state?.back) {
+                    const back = window.history.state.back;
+                    ref = URL.canParse?.(back, location.origin) ? new URL(back, location.origin).href : back;
+                }
+                const lastNavLog = this.logs.slice().reverse().find(log => log._isNav) || {};
+                if (lastNavLog.to !== currentUrl || lastNavLog.from !== ref || lastNavLog.type !== navType) {
                     this.addLogs([{
                         _isNav: true,
                         type: navType,
