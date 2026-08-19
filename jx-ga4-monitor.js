@@ -63,7 +63,6 @@
                 d.getSeconds().toString().padStart(2, '0')
             ].join(':');
         },
-        // [修复核心1] 增加强大的 Body 字符串化工具，解决二进制流丢数据问题
         stringifyBody: (body) => {
             if (!body) return '';
             if (typeof body === 'string') return body;
@@ -74,9 +73,6 @@
         }
     };
 
-    /**
-     * 纯粹的底层网络拦截器，不包含任何业务校验
-     */
     const NetworkProxy = {
         init({ onRequest, onResponse }) {
             if (window.fetch) {
@@ -134,7 +130,7 @@
     };
 
     // ==========================================
-    // 💼 2. 主控台专属业务层 (沙盒不加载这些模块)
+    // 💼 2. 主控台专属业务层
     // ==========================================
     let Storage, KEYS, CONFIG, LogState, GA4Parser, UI;
 
@@ -146,13 +142,7 @@
             saveCache: (key, logs) => { try { sessionStorage.setItem(key, JSON.stringify(logs)); } catch (e) { } }
         };
 
-        KEYS = {
-            CACHE: 'jx_ga4_monitor_logs',
-            FILTER: 'jx_ga4_monitor_filter_tid',
-            DOMAIN: 'jx_ga4_monitor_domain_match',
-            PATH: 'jx_ga4_monitor_path_match',
-            APPEND: 'jx_ga4_monitor_is_append'
-        };
+        KEYS = { CACHE: 'jx_ga4_monitor_logs', FILTER: 'jx_ga4_monitor_filter_tid', DOMAIN: 'jx_ga4_monitor_domain_match', PATH: 'jx_ga4_monitor_path_match', APPEND: 'jx_ga4_monitor_is_append' };
 
         CONFIG = {
             MAX_LOGS: 200,
@@ -172,31 +162,95 @@
         };
 
         LogState = {
-            logs: [], knownTids: new Set(),
+            logs: [], 
+            knownTids: new Set(),
+            _lastUrl: '',
+            
+            // 解耦层：由外部(MainApp)注入回调函数，实现高内聚低耦合
+            onLogsAdded: null,
+            onStatusUpdated: null,
+
             init() {
-                this.logs = Storage.getCache(KEYS.CACHE);
-                this.handleNavigation();
+                this.logs = Storage.getCache(KEYS.CACHE) || [];
+                this._lastUrl = window.location.href;
+                // 1. 首次加载执行（传入 syncUI=false，避免尚未完成全量挂载时触发增量渲染）
+                this.handleNavigation(undefined, false);
+
+                ['pushState', 'replaceState'].forEach(m => {
+                    const orig = window.history[m];
+                    window.history[m] = (...args) => {
+                        const prev = window.location.href;
+                        const res = orig.apply(window.history, args);
+                        if (window.location.href !== prev) {
+                            this._lastUrl = prev;
+                            this.handleNavigation('spa');
+                        }
+                        return res;
+                    };
+                });
+
+                const handlePop = () => this.handleNavigation('spa');
+                window.addEventListener('popstate', handlePop, true);
+                window.addEventListener('hashchange', handlePop, true);
             },
-            handleNavigation() {
-                const currentUrl = window.location.href, referrerUrl = document.referrer;
-                const navType = performance.getEntriesByType('navigation')[0]?.type || 'navigate';
-                const lastLog = this.logs[this.logs.length - 1] || {};
-                if (lastLog.to !== currentUrl || lastLog.from !== referrerUrl) {
-                    this.addLogs([{ _isNav: true, type: navType, from: referrerUrl || '', to: currentUrl, _capturedAtUrl: currentUrl, timestamp: Date.now() }]);
+
+            getNavType() {
+                const entry = performance.getEntriesByType('navigation')[0];
+                if (entry) return entry.type; // 'navigate' | 'reload' | 'back_forward'
+                return ['navigate', 'reload', 'back_forward'][performance.navigation?.type] || 'navigate';
+            },
+
+            handleNavigation(overrideType, syncUI = true) {
+                const currentUrl = window.location.href;
+                const navType = overrideType || this.getNavType();
+                
+                let ref = this._lastUrl;
+                if (!overrideType && navType === 'reload') {
+                    ref = currentUrl;
+                } else if (!ref) {
+                    const back = window.history.state?.back;
+                    ref = back ? (URL.canParse?.(back, location.origin) ? new URL(back, location.origin).href : back) : (document.referrer || '');
                 }
+
+                const last = this.logs[this.logs.length - 1] || {};
+                if (last.to !== currentUrl || last.from !== ref || last.type !== navType) {
+                    this.addLogs([{
+                        _isNav: true,
+                        type: navType,
+                        from: ref,
+                        to: currentUrl,
+                        _capturedAtUrl: currentUrl,
+                        timestamp: Date.now()
+                    }], syncUI);
+                }
+                this._lastUrl = currentUrl;
             },
-            addLogs(newLogs) {
+
+            // 修改点：默认向外触发更新机制，保留可选的静默写入(syncUI)
+            addLogs(newLogs, syncUI = true) {
                 this.logs.push(...newLogs);
                 if (this.logs.length > CONFIG.MAX_LOGS) this.logs = this.logs.slice(-CONFIG.MAX_LOGS);
                 Storage.saveCache(KEYS.CACHE, this.logs);
+
+                if (syncUI && typeof this.onLogsAdded === 'function') {
+                    this.onLogsAdded(newLogs);
+                }
             },
-            updateStatus(rowId, status) {
+
+            updateStatus(rowId, status, syncUI = true) {
                 let changed = false;
                 this.logs.forEach(log => {
                     if (log._rowId?.startsWith(rowId)) { log.status = status; changed = true; }
                 });
-                if (changed) Storage.saveCache(KEYS.CACHE, this.logs);
+                if (changed) {
+                    Storage.saveCache(KEYS.CACHE, this.logs);
+                    
+                    if (syncUI && typeof this.onStatusUpdated === 'function') {
+                        this.onStatusUpdated(rowId, status);
+                    }
+                }
             },
+
             clear() {
                 this.logs = []; this.knownTids.clear(); Storage.saveCache(KEYS.CACHE, []);
             }
@@ -206,7 +260,6 @@
             extract(url, body, filters, meta) {
                 if (!url || typeof url !== 'string') return null;
                 const { domain: targetDomain, path: targetPath } = filters;
-                // [修复点2] 使用统一工具将不同格式的 body 安全转化为字符串
                 const bodyStr = Utils.stringifyBody(body);
 
                 if (targetDomain && !url.includes(targetDomain)) return null;
@@ -216,22 +269,18 @@
                 const baseParams = new URLSearchParams(urlQs);
                 const extractedLogs = [];
 
-                // [修复点3] 统一使用 \r?\n 切割，抹平系统差异。合并单行和多行的处理逻辑，确保不管 Batch 还是 Single Event 都能稳定提取
                 const lines = bodyStr.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
 
                 if (lines.length > 0) {
-                    // 当有 payload 时（包含 batch 和 单个 payload）
                     lines.forEach((line, index) => {
                         const lineParams = new URLSearchParams(line);
                         if (lineParams.has('en') || baseParams.has('en')) {
-                            // lines.length > 1 代表是真实的 batch 批量请求
                             const isBatch = lines.length > 1;
                             const record = this.buildRecord(lineParams, baseParams, { ...meta, rowId: `${meta.rowId}_${index}` }, isBatch);
                             if (record) extractedLogs.push(record);
                         }
                     });
                 } else {
-                    // GET 请求，没有任何 Body 的情况
                     const record = this.buildRecord(baseParams, baseParams, meta, false);
                     if (record) extractedLogs.push(record);
                 }
@@ -240,7 +289,6 @@
             buildRecord(primaryParams, fallbackParams, meta, isBatch) {
                 const data = { _capturedAtUrl: meta.capturedAtUrl || window.location.href, _isSandbox: meta._isSandbox || false, timestamp: meta.timestamp || Date.now(), _rowId: meta.rowId, status: meta.status, _isBatch: isBatch };
                 CONFIG.FIELDS.filter(f => f.parse !== false).forEach(f => {
-                    // 优先从 payload 当中提取（primaryParams），取不到再从 url 基础参数里提取（fallbackParams）
                     data[f.key] = primaryParams.get(f.key) || fallbackParams.get(f.key) || '-';
                 });
                 return (data.en === '-' && data.tid === '-') ? null : data;
@@ -263,28 +311,21 @@
             renderLayout() {
                 const style = document.createElement('style');
                 style.textContent = `
-                    /* 基础布局与磨砂玻璃底座 */
                     #ga4-box {letter-spacing:normal;line-height:normal;font-weight:normal;width:1000px;max-height:650px;background:rgba(255,255,255,0.8);color:#1d1d1f;font-family:sans-serif;font-size:12px;border-radius:14px;box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.6);display:flex;flex-direction:column;overflow:hidden;backdrop-filter:blur(24px) saturate(180%);transition: width 0.3s, height 0.3s;}
                     #ga4-box.mini { width: 80px; max-height: 40px!important; }
                     #ga4-box.mini #ga4-body, #ga4-box.mini .hide-on-mini { display: none; }
-
                     #ga4-head { box-sizing: border-box; height: 40px; padding: 8px 12px; display: flex; gap: 8px; align-items: center; cursor: move; user-select: none; color: #1d1d1f; border-bottom: 1px solid rgba(0,0,0,0.08); }
                     #ga4-title { font-weight: 600; flex: 1; font-size: 13px; color: #ea580c; white-space: nowrap;}
                     .hide-on-mini { animation: ga4FadeIn 0.25s ease-out forwards; }
                     @keyframes ga4FadeIn { from {opacity: 0; transform: translateX(-5px);} to {opacity: 1; transform: translateX(0);} }
-
                     input.ga4-input { color: #ea580c; border: 1px solid rgba(234, 88, 12, 0.25); border-radius: 6px; padding: 4px 10px; font-size: 11px; outline: none; width: 110px; transition: all 0.2s; }
                     input.ga4-input:focus { background: #fff; color: #ea580c; box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.25); border-color: #ea580c; }
                     input.ga4-input::placeholder { color: #94a3b8; }
-
                     select.ga4-select { color: #ea580c; border: 1px solid rgba(234, 88, 12, 0.25); border-radius: 6px; padding: 4px 8px; font-size: 11px; outline: none; cursor: pointer; transition: all 0.2s; }
                     select.ga4-select:focus { background: #fff; border-color: #ea580c; }
                     select.ga4-select option { color: #1d1d1f; background: #fff; }
-
                     .ga4-btn { background: rgba(255, 255, 255, 0.15); color: #ea580c; border: 1px solid rgba(234, 88, 12, 0.25); padding: 4px 12px; border-radius: 5px; cursor: pointer; font-size: 11px; font-weight: 600; transition: all 0.2s; }
                     .ga4-btn:hover { background: #f97316; color: #ffffff; border-color: #ea580c; transform: translateY(-1px); box-shadow: 0 2px 8px rgba(234, 88, 12, 0.3); }
-
-                    /* 表格与数据展示区（保持原样） */
                     #ga4-body { flex: 1; overflow-y: auto; min-height: 50px; background: transparent; }
                     #ga4-body::-webkit-scrollbar { width: 8px; }
                     #ga4-body::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 10px; border: 2px solid transparent; background-clip: padding-box; }
@@ -373,7 +414,6 @@
                 els.head.addEventListener('pointerdown', (e) => {
                     if (['BUTTON', 'SELECT', 'INPUT'].includes(e.target.tagName)) return;
                     e.preventDefault();
-                    // PointerEvent 会自动把鼠标 clientX 和触摸 clientX 统一
                     const dx = e.clientX - this.host.offsetLeft, dy = e.clientY - this.host.offsetTop;
                     this.host.style.right = this.host.style.bottom = 'auto';
                     const onMove = ev => {
@@ -381,11 +421,9 @@
                         this.host.style.top = Math.max(0, Math.min(ev.clientY - dy, window.innerHeight - els.box.offsetHeight)) + 'px';
                     };
                     document.addEventListener('pointermove', onMove);
-                    const onEnd = () => {
-                        document.removeEventListener('pointermove', onMove);
-                    };
+                    const onEnd = () => { document.removeEventListener('pointermove', onMove); };
                     document.addEventListener('pointerup', onEnd, { once: true });
-                    document.addEventListener('pointercancel', onEnd, { once: true }); // 移动端必加：防系统手势中断
+                    document.addEventListener('pointercancel', onEnd, { once: true });
                 });
             },
             getFilters() { return { domain: this.els.domainInput.value, path: this.els.pathInput.value }; },
@@ -411,7 +449,8 @@
                 const tr = document.createElement('tr');
                 if (data._isNav) {
                     tr.className = 'ga4-row-nav';
-                    tr.innerHTML = `<td colspan="${CONFIG.FIELDS.length}"><div class="nav-block"><span class="c-nav-tag">${data.type === 'reload' ? 'RELOAD' : 'NAVIGATE'}</span><div class="nav-paths"><div class="nav-line"><b>FROM:</b>${data.from || '(direct)'}</div><div class="nav-line" style="color:#ea580c;font-weight:500;"><b>TO:</b>${data.to}</div></div></div></td>`;
+                    const tagText = data.type ? String(data.type).toUpperCase() : 'NAVIGATE';
+                    tr.innerHTML = `<td colspan="${CONFIG.FIELDS.length}"><div class="nav-block"><span class="c-nav-tag">${tagText}</span><div class="nav-paths"><div class="nav-line"><b>FROM:</b>${data.from || '(direct)'}</div><div class="nav-line" style="color:#ea580c;font-weight:500;"><b>TO:</b>${data.to}</div></div></div></td>`;
                 } else {
                     if (data.tid !== '-' && !LogState.knownTids.has(data.tid)) {
                         LogState.knownTids.add(data.tid); this.els.filterSelect.add(new Option(data.tid, data.tid));
@@ -456,13 +495,20 @@
     }
 
     // ==========================================
-    // 🚀 3. 主控台引擎 (Main App)
+    // 🚀 3. 主控台引擎 (Main App) - 扮演核心调度器
     // ==========================================
     const MainApp = {
         init() {
-            LogState.init(); UI.mount(); UI.renderLogs([...LogState.logs], false); UI.applyFilter();
-
-            // 监听主站自身发出的请求
+            // 1. 挂载 UI（此时先不渲染任何数据）
+            UI.mount();
+            // 2. 将视图更新逻辑通过钩子注入到数据模型中，实现纯净解耦
+            LogState.onLogsAdded = (logs) => UI.renderLogs(logs, true);
+            LogState.onStatusUpdated = (rowId, status) => UI.updateRowStatus(rowId, status);
+            // 3. 初始化数据（内部静默触发历史导航日志拦截，不触发异常增量UI更新）
+            LogState.init();
+            // 4. 初次完成：进行日志的全量安全渲染
+            UI.renderLogs([...LogState.logs], false);
+            UI.applyFilter();
             NetworkProxy.init({
                 onRequest: (url, body, rowId, defaultStatus) => {
                     return this.processRequest(url, body, rowId, defaultStatus, {
@@ -471,13 +517,10 @@
                 },
                 onResponse: (rowId, status) => this.processResponse(rowId, status)
             });
-
-            // 监听来自 Sandbox 盲发的请求消息
             window.addEventListener('message', (e) => {
                 if (e.data?.type === CHANNEL_ID) {
                     const { action, payload } = e.data;
                     if (action === 'request') {
-                        // 共用一套解析链路，完美复用参数提取和过滤规则
                         this.processRequest(payload.url, payload.body, payload.rowId, payload.defaultStatus, {
                             capturedAtUrl: payload.capturedAtUrl, _isSandbox: true, timestamp: payload.timestamp
                         });
@@ -487,19 +530,21 @@
                 }
             });
         },
-        // 集中处理所有请求（无论是本地还是通信传来的）
+
+        // 统一调度：数据层完成存录后，自动触发解耦的UI更新
         processRequest(url, body, rowId, defaultStatus, meta) {
             const logs = GA4Parser.extract(url, body, UI.getFilters(), { ...meta, rowId, status: defaultStatus });
             if (logs) {
+                // 仅需调用这一行，数据存储 + UI渲染一站式完成
                 LogState.addLogs(logs);
-                UI.renderLogs(logs, true);
-                return true; // 返回 true 通知 NetworkProxy 需要挂载该请求的 onResponse 监听
+                return true; 
             }
             return false;
         },
+        
         processResponse(rowId, status) {
+            // 同上，更新状态也会自动映射到 UI
             LogState.updateStatus(rowId, status);
-            UI.updateRowStatus(rowId, status);
         }
     };
 
@@ -508,18 +553,14 @@
     // ==========================================
     const SandboxApp = {
         init() {
-            // 沙盒完全抛弃业务逻辑，化身为纯粹的盲发代理
             NetworkProxy.init({
                 onRequest: (url, body, rowId, defaultStatus) => {
-                    // [修复点4] 在通信前将 body 安全转为字符串，防止 DataCloneError
-                    // 因为 Sandbox 传过来的 body 也可能是 ArrayBuffer（Shopify WebPixel 常用 sendBeacon 发送二进制流）
                     const safeBody = Utils.stringifyBody(body);
                     window.parent.postMessage({
                         type: CHANNEL_ID,
                         action: 'request',
                         payload: { url, body: safeBody, rowId, defaultStatus, timestamp: Date.now(), capturedAtUrl: window.location.href }
                     }, '*');
-                    // 始终返回 true 从而让沙盒底层拦截并回传该请求的 Response
                     return true;
                 },
                 onResponse: (rowId, status) => {
