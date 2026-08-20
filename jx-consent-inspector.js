@@ -47,9 +47,9 @@
             { id: 'analytics_storage', label: 'analytics_storage' },
             { id: 'ad_user_data', label: 'ad_user_data' },
             { id: 'ad_personalization', label: 'ad_personalization' },
-            { id: 'functionality_storage', label: 'functionality' },
-            { id: 'personalization_storage', label: 'personalization' },
-            { id: 'security_storage', label: 'security' }
+            { id: 'functionality_storage', label: 'functionality_storage' },
+            { id: 'personalization_storage', label: 'personalization_storage' },
+            { id: 'security_storage', label: 'security_storage' }
         ],
         shopifyCols: [
             { key: 'event', label: 'Event', width: '60px' },
@@ -157,7 +157,8 @@
         setConsent(action, payload) {
             if (!payload || Object.keys(payload).length === 0) return;
             window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push('consent', action, payload);
+            window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+            window.gtag('consent', action, payload);
             this.pollDataLayer(); // 立即触发加速响应
         }
     };
@@ -241,8 +242,8 @@
                     .btn:hover { background: #f8f9fa; border-color: #b0b4b8; }
                     .btn-primary { background: #000; color: #fff; border: none; }
                     .btn-primary:hover { background: #333; }
-                    .btn-google { background: #1a73e8; color: #fff; border: none; }
-                    .btn-google:hover { background: #1557b0; }
+                    .btn-google { background: linear-gradient(135deg, #1a73e8, #7c3aed); color: #fff; border: none; }
+                    .btn-google:hover { background: linear-gradient(135deg, #1557b0, #6d28d9); }
                     .split-layout { display: flex; gap: 16px; width: 100%; }
                     .col { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 12px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px; }
                     .col-header { display: flex; align-items: center; justify-content: space-between; font-size: 13px; font-weight: 700; color: #374151; border-bottom: 1px solid #e5e7eb; padding-bottom: 8px;}
@@ -396,8 +397,7 @@
 
             this.dom.googleTbody.innerHTML = googleRecords.map(r => {
                 const diffHtml = Object.entries(r.diff || {}).map(([k, v]) => {
-                    const shortK = k.replace('_storage', '').replace('ad_', '');
-                    return `<div class="diff-item"><b>${shortK}:</b> ${this.getBadge(v.old)} <span class="diff-arrow">➞</span> ${this.getBadge(v.new)}</div>`;
+                    return `<div class="diff-item"><b>${k}:</b> ${this.getBadge(v.old)} <span class="diff-arrow">➞</span> ${this.getBadge(v.new)}</div>`;
                 }).join('');
 
                 return `
