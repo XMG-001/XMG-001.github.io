@@ -219,6 +219,7 @@
                 panel: this.shadow.querySelector('#main-panel'),
                 shopifyStats: this.shadow.querySelector('#shopify-stats'),
                 btnLoadApi: this.shadow.querySelector('#btn-load-api'),
+                btnQueryAll: this.shadow.querySelector('#btn-query-all'),
                 shopifyTbody: this.shadow.querySelector('#shopify-tbody'),
                 googleTbody: this.shadow.querySelector('#google-tbody'),
                 toggleBtn: this.shadow.querySelector('#btn-toggle')
@@ -261,7 +262,8 @@
                     thead { position: sticky; top: 0; background: #f3f4f6 !important; z-index: 2; box-shadow: 0 1px 0 #e5e7eb; }
                     th { padding: 6px 8px !important; font-size: 11px !important; text-align: left !important; color: #666666; font-weight: 600 !important; }
                     td { padding: 8px !important; font-size: 12px !important; vertical-align: top !important; border-top: 1px solid #f3f4f6 !important; }
-                    .inline-flex-box { display: inline-flex; align-items: center; flex-direction: column;}
+                    .inline-flex-box { display: inline-flex; align-items: center; }
+                    .inline-flex-box-column { display: inline-flex; align-items: center; flex-direction: column; }
                     .badge { padding: 2px 4px; border-radius: 4px; font-weight: 700; font-size: 10px; line-height: 1; display: inline-block; text-transform: uppercase; }
                     .b-true { color: #059669; background: #d1fae5; }
                     .b-false { color: #dc2626; background: #fee2e2; }
@@ -287,11 +289,11 @@
                         <div class="split-layout">
                             <div class="col">
                                 <div class="col-header">
-                                    <span><img src="https://www.google.com/s2/favicons?domain=shopify.com&sz=64" width="16" height="16"/> Shopify Customer Privacy</span>
+                                    <span class="inline-flex-box"><img src="https://www.google.com/s2/favicons?domain=shopify.com&sz=64" width="16" height="16"/> Shopify Customer Privacy</span>
                                     <button id="btn-load-api" class="btn" style="display:none; padding: 2px 6px;">Load Consent API</button>
-                                    <button id="btn-query-all" class="btn">Query</button>
+                                    <button id="btn-query-all" class="btn" style="display:none;">Query</button>
                                 </div>
-                                <div class="global-stats" id="shopify-stats"></div>
+                                <div class="global-stats" style="display:none;" id="shopify-stats"></div>
                                 <div class="control-box">
                                     <div class="chk-grid">${renderCheckboxes(CONFIG.shopifyOptions, 'chk')}</div>
                                     <div class="action-row">
@@ -307,7 +309,7 @@
                             </div>
                             <div class="col" style="flex: 1.35;">
                                 <div class="col-header">
-                                    <span><img src="https://www.google.com/s2/favicons?domain=google.com&sz=64" width="16" height="16"/> Google Consent Mode</span>
+                                    <span class="inline-flex-box"><img src="https://www.google.com/s2/favicons?domain=google.com&sz=64" width="16" height="16"/> Google Consent Mode</span>
                                 </div>
                                 <div class="control-box">
                                     <div class="chk-grid">${renderCheckboxes(CONFIG.googleOptions, 'gchk')}</div>
@@ -377,12 +379,16 @@
                 <div>shouldShowBanner: ${this.getBadge(shopifyGlobal.shouldShowBanner)}</div>
                 <div>userCanBeTracked: ${this.getBadge(shopifyGlobal.userCanBeTracked)}</div>
             `;
+            this.dom.shopifyStats.style.display = '';
+
             this.dom.btnLoadApi.style.display = ShopifyAPI.canLoadAPI ? 'inline-block' : 'none';
+
+            this.dom.btnQueryAll.style.display = ShopifyAPI.isCPLoaded ? 'inline-block' : 'none';
 
             this.dom.shopifyTbody.innerHTML = shopifyRecords.map(r => `
                 <tr>
-                    <td><div class="inline-flex-box"><span style="font-size:12px;font-weight:600;color:#111;">${r.time}</span><span class="badge b-purp">${r.event}</span></div></td>
-                    <td><div class="inline-flex-box"><span style="font-size:12px;font-weight:600;color:#111;">${r.state?.region}</span><span class="badge b-neu">${r.state?.law}</span></div></td>
+                    <td><div class="inline-flex-box-column"><span style="font-size:12px;font-weight:600;color:#111;">${r.time}</span><span class="badge b-purp">${r.event}</span></div></td>
+                    <td><div class="inline-flex-box-column"><span style="font-size:12px;font-weight:600;color:#111;">${r.state?.region}</span><span class="badge b-neu">${r.state?.law}</span></div></td>
                     <td>
                         <div class="mini-status">
                             <span>Preferences: ${this.getBadge(r.state?.preferences)}</span>
@@ -402,8 +408,8 @@
 
                 return `
                 <tr>
-                    <td><div class="inline-flex-box"><span style="font-size:12px;font-weight:600;color:#111;">${r.time}</span></div></td>
-                    <td><div class="inline-flex-box"><span class="badge ${r.action === 'default' ? 'b-neu' : 'b-blue'}">${r.action}</span></div></td>
+                    <td><div class="inline-flex-box-column"><span style="font-size:12px;font-weight:600;color:#111;">${r.time}</span></div></td>
+                    <td><div class="inline-flex-box-column"><span class="badge ${r.action === 'default' ? 'b-neu' : 'b-blue'}">${r.action}</span></div></td>
                     <td>${diffHtml || '<span style="color:#9ca3af;font-size:10px;">No changes</span>'}</td>
                     <td><details><summary>Details</summary><pre>${JSON.stringify(r.payload, null, 2)}</pre></details></td>
                 </tr>
