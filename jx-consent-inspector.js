@@ -201,7 +201,8 @@
 
         init() {
             this.host = document.createElement('div');
-            this.host.id = 'jx-privacy-inspector-v2';
+            this.host.id = 'jx-consent-inspector';
+            this.host.innerHTML = '<i hidden></i>'; // 避免shopify css判空不显示
             this.host.style.cssText = `position: fixed; top: 20px; right: 20px; z-index: 2147483647;`;
             this.shadow = this.host.attachShadow({ mode: 'open' });
             
