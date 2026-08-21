@@ -265,14 +265,14 @@
                     td { padding: 8px !important; font-size: 12px !important; vertical-align: top !important; border-top: 1px solid #f3f4f6 !important; }
                     .inline-flex-box { display: inline-flex; align-items: center; }
                     .inline-flex-box-column { display: inline-flex; align-items: center; flex-direction: column; }
-                    .badge { padding: 2px 4px; border-radius: 4px; font-weight: 700; font-size: 10px; line-height: 1; display: inline-block; text-transform: uppercase; }
+                    .badge { padding: 2px 4px; border-radius: 4px; font-weight: 700; font-size: 10px !important; line-height: 1; display: inline-block; text-transform: uppercase; }
                     .b-true { color: #059669; background: #d1fae5; }
                     .b-false { color: #dc2626; background: #fee2e2; }
                     .b-neu { color: #4b5563; background: #f3f4f6; }
                     .b-purp { color: #6b21a8; background: #f3e8ff; }
                     .b-blue { color: #1e40af; background: #dbeafe; }
                     .mini-status { display: flex; flex-direction: column; gap: 5px; }
-                    .mini-status span { font-size: 10px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #eee; padding-bottom: 2px;}
+                    .mini-status span { font-size: 11px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #eee; padding-bottom: 2px;}
                     .diff-item { font-size: 11px; margin-bottom: 5px; color: #374151;}
                     .diff-arrow { color: #9ca3af; margin: 0 4px; }
                     details summary { cursor: pointer; color: #2563eb; font-weight: 600; font-size: 10px; outline: none; }
@@ -392,10 +392,10 @@
                     <td><div class="inline-flex-box-column"><span style="font-size:12px;font-weight:600;color:#111;">${r.state?.region}</span><span class="badge b-neu">${r.state?.law}</span></div></td>
                     <td>
                         <div class="mini-status">
-                            <span>Preferences: ${this.getBadge(r.state?.preferences)}</span>
-                            <span>Analytics: ${this.getBadge(r.state?.analytics)}</span>
-                            <span>Marketing: ${this.getBadge(r.state?.marketing)}</span>
-                            <span>SaleOfData: ${this.getBadge(r.state?.saleOfData)}</span>
+                            <span><b>Preferences:</b> ${this.getBadge(r.state?.preferences)}</span>
+                            <span><b>Analytics:</b> ${this.getBadge(r.state?.analytics)}</span>
+                            <span><b>Marketing:</b> ${this.getBadge(r.state?.marketing)}</span>
+                            <span><b>SaleOfData:</b> ${this.getBadge(r.state?.saleOfData)}</span>
                         </div>
                     </td>
                     <td><details open><summary>Details</summary><pre>${JSON.stringify(r.state?.cvConsent, null, 2)}</pre></details></td>
