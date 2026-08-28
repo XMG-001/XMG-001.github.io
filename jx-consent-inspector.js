@@ -58,8 +58,8 @@
             { key: 'details', label: 'CurrentVisitorConsent', width: 'auto' }
         ],
         googleCols: [
-            { key: 'time', label: 'Time', width: '60px' },
-            { key: 'action', label: 'Action', width: '60px' },
+            { key: 'time', label: 'Time', width: '50px' },
+            { key: 'action', label: 'Action', width: '50px' },
             { key: 'diff', label: 'Consent State Diff', width: '235px' },
             { key: 'dataLayer', label: 'DataLayer', width: 'auto' }
         ]
@@ -79,18 +79,18 @@
         },
         getGlobalState() {
             return {
-                shouldShowBanner: this.cp?.shouldShowBanner?.() ?? 'N/A',
-                userCanBeTracked: this.cp?.userCanBeTracked?.() ?? 'N/A'
+                shouldShowBanner: this.cp?.shouldShowBanner?.() ?? '-',
+                userCanBeTracked: this.cp?.userCanBeTracked?.() ?? '-'
             };
         },
         getSnapshotData() {
             if (!this.isCPLoaded) return null;
             const cp = this.cp;
             return {
-                preferences: cp.preferencesProcessingAllowed?.() ?? 'N/A',
-                analytics: cp.analyticsProcessingAllowed?.() ?? 'N/A',
-                marketing: cp.marketingAllowed?.() ?? 'N/A',
-                saleOfData: cp.saleOfDataAllowed?.() ?? 'N/A',
+                preferences: cp.preferencesProcessingAllowed?.() ?? '-',
+                analytics: cp.analyticsProcessingAllowed?.() ?? '-',
+                marketing: cp.marketingAllowed?.() ?? '-',
+                saleOfData: cp.saleOfDataAllowed?.() ?? '-',
                 cvConsent: cp.currentVisitorConsent?.() || {},
                 region: cp.getRegion?.() || '-',
                 law: cp.getRegulation?.() || '-'
@@ -169,7 +169,7 @@
     const DataStore = {
         shopifyRecords: [],
         googleRecords: [],
-        shopifyGlobal: { shouldShowBanner: 'N/A', userCanBeTracked: 'N/A' },
+        shopifyGlobal: { shouldShowBanner: '-', userCanBeTracked: '-' },
         listeners: [],
 
         addShopifyRecord(record) {
