@@ -60,7 +60,7 @@
         googleCols: [
             { key: 'time', label: 'Time', width: '50px' },
             { key: 'action', label: 'Action', width: '50px' },
-            { key: 'diff', label: 'Consent State Diff', width: '235px' },
+            { key: 'diff', label: 'Consent State Diff', width: '250px' },
             { key: 'dataLayer', label: 'DataLayer', width: 'auto' }
         ]
     };
@@ -111,47 +111,88 @@
         lastIndex: 0,
         timer: null,
         onChange: null,
+        onPoll: null,
 
-        init(callback) {
+        // 统一格式化 boolean 为 granted/denied
+        normalizeVal(val) {
+            if (val === true) return 'granted';
+            if (val === false) return 'denied';
+            return val;
+        },
+        init(callback, onPollCallback) {
             this.onChange = callback;
-            this.timer = setInterval(() => this.pollDataLayer(), 200);
+            this.onPoll = onPollCallback;
+            this.timer = setInterval(() => {
+                this.pollDataLayer();
+                if (this.onPoll) this.onPoll();
+            }, 200);
         },
         pollDataLayer() {
             const dl = window.dataLayer;
-            if (!Array.isArray(dl)) return;
-
-            const len = dl.length;
-            if (len < this.lastIndex) this.lastIndex = 0;
-            if (len === this.lastIndex) return; // 无变化时直接退出，避免无效循环
-
-            for (let i = this.lastIndex; i < len; i++) {
-                this.processItem(dl[i]);
+            if (Array.isArray(dl)) {
+                const len = dl.length;
+                if (len < this.lastIndex) this.lastIndex = 0;
+                if (len > this.lastIndex) {
+                    for (let i = this.lastIndex; i < len; i++) {
+                        this.processItem(dl[i]);
+                    }
+                    this.lastIndex = len;
+                }
             }
-            this.lastIndex = len;
+            // 优先读取 dataLayer 后，再去轮询 google_tag_data
+            this.pollGoogleTagData();
         },
         processItem(item) {
             if (!item) return;
-            // 优化 Arguments 转换逻辑，减少不必要的 Array.from 对象创建
-            const arr = Object.prototype.toString.call(item) === '[object Arguments]' 
-                ? Array.prototype.slice.call(item) 
+            const arr = Object.prototype.toString.call(item) === '[object Arguments]'
+                ? Array.prototype.slice.call(item)
                 : (Array.isArray(item) ? item : null);
-
             if (!arr || arr[0] !== 'consent') return;
             const [_, action, payload] = arr;
-
             if (payload && typeof payload === 'object') {
-                let isChanged = false;
                 const previous = { ...this.currentState };
-
+                const normalizedPayload = {};
                 for (const opt of CONFIG.googleOptions) {
                     if (payload[opt.id] !== undefined) {
-                        this.currentState[opt.id] = payload[opt.id];
-                        isChanged = true;
+                        const val = this.normalizeVal(payload[opt.id]);
+                        normalizedPayload[opt.id] = val;
+                        if (this.currentState[opt.id] !== val) {
+                            this.currentState[opt.id] = val;
+                        }
                     }
                 }
-                if (isChanged && this.onChange) {
-                    this.onChange(action, payload, previous);
+                if (this.onChange) this.onChange(action, { ...payload, ...normalizedPayload }, previous);
+            }
+        },
+        pollGoogleTagData() {
+            const entries = window.google_tag_data?.ics?.entries;
+            if (!entries) return;
+            const previous = { ...this.currentState };
+            let isChanged = false;
+            let triggeredAction = null;
+            let maxPriority = 0;
+            const actionMap = {
+                update: { action: 'update', priority: 3 },
+                default: { action: 'default', priority: 2 },
+                implicit: { action: 'implicit', priority: 1 },
+            };
+            for (const opt of CONFIG.googleOptions) {
+                const entry = entries[opt.id];
+                if (!entry) continue;
+                const actionKey = Object.keys(actionMap).find(key => entry[key] !== undefined);
+                if (!actionKey) continue;
+                const val = this.normalizeVal(entry[actionKey]);
+                if (this.currentState[opt.id] === val) continue;
+                this.currentState[opt.id] = val;
+                isChanged = true;
+                const { action, priority } = actionMap[actionKey];
+                if (priority > maxPriority) {
+                    maxPriority = priority;
+                    triggeredAction = action;
                 }
+            }
+            if (isChanged && this.onChange) {
+                this.onChange(triggeredAction, { source: 'google_tag_data.ics.entries', fromDataLayer: false }, previous);
             }
         },
         setConsent(action, payload) {
@@ -178,7 +219,7 @@
             this.notify();
         },
         addGoogleRecord(record) {
-            if (!record || !record.payload) return;
+            if (!record) return;
             this.googleRecords.unshift(record);
             this.notify();
         },
@@ -205,12 +246,10 @@
             this.host.innerHTML = '<i hidden></i>'; // 避免shopify css判空不显示
             this.host.style.cssText = `position: fixed; top: 20px; right: 20px; z-index: 2147483647;`;
             this.shadow = this.host.attachShadow({ mode: 'open' });
-            
             const inject = () => document.body ? document.body.appendChild(this.host) : false;
             if (!inject()) {
                 new MutationObserver((_, obs) => inject() && obs.disconnect()).observe(document.documentElement, { childList: true });
             }
-            
             this.renderLayout();
             this.cacheDOM();
             this.bindDrag();
@@ -223,7 +262,8 @@
                 btnQueryAll: this.shadow.querySelector('#btn-query-all'),
                 shopifyTbody: this.shadow.querySelector('#shopify-tbody'),
                 googleTbody: this.shadow.querySelector('#google-tbody'),
-                toggleBtn: this.shadow.querySelector('#btn-toggle')
+                toggleBtn: this.shadow.querySelector('#btn-toggle'),
+                gCurrentConsent: this.shadow.querySelector('#g-current-consent')
             };
         },
         renderLayout() {
@@ -233,11 +273,11 @@
 
             this.shadow.innerHTML = `
                 <style>
-                    :host { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
-                    .root-container { position: relative; letter-spacing: normal; line-height: normal; }
+                    :host { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important; -webkit-font-smoothing: antialiased !important; } 
+                    .root-container { position: relative; letter-spacing: normal !important; line-height: normal !important; }
                     .trigger-btn { width: 40px; height: 40px; border-radius: 15px; background: #fff; display: flex; align-items: center; justify-content: center; cursor: move; box-shadow: 0 6px 16px rgba(0,0,0,0.12); user-select: none; transition: transform 0.2s ease; position: relative; }
                     .trigger-btn:active { transform: scale(0.95); }
-                    .panel { display: none; position: absolute; right: 0; top: 50px; width: 1200px; background: rgba(255, 255, 255, 0.95); backdrop-filter: saturate(180%) blur(16px); border-radius: 12px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 20px 40px rgba(0,0,0,0.15); padding: 16px; cursor: default; }
+                    .panel { display: none; position: absolute; right: 0; top: 50px; width: 1250px; background: rgba(255, 255, 255, 0.95); backdrop-filter: saturate(180%) blur(16px); border-radius: 12px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 20px 40px rgba(0,0,0,0.15); padding: 16px; cursor: default; }
                     .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; user-select: none; cursor: move; }
                     .header-title { font-weight: 700; color: #111; font-size: 15px; }
                     .btn { background: #fff; border: 1px solid #d2d5d8; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 600; color: #333; transition: all 0.2s ease; }
@@ -251,6 +291,14 @@
                     .col-header { display: flex; align-items: center; justify-content: space-between; font-size: 13px; font-weight: 700; color: #374151; border-bottom: 1px solid #e5e7eb; padding-bottom: 8px;}
                     .col-header img { margin-right: 6px; vertical-align: middle; }
                     .control-box { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px; }
+
+                    /* Google 左右分栏样式 */
+                    .split-control { display: flex; gap: 12px; }
+                    .split-left { flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+                    .split-right { flex: 0.9; border-left: 1px dashed #e5e7eb; padding-left: 12px; display: flex; flex-direction: column; }
+                    .current-consent-title { font-size: 11px; font-weight: 700; color: #6b7280; margin-bottom: 8px; }
+                    .current-consent-item { font-size: 11px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px; }
+
                     .chk-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; margin-bottom: 10px; }
                     .chk-grid label { font-size: 12px; color: #4b5563; font-weight: 500; display: flex; align-items: center; gap: 4px; cursor: pointer;}
                     .chk-grid input { accent-color: #000; width: 12px; height: 12px; margin: 0; cursor: pointer;}
@@ -312,11 +360,16 @@
                                 <div class="col-header">
                                     <span class="inline-flex-box"><img src="https://www.google.com/s2/favicons?domain=google.com&sz=64" width="16" height="16"/> Google Consent Mode</span>
                                 </div>
-                                <div class="control-box">
-                                    <div class="chk-grid">${renderCheckboxes(CONFIG.googleOptions, 'gchk')}</div>
-                                    <div class="action-row">
-                                        <button id="btn-g-default" class="btn" style="flex:1;">Set Default</button>
-                                        <button id="btn-g-update" class="btn btn-google" style="flex:1;">Update Consent</button>
+                                <div class="control-box split-control">
+                                    <div class="split-left">
+                                        <div class="chk-grid">${renderCheckboxes(CONFIG.googleOptions, 'gchk')}</div>
+                                        <div class="action-row">
+                                            <button id="btn-g-default" class="btn" style="flex:1;">Set Default</button>
+                                            <button id="btn-g-update" class="btn btn-google" style="flex:1;">Update Consent</button>
+                                        </div>
+                                    </div>
+                                    <div class="split-right" id="g-current-consent">
+                                        <!-- 动态渲染的 Current Consent 区域 -->
                                     </div>
                                 </div>
                                 <div class="table-wrapper">
@@ -334,7 +387,7 @@
         bindDrag() {
             const el = this.host;
             let isDragging = false, offset = { x: 0, y: 0 }, clickTime, rAF;
-            
+
             const start = (e) => {
                 isDragging = true;
                 const rect = el.getBoundingClientRect();
@@ -370,12 +423,41 @@
             });
         },
         getBadge(val) {
-            if (val === true || val === 'granted') return `<span class="badge b-true">${val === true ? 'TRUE' : 'GRANT'}</span>`;
-            if (val === false || val === 'denied') return `<span class="badge b-false">${val === false ? 'FALSE' : 'DENY'}</span>`;
+            // 对标准化后的值也兼容 true/false 判断
+            if (val === true || val === 'granted') return `<span class="badge b-true">GRANT</span>`;
+            if (val === false || val === 'denied') return `<span class="badge b-false">DENY</span>`;
             return `<span class="badge b-neu">${String(val || '-').toUpperCase().substring(0, 5)}</span>`;
         },
+        updateCurrentConsent() {
+            if (!this.dom.gCurrentConsent) return;
+            const entries = window.google_tag_data?.ics?.entries;
+            const source = entries ? 'google_tag_data.ics.entries' : 'dataLayer';
+
+            let html = `<div class="current-consent-title">Source: <span style="color:#2563eb;">${source}</span></div>`;
+            html += `<div style="display:flex;flex-direction:column;gap:1px;overflow-y:auto;">`;
+
+            for (const opt of CONFIG.googleOptions) {
+                let val = undefined;
+                if (entries && entries[opt.id]) {
+                    const e = entries[opt.id];
+                    if (e.update !== undefined) val = e.update;
+                    else if (e.default !== undefined) val = e.default;
+                    else if (e.implicit !== undefined) val = e.implicit;
+                }
+                // 数据溯源或降级 dataLayer，并标准化布尔值展示
+                if (val === undefined) {
+                    val = GoogleConsentAPI.currentState[opt.id];
+                } else {
+                    val = GoogleConsentAPI.normalizeVal(val);
+                }
+                html += `<div class="current-consent-item"><span>${opt.label}</span> ${this.getBadge(val)}</div>`;
+            }
+            html += `</div>`;
+            if (this.dom.gCurrentConsent.innerHTML !== html) {
+                this.dom.gCurrentConsent.innerHTML = html;
+            }
+        },
         updateView(shopifyRecords, googleRecords, shopifyGlobal) {
-            // 通过缓存 DOM 减少重复重绘
             this.dom.shopifyStats.innerHTML = `
                 <div>shouldShowBanner: ${this.getBadge(shopifyGlobal.shouldShowBanner)}</div>
                 <div>userCanBeTracked: ${this.getBadge(shopifyGlobal.userCanBeTracked)}</div>
@@ -383,7 +465,6 @@
             this.dom.shopifyStats.style.display = '';
 
             this.dom.btnLoadApi.style.display = ShopifyAPI.canLoadAPI ? 'inline-block' : 'none';
-
             this.dom.btnQueryAll.style.display = ShopifyAPI.isCPLoaded ? 'inline-block' : 'none';
 
             this.dom.shopifyTbody.innerHTML = shopifyRecords.map(r => `
@@ -410,7 +491,7 @@
                 return `
                 <tr>
                     <td><div class="inline-flex-box-column"><span style="font-size:12px;font-weight:600;color:#111;">${r.time}</span></div></td>
-                    <td><div class="inline-flex-box-column"><span class="badge ${r.action === 'default' ? 'b-neu' : 'b-blue'}">${r.action}</span></div></td>
+                    <td><div class="inline-flex-box-column"><span class="badge ${r.action === 'update' ? 'b-blue' : 'b-neu'}">${r.action}</span></div></td>
                     <td>${diffHtml || '<span style="color:#9ca3af;font-size:10px;">No changes</span>'}</td>
                     <td><details><summary>Details</summary><pre>${JSON.stringify(r.payload, null, 2)}</pre></details></td>
                 </tr>
@@ -446,23 +527,24 @@
             UI.init();
             DataStore.subscribe((sRec, gRec, sGlobal) => UI.updateView(sRec, gRec, sGlobal));
             this.bindEvents();
-
-            GoogleConsentAPI.init((action, payload, previous) => {
-                const diff = this.calculateDiff(previous, GoogleConsentAPI.currentState);
-                this.recordGoogle(action, payload, diff);
-            });
-
+            GoogleConsentAPI.init(
+                (action, payload, previous) => {
+                    const diff = this.calculateDiff(previous, GoogleConsentAPI.currentState);
+                    this.recordGoogle(action, payload, diff);
+                },
+                () => {
+                    UI.updateCurrentConsent();
+                }
+            );
             this.watchShopifyCP();
         },
         bindEvents() {
             const $ = selector => UI.shadow.querySelector(selector);
-            
             $('#btn-query-all').onclick = () => this.recordShopify('query');
             $('#btn-load-api').onclick = () => ShopifyAPI.loadConsentAPI(err => !err && this.recordShopify('load_api'));
             $('#btn-submit-shopify').onclick = () => ShopifyAPI.setConsent(UI.getFormData('shopify'), () => {});
             $('#btn-g-default').onclick = () => GoogleConsentAPI.setConsent('default', UI.getFormData('google'));
             $('#btn-g-update').onclick = () => GoogleConsentAPI.setConsent('update', UI.getFormData('google'));
-            
             document.addEventListener('visitorConsentCollected', () => {
                 setTimeout(() => this.recordShopify('update'), 100);
             });
@@ -477,12 +559,12 @@
                     hasDiff = true;
                 }
             }
-            return hasDiff ? diff : null; // 空数据返回 null，拦截无效记录
+            return hasDiff ? diff : null;
         },
         recordShopify(eventName) {
             const state = ShopifyAPI.getSnapshotData();
-            if (eventName === 'query' && !state) return; // 边界：无有效状态数据则不生成记录
-            
+            if (eventName === 'query' && !state) return;
+
             DataStore.updateShopifyGlobal(ShopifyAPI.getGlobalState());
             DataStore.addShopifyRecord({
                 time: new Date().toLocaleTimeString([], { hour12: false }),
@@ -491,9 +573,7 @@
             });
         },
         recordGoogle(action, payload, diff) {
-            // 边界：没有实质性变化且非主动查询更新时，减少无意义 UI 渲染
-            if (!diff && action !== 'default' && action !== 'update') return; 
-            
+            if (!diff && !['default', 'update', 'implicit'].includes(action)) return;
             DataStore.addGoogleRecord({
                 time: new Date().toLocaleTimeString([], { hour12: false }),
                 action: action,
