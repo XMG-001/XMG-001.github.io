@@ -61,7 +61,7 @@
             { key: 'time', label: 'Time', width: '50px' },
             { key: 'action', label: 'Action', width: '50px' },
             { key: 'diff', label: 'Consent State Diff', width: '250px' },
-            { key: 'dataLayer', label: 'DataLayer', width: 'auto' }
+            { key: 'info', label: 'Info', width: 'auto' }
         ]
     };
 
@@ -161,7 +161,7 @@
                         }
                     }
                 }
-                if (this.onChange) this.onChange(action, { ...payload, ...normalizedPayload }, previous);
+                if (this.onChange) this.onChange(action, { source: 'dataLayer', data: { ...payload, ...normalizedPayload } }, previous);
             }
         },
         pollGoogleTagData() {
@@ -192,7 +192,10 @@
                 }
             }
             if (isChanged && this.onChange) {
-                this.onChange(triggeredAction, { source: 'google_tag_data.ics.entries', fromDataLayer: false }, previous);
+                this.onChange(triggeredAction, {
+                    source: 'google_tag_data.ics.entries',
+                    data: JSON.parse(JSON.stringify(window.google_tag_data?.ics?.entries))
+                }, previous);
             }
         },
         setConsent(action, payload) {
@@ -493,7 +496,7 @@
                     <td><div class="inline-flex-box-column"><span style="font-size:12px;font-weight:600;color:#111;">${r.time}</span></div></td>
                     <td><div class="inline-flex-box-column"><span class="badge ${r.action === 'update' ? 'b-blue' : 'b-neu'}">${r.action}</span></div></td>
                     <td>${diffHtml || '<span style="color:#9ca3af;font-size:10px;">No changes</span>'}</td>
-                    <td><details><summary>Details</summary><pre>${JSON.stringify(r.payload, null, 2)}</pre></details></td>
+                    <td><details><summary>${r.payload?.source || "Details"}</summary><pre>${JSON.stringify(r.payload?.data, null, 2)}</pre></details></td>
                 </tr>
             `}).join('');
         },
