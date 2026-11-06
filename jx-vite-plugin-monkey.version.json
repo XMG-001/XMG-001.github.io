@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-11-06T16:28:37.417Z",
+  "modules": [
+    {
+      "id": "jx-work-assistant",
+      "name": "JX Work Assistant",
+      "version": "1.0.0",
+      "releaseNotes": "Host 版本管理与更新检测功能。"
+    },
+    {
+      "id": "example",
+      "name": "示例插件",
+      "version": "1.0.1",
+      "releaseNotes": "初始版本。"
+    },
+    {
+      "id": "example2",
+      "name": "示例插件2",
+      "version": "1.0.1",
+      "releaseNotes": "初始版本。"
+    },
+    {
+      "id": "jx-consent-inspector",
+      "name": "同意状态监测器",
+      "version": "1.0.2",
+      "releaseNotes": "初始版本。"
+    },
+    {
+      "id": "jx-nav-blocker",
+      "name": "页面跳转拦截器",
+      "version": "1.0.0",
+      "releaseNotes": "初始版本。"
+    }
+  ]
+}
