@@ -35,7 +35,7 @@
 			else (document.head || document.documentElement).appendChild(document.createElement("style")).append(c);
 		})(t);
 	};
-	_css(" .url-rule-editor[data-v-ec03e8d3]{gap:8px;margin-top:8px;display:grid}label[data-v-ec03e8d3]{color:#374151;gap:4px;font-size:11px;font-weight:500;display:grid}.tip-text[data-v-ec03e8d3]{color:#9ca3af;font-size:10px;font-weight:400}.modern-textarea[data-v-ec03e8d3]{border-radius:6px;font-size:12px}.section-title[data-v-aa3837de]{color:#374151;border-top:1px solid #f0f0f2;margin:18px 0 10px;padding-top:12px;font-size:13px;font-weight:600}.config-grid[data-v-aa3837de]{grid-template-columns:1fr 1fr;gap:10px 12px;display:grid}.wide[data-v-aa3837de]{grid-column:1/-1}label[data-v-aa3837de]{color:#6b7280;flex-direction:column;gap:5px;font-size:11px;display:flex}.config-grid[data-v-aa3837de] .ant-input-number,.config-grid[data-v-aa3837de] .ant-input,.config-grid[data-v-aa3837de] .ant-select{width:100%}.switch-grid[data-v-aa3837de]{grid-template-columns:1fr 1fr;gap:8px;display:grid}.switch-grid label[data-v-aa3837de]{color:#374151;background:#fafbfc;border:1px solid #eef0f2;border-radius:7px;flex-direction:row;justify-content:space-between;align-items:center;padding:9px 10px}.section-title[data-v-addb7241]{color:#374151;border-top:1px solid #f0f0f2;margin:18px 0 10px;padding-top:12px;font-size:13px;font-weight:600}.business-fields[data-v-addb7241]{flex-direction:column;gap:7px;display:flex}.business-field[data-v-addb7241]{color:#4b5563;background:#fafbfc;border:1px solid #eef0f2;border-radius:7px;flex-direction:column;gap:6px;padding:9px 10px;font-size:11px;font-weight:500;display:flex}.business-field[data-v-addb7241] .ant-input-number,.business-field[data-v-addb7241] .ant-input{width:100%}.update-manager[data-v-3683db9e]{justify-content:flex-end;min-height:28px;margin:0 0 12px;display:flex}.check-button[data-v-3683db9e]{color:#8b929d;height:26px;padding:0 4px;font-size:12px}.update-banner[data-v-3683db9e]{color:#9a3412;cursor:pointer;text-align:left;background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;align-items:center;gap:8px;width:100%;padding:8px 10px;font-size:12px;font-weight:600;display:flex}.update-dot[data-v-3683db9e]{background:#f97316;border-radius:50%;width:7px;height:7px;box-shadow:0 0 0 3px #ffedd5}.update-arrow[data-v-3683db9e]{margin-left:auto;font-weight:500}.update-intro[data-v-3683db9e]{color:#68707d;margin:0 0 14px;font-size:12px}.update-item[data-v-3683db9e]{border-top:1px solid #eee;padding:11px 0}.update-item-heading[data-v-3683db9e]{justify-content:space-between;gap:12px;font-size:13px;display:flex}.update-item-heading span[data-v-3683db9e]{color:#e65f16;white-space:nowrap}.update-item p[data-v-3683db9e]{color:#737b87;white-space:pre-wrap;margin:6px 0 0;font-size:12px}.install-link[data-v-3683db9e]{color:#c2410c;margin-top:12px;font-size:13px;font-weight:600;display:inline-block}.modern-host-drawer[data-v-1526274b]{--primary-color:#1677ff;--text-main:#1f2329;--text-regular:#4e5969;--text-muted:#86909c;--bg-page:#f7f8fa;--bg-card:#fff;--bg-subtle:#f2f3f5;--border-color:#e5e6eb;--radius-base:8px;--transition-fast:all .2s cubic-bezier(.4, 0, .2, 1)}.drawer-header[data-v-1526274b]{justify-content:space-between;align-items:center;width:100%;display:flex}.drawer-title-group[data-v-1526274b]{align-items:center;gap:8px;display:flex}.main-title[data-v-1526274b]{color:var(--text-main,#1f2329);letter-spacing:-.2px;font-size:15px;font-weight:600}.status-badge[data-v-1526274b]{border-radius:10px;padding:2px 8px;font-size:11px;font-weight:500;line-height:1.2}.status-badge.warning[data-v-1526274b]{color:#d97706;background-color:#fef3c7}.icon-btn-close[data-v-1526274b]{width:28px;height:28px;color:var(--text-muted,#86909c);cursor:pointer;transition:var(--transition-fast,all .2s);background:0 0;border:none;border-radius:6px;justify-content:center;align-items:center;display:inline-flex}.icon-btn-close[data-v-1526274b]:hover{background-color:var(--bg-subtle,#f2f3f5);color:var(--text-main,#1f2329)}.list-summary-bar[data-v-1526274b]{justify-content:space-between;align-items:center;margin-bottom:12px;padding:0 2px;display:flex}.count-text[data-v-1526274b]{color:var(--text-muted,#86909c);font-size:12px}.toggle-hidden-btn[data-v-1526274b]{padding:0;font-size:12px}.plugin-list[data-v-1526274b]{flex-direction:column;gap:10px;display:flex}.plugin-card[data-v-1526274b]{background:var(--bg-card,#fff);border:1px solid var(--border-color,#e5e6eb);border-radius:var(--radius-base,8px);transition:var(--transition-fast,all .2s);padding:12px}.plugin-card[data-v-1526274b]:hover{border-color:#c9cdd4;box-shadow:0 4px 12px #00000008}.plugin-card.is-disabled[data-v-1526274b]{opacity:.6}.plugin-summary[data-v-1526274b]{cursor:pointer;-webkit-user-select:none;user-select:none;align-items:center;gap:10px;display:flex}.expand-icon-btn[data-v-1526274b]{background:var(--bg-subtle,#f2f3f5);width:20px;height:20px;color:var(--text-regular,#4e5969);cursor:pointer;border:none;border-radius:4px;justify-content:center;align-items:center;padding:0;transition:transform .2s,background .2s;display:flex}.expand-icon-btn.expanded[data-v-1526274b]{transform:rotate(90deg)}.expand-icon-btn[data-v-1526274b]:hover{background-color:#e5e6eb}.plugin-icon[data-v-1526274b]{justify-content:center;align-items:center;font-size:18px;line-height:1;display:flex}.summary-info[data-v-1526274b]{flex:1;min-width:0}.plugin-name[data-v-1526274b]{color:var(--text-main,#1f2329);margin-right:6px;font-size:13px;font-weight:600;line-height:1.3}.plugin-desc[data-v-1526274b]{color:var(--text-muted,#86909c);white-space:nowrap;text-overflow:ellipsis;margin:2px 0 0;font-size:12px;overflow:hidden}.switch-wrapper[data-v-1526274b]{align-items:center;display:flex}.plugin-details[data-v-1526274b]{border-top:1px solid var(--border-color,#e5e6eb);margin-top:12px;padding-top:12px}.plugin-meta-bar[data-v-1526274b]{align-items:center;gap:6px;margin-bottom:10px;display:flex}.custom-tag[data-v-1526274b]{border-radius:4px;margin-right:0;font-size:11px}.open-plugin-btn[data-v-1526274b]{height:auto;margin-left:auto;padding:0;font-size:12px}.runtime-alert[data-v-1526274b]{color:var(--text-regular,#4e5969);background:var(--bg-subtle,#f2f3f5);border-radius:6px;margin-bottom:12px;padding:6px 10px;font-size:11px;line-height:1.4}.section-divider[data-v-1526274b]{color:var(--text-muted,#86909c);text-transform:uppercase;letter-spacing:.5px;align-items:center;margin:14px 0 8px;font-size:11px;font-weight:600;display:flex}.section-divider[data-v-1526274b]:after{content:\"\";background-color:var(--border-color,#e5e6eb);flex:1;height:1px;margin-left:8px}.match-context-card[data-v-1526274b]{border:1px solid var(--border-color,#e5e6eb);background:#fafafa;border-radius:6px;margin-bottom:8px;padding:10px}.context-header[data-v-1526274b]{justify-content:space-between;align-items:center;margin-bottom:8px;display:flex}.context-title[data-v-1526274b]{align-items:center;gap:8px;font-size:12px;display:flex}.context-title strong[data-v-1526274b]{color:var(--text-main,#1f2329)}.context-hint[data-v-1526274b]{color:var(--text-muted,#86909c);font-size:11px}.match-preview-result[data-v-1526274b]{align-items:center;gap:6px;margin-top:8px;font-size:11px;display:flex}.reason-text[data-v-1526274b]{color:var(--text-regular,#4e5969)}.context-disabled-tip[data-v-1526274b]{color:var(--text-muted,#86909c);font-size:11px}.drawer-footer-content[data-v-1526274b]{justify-content:space-between;align-items:center;width:100%;display:flex}.status-indicator[data-v-1526274b]{align-items:center;gap:6px;font-size:12px;display:flex}.status-dot[data-v-1526274b]{border-radius:50%;width:6px;height:6px}.status-dot.warning[data-v-1526274b]{background-color:#f59e0b}.status-dot.success[data-v-1526274b]{background-color:#10b981}.pending-text[data-v-1526274b]{color:#d97706}.saved-text[data-v-1526274b]{color:var(--text-muted,#86909c)}.footer-actions[data-v-1526274b]{gap:8px;display:flex}.btn-secondary[data-v-1526274b],.btn-primary[data-v-1526274b]{border-radius:6px;font-size:12px}.jx-fab-container[data-v-35a4817e]{--fab-size:36px;--fab-radius-dock-right:50% 0 0 50%;--fab-radius-dock-left:0 50% 50% 0;--fab-radius-dragging:50%;z-index:var(--jx-floating-z-index,2147480000);width:var(--fab-size);height:var(--fab-size);cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none;position:fixed}.jx-fab-container.is-dragging[data-v-35a4817e]{cursor:grabbing}.jx-fab-backdrop[data-v-35a4817e]{-webkit-backdrop-filter:blur(14px);background:#ffffffa6;transition:border-radius .3s cubic-bezier(.16,1,.3,1),background .2s;position:absolute;inset:0;overflow:hidden;box-shadow:0 2px 16px #0000001f}.jx-fab-container.side-right:not(.is-dragging) .jx-fab-backdrop[data-v-35a4817e]{border-radius:var(--fab-radius-dock-right)}.jx-fab-container.side-left:not(.is-dragging) .jx-fab-backdrop[data-v-35a4817e]{border-radius:var(--fab-radius-dock-left)}.jx-fab-container.is-dragging .jx-fab-backdrop[data-v-35a4817e],.jx-fab-container:hover:not(.is-dragging) .jx-fab-backdrop[data-v-35a4817e]{border-radius:var(--fab-radius-dragging);background:#ffffffd9}.jx-fab-content[data-v-35a4817e]{color:#111;pointer-events:none;flex-direction:column;justify-content:center;align-items:center;width:100%;height:100%;display:flex}.jx-fab-icon[data-v-35a4817e]{width:12px;height:12px}.jx-fab-text[data-v-35a4817e]{letter-spacing:-.5px;font-size:10px;font-weight:800}.jx-recall-list[data-v-35a4817e]{z-index:var(--jx-floating-list-z-index,2147480000);opacity:0;visibility:hidden;-webkit-backdrop-filter:blur(16px);background:#fffc;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;gap:8px;width:36px;max-height:calc(100vh - 16px);transition:opacity .2s cubic-bezier(.16,1,.3,1),visibility .2s cubic-bezier(.16,1,.3,1),transform .2s cubic-bezier(.16,1,.3,1);display:flex;position:fixed;overflow:auto;transform:scale(.95);box-shadow:0 10px 30px -5px #0000001a,0 4px 12px -2px #0000000d}.jx-recall-list[data-v-35a4817e]::-webkit-scrollbar{width:4px}.jx-recall-list[data-v-35a4817e]::-webkit-scrollbar-thumb{background:#00000026;border-radius:4px}.jx-fab-container:hover~.jx-recall-list[data-v-35a4817e],.jx-recall-list[data-v-35a4817e]:hover{opacity:1;visibility:visible;transform:scale(1)}.jx-recall-item[data-v-35a4817e]{color:#262626;cursor:pointer;width:32px;height:32px;font:inherit;background:0 0;border:1px solid #0000;border-radius:10px;justify-content:center;align-items:center;padding:0;transition:all .2s cubic-bezier(.16,1,.3,1);display:flex;position:relative}.jx-recall-icon[data-v-35a4817e]{justify-content:center;align-items:center;font-size:16px;line-height:1;transition:transform .2s;display:flex}.jx-recall-item[data-v-35a4817e]:hover:not(:disabled){background:#ffffffe6;border-color:#0000000f;transform:translateY(-1px);box-shadow:0 4px 12px #00000014}.jx-recall-item:hover:not(:disabled) .jx-recall-icon[data-v-35a4817e]{transform:scale(1.1)}.jx-recall-item[data-v-35a4817e]:active:not(:disabled){transform:translateY(0)scale(.96)}.jx-recall-item[data-v-35a4817e]:disabled{opacity:.4;cursor:not-allowed}@media (prefers-color-scheme:dark){.jx-recall-list[data-v-35a4817e]{background:#1e1e1ecc;border:1px solid #ffffff14;box-shadow:0 10px 30px -5px #0006}.jx-recall-list[data-v-35a4817e]::-webkit-scrollbar-thumb{background:#fff3}.jx-recall-item[data-v-35a4817e]{color:#f3f4f6}.jx-recall-item[data-v-35a4817e]:hover:not(:disabled){background:#ffffff1a;border-color:#ffffff14}.jx-fab-backdrop[data-v-35a4817e]{background:#1a1a1aa6}.jx-fab-container.is-dragging .jx-fab-backdrop[data-v-35a4817e],.jx-fab-container:hover:not(.is-dragging) .jx-fab-backdrop[data-v-35a4817e]{background:#262626d9}.jx-fab-content[data-v-35a4817e]{color:#f3f4f6}}.example-plugin p[data-v-bada61c7],.example-plugin p[data-v-8df22ec7]{color:#555;margin:0 0 14px}.split-layout[data-v-03f784d7]{gap:16px;width:100%;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;display:flex;line-height:1.2!important}.col[data-v-03f784d7]{box-sizing:border-box;background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;flex-direction:column;flex:1;gap:12px;min-width:0;padding:12px;display:flex}.col-header[data-v-03f784d7]{color:#374151;border-bottom:1px solid #e5e7eb;justify-content:space-between;align-items:center;padding-bottom:8px;font-size:13px;font-weight:700;display:flex}.col-header img[data-v-03f784d7]{vertical-align:middle;margin-right:6px}.control-box[data-v-03f784d7]{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:10px}.split-control[data-v-03f784d7]{gap:12px;display:flex}.split-left[data-v-03f784d7]{flex-direction:column;flex:1;justify-content:space-between;display:flex}.split-right[data-v-03f784d7]{border-left:1px dashed #e5e7eb;flex-direction:column;flex:.9;padding-left:12px;display:flex}.current-consent-title[data-v-03f784d7]{color:#6b7280;margin-bottom:6px;font-size:11px;font-weight:700}.current-consent-item[data-v-03f784d7]{justify-content:space-between;align-items:center;margin-bottom:2px;font-size:11px;display:flex}.chk-grid[data-v-03f784d7]{grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:10px;display:grid}.chk-grid label[data-v-03f784d7]{color:#4b5563;cursor:pointer;align-items:center;gap:4px;font-size:12px;font-weight:500;display:flex}.chk-grid input[data-v-03f784d7]{accent-color:#000;cursor:pointer;width:12px;height:12px;margin:0}.action-row[data-v-03f784d7]{gap:8px;display:flex}.global-stats[data-v-03f784d7]{color:#4b5563;background:#fff;border:1px solid #e5e7eb;border-radius:8px;gap:12px;padding:8px 10px;font-size:12px;font-weight:600;display:flex}.table-wrapper[data-v-03f784d7]{background:#fff;border:1px solid #e5e7eb;border-radius:6px;max-height:350px;overflow-y:auto}.table-wrapper[data-v-03f784d7]::-webkit-scrollbar{width:4px}.table-wrapper[data-v-03f784d7]::-webkit-scrollbar-thumb{background:#ccc;border-radius:2px}table[data-v-03f784d7]{border-collapse:collapse;table-layout:fixed;width:100%}thead[data-v-03f784d7]{z-index:2;background:#f3f4f6;position:sticky;top:0;box-shadow:0 1px #e5e7eb}th[data-v-03f784d7]{text-align:left;color:#666;padding:6px 8px;font-size:11px;font-weight:600}td[data-v-03f784d7]{vertical-align:top;word-break:break-all;border-top:1px solid #f3f4f6;padding:8px;font-size:12px}.inline-flex-box[data-v-03f784d7]{align-items:center;display:inline-flex}.inline-flex-box-column[data-v-03f784d7]{flex-direction:column;align-items:flex-start;display:inline-flex}.btn[data-v-03f784d7]{cursor:pointer;color:#333;background:#fff;border:1px solid #d2d5d8;border-radius:6px;padding:6px 12px;font-size:12px;font-weight:600;transition:all .2s}.btn[data-v-03f784d7]:hover{background:#f8f9fa;border-color:#b0b4b8}.btn[data-v-03f784d7]:disabled{opacity:.5;cursor:not-allowed}.sm-btn[data-v-03f784d7]{margin-left:4px;padding:2px 6px;font-size:11px}.btn-primary[data-v-03f784d7]{color:#fff;background:#000;border:none}.btn-primary[data-v-03f784d7]:hover{background:#333}.btn-google[data-v-03f784d7]{color:#fff;background:linear-gradient(135deg,#1a73e8,#7c3aed);border:none}.btn-google[data-v-03f784d7]:hover{background:linear-gradient(135deg,#1557b0,#6d28d9)}.badge[data-v-03f784d7]{text-transform:uppercase;border-radius:4px;padding:2px 4px;font-size:10px;font-weight:700;line-height:1;display:inline-block}.b-true[data-v-03f784d7]{color:#059669;background:#d1fae5}.b-false[data-v-03f784d7]{color:#dc2626;background:#fee2e2}.b-neu[data-v-03f784d7]{color:#4b5563;background:#f3f4f6}.b-purp[data-v-03f784d7]{color:#6b21a8;background:#f3e8ff}.b-blue[data-v-03f784d7]{color:#1e40af;background:#dbeafe}.mini-status[data-v-03f784d7]{border-bottom:1px dashed #eee;justify-content:space-between;margin-bottom:2px;padding-bottom:2px;font-size:11px;display:flex}.diff-item[data-v-03f784d7]{color:#374151;margin-bottom:4px;font-size:11px}details summary[data-v-03f784d7]{cursor:pointer;color:#2563eb;outline:none;font-size:10px;font-weight:600}pre[data-v-03f784d7]{color:#333;white-space:pre-wrap;background:#f4f6f8;border-radius:4px;max-height:100px;margin:4px 0 0;padding:6px;font-family:monospace;font-size:10px;overflow:auto}.jx-intercept-container[data-v-721985c9]{font-family:PingFang SC,Microsoft YaHei,sans-serif}.jx-modal-desc[data-v-721985c9]{color:#666;word-break:break-all;text-align:left;background:#f5f5f7;border-radius:8px;margin-top:8px;padding:12px;font-size:14px;line-height:1.6}.jx-modal-option[data-v-721985c9]{justify-content:flex-end;margin-top:12px;font-size:13px;display:flex}.dialog-title[data-v-62f6653d]{cursor:move;-webkit-user-select:none;user-select:none;touch-action:none;justify-content:space-between;align-items:center;gap:10px;display:flex}.main-title[data-v-62f6653d]{flex-shrink:0;align-items:center;gap:8px;display:flex}.custom-header[data-v-62f6653d]{flex:1;min-width:0}.header-extra[data-v-62f6653d]{align-items:center;gap:6px;display:flex}.plugin-icon[data-v-62f6653d]{font-size:18px}.drawer-title[data-v-797cb8e7]{align-items:center;gap:10px;display:flex}.main-title[data-v-797cb8e7]{flex-shrink:0;align-items:center;gap:8px;display:flex}.custom-header[data-v-797cb8e7]{flex:1;min-width:0}.header-extra[data-v-797cb8e7]{align-items:center;gap:6px;display:flex}.plugin-icon[data-v-797cb8e7]{font-size:18px}.jx-assistant-root{color:#171717;font-family:Inter,system-ui,sans-serif}.jx-fab-container,.jx-recall-list{pointer-events:auto}\n/*$vite$:1*/ ");
+	_css(" .url-rule-editor[data-v-ec03e8d3]{gap:8px;margin-top:8px;display:grid}label[data-v-ec03e8d3]{color:#374151;gap:4px;font-size:11px;font-weight:500;display:grid}.tip-text[data-v-ec03e8d3]{color:#9ca3af;font-size:10px;font-weight:400}.modern-textarea[data-v-ec03e8d3]{border-radius:6px;font-size:12px}.section-title[data-v-aa3837de]{color:#374151;border-top:1px solid #f0f0f2;margin:18px 0 10px;padding-top:12px;font-size:13px;font-weight:600}.config-grid[data-v-aa3837de]{grid-template-columns:1fr 1fr;gap:10px 12px;display:grid}.wide[data-v-aa3837de]{grid-column:1/-1}label[data-v-aa3837de]{color:#6b7280;flex-direction:column;gap:5px;font-size:11px;display:flex}.config-grid[data-v-aa3837de] .ant-input-number,.config-grid[data-v-aa3837de] .ant-input,.config-grid[data-v-aa3837de] .ant-select{width:100%}.switch-grid[data-v-aa3837de]{grid-template-columns:1fr 1fr;gap:8px;display:grid}.switch-grid label[data-v-aa3837de]{color:#374151;background:#fafbfc;border:1px solid #eef0f2;border-radius:7px;flex-direction:row;justify-content:space-between;align-items:center;padding:9px 10px}.section-title[data-v-addb7241]{color:#374151;border-top:1px solid #f0f0f2;margin:18px 0 10px;padding-top:12px;font-size:13px;font-weight:600}.business-fields[data-v-addb7241]{flex-direction:column;gap:7px;display:flex}.business-field[data-v-addb7241]{color:#4b5563;background:#fafbfc;border:1px solid #eef0f2;border-radius:7px;flex-direction:column;gap:6px;padding:9px 10px;font-size:11px;font-weight:500;display:flex}.business-field[data-v-addb7241] .ant-input-number,.business-field[data-v-addb7241] .ant-input{width:100%}.update-manager[data-v-cbb4ed5d]{display:inline-flex}.trigger-entry[data-v-cbb4ed5d]{color:#525252;cursor:pointer;-webkit-user-select:none;user-select:none;background:#fff;border:1px solid #e5e5e5;border-radius:99px;align-items:center;gap:3px;padding:1px 8px;font-size:11px;font-weight:500;transition:all .2s cubic-bezier(.4,0,.2,1);display:flex}.trigger-entry[data-v-cbb4ed5d]:hover{color:#171717;border-color:#171717}.status-dot[data-v-cbb4ed5d]{background:#a3a3a3;border-radius:50%;width:3px;height:3px;transition:background .2s}.trigger-entry.has-update[data-v-cbb4ed5d]{color:#fff;background:#171717;border-color:#171717}.trigger-entry.has-update .status-dot[data-v-cbb4ed5d]{background:#fff;box-shadow:0 0 6px #fff9}.popover-panel[data-v-cbb4ed5d]{color:#171717;width:210px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;font-size:12px}.panel-header[data-v-cbb4ed5d]{border-bottom:1px solid #f4f4f5;justify-content:space-between;align-items:center;margin-bottom:4px;padding-bottom:8px;display:flex}.panel-title[data-v-cbb4ed5d]{letter-spacing:-.01em;font-size:12px;font-weight:600}.icon-refresh[data-v-cbb4ed5d]{cursor:pointer;color:#a3a3a3;background:0 0;border:none;padding:2px;font-size:13px;line-height:1;transition:color .15s}.icon-refresh[data-v-cbb4ed5d]:hover{color:#171717}.icon-refresh.spinning[data-v-cbb4ed5d]{animation:.8s linear infinite spin-cbb4ed5d}.panel-empty[data-v-cbb4ed5d]{text-align:center;padding:12px 0 6px}.status-text[data-v-cbb4ed5d]{color:#737373;margin:0;font-size:11px}.version-tag[data-v-cbb4ed5d]{color:#a3a3a3;margin-top:4px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;display:inline-block}.panel-body[data-v-cbb4ed5d]{padding-top:2px}.update-item[data-v-cbb4ed5d]{border-bottom:1px solid #fafafa;padding:6px 0}.update-item[data-v-cbb4ed5d]:last-child{border-bottom:none}.item-head[data-v-cbb4ed5d]{justify-content:space-between;align-items:center;gap:8px;display:flex}.item-head .name[data-v-cbb4ed5d]{color:#171717;font-weight:500}.ver-change[data-v-cbb4ed5d]{color:#737373;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px}.notes[data-v-cbb4ed5d]{color:#737373;white-space:pre-wrap;margin:3px 0 0;font-size:11px;line-height:1.4}.update-btn[data-v-cbb4ed5d]{color:#fff;letter-spacing:.02em;background:#171717;border-radius:6px;justify-content:center;align-items:center;margin-top:10px;padding:6px 0;font-size:11px;font-weight:500;text-decoration:none;transition:background .15s;display:flex}.update-btn[data-v-cbb4ed5d]:hover{color:#fff;background:#333}@keyframes spin-cbb4ed5d{0%{transform:rotate(0)}to{transform:rotate(360deg)}}.monochrome-popover .ant-popover-inner{border:1px solid #e5e5e5;border-radius:8px;padding:10px 12px;box-shadow:0 10px 15px -3px #0000000d,0 4px 6px -4px #0000000d}.plugin-icon[data-v-807a1c8c]{vertical-align:middle;flex:none;justify-content:center;align-items:center;width:1em;height:1em;line-height:1;display:inline-flex}img[data-v-807a1c8c]{object-fit:contain;width:100%;height:100%;display:block}.modern-host-drawer[data-v-3101e1ae]{--primary-color:#1677ff;--text-main:#1f2329;--text-regular:#4e5969;--text-muted:#86909c;--bg-page:#f7f8fa;--bg-card:#fff;--bg-subtle:#f2f3f5;--border-color:#e5e6eb;--radius-base:8px;--transition-fast:all .2s cubic-bezier(.4, 0, .2, 1)}.drawer-header[data-v-3101e1ae]{justify-content:space-between;align-items:center;width:100%;display:flex}.drawer-title-group[data-v-3101e1ae]{align-items:center;gap:8px;display:flex}.main-title[data-v-3101e1ae]{color:var(--text-main,#1f2329);letter-spacing:-.2px;font-size:15px;font-weight:600}.status-badge[data-v-3101e1ae]{border-radius:10px;padding:2px 8px;font-size:11px;font-weight:500;line-height:1.2}.status-badge.warning[data-v-3101e1ae]{color:#d97706;background-color:#fef3c7}.icon-btn-close[data-v-3101e1ae]{width:28px;height:28px;color:var(--text-muted,#86909c);cursor:pointer;transition:var(--transition-fast,all .2s);background:0 0;border:none;border-radius:6px;justify-content:center;align-items:center;display:inline-flex}.icon-btn-close[data-v-3101e1ae]:hover{background-color:var(--bg-subtle,#f2f3f5);color:var(--text-main,#1f2329)}.list-summary-bar[data-v-3101e1ae]{justify-content:space-between;align-items:center;margin-bottom:12px;padding:0 2px;display:flex}.count-text[data-v-3101e1ae]{color:var(--text-muted,#86909c);font-size:12px}.toggle-hidden-btn[data-v-3101e1ae]{padding:0;font-size:12px}.plugin-list[data-v-3101e1ae]{flex-direction:column;gap:10px;display:flex}.plugin-card[data-v-3101e1ae]{background:var(--bg-card,#fff);border:1px solid var(--border-color,#e5e6eb);border-radius:var(--radius-base,8px);transition:var(--transition-fast,all .2s);padding:12px}.plugin-card[data-v-3101e1ae]:hover{border-color:#c9cdd4;box-shadow:0 4px 12px #00000008}.plugin-card.is-disabled[data-v-3101e1ae]{opacity:.6}.plugin-summary[data-v-3101e1ae]{cursor:pointer;-webkit-user-select:none;user-select:none;align-items:center;gap:10px;display:flex}.expand-icon-btn[data-v-3101e1ae]{background:var(--bg-subtle,#f2f3f5);width:20px;height:20px;color:var(--text-regular,#4e5969);cursor:pointer;border:none;border-radius:4px;justify-content:center;align-items:center;padding:0;transition:transform .2s,background .2s;display:flex}.expand-icon-btn.expanded[data-v-3101e1ae]{transform:rotate(90deg)}.expand-icon-btn[data-v-3101e1ae]:hover{background-color:#e5e6eb}.plugin-icon[data-v-3101e1ae]{justify-content:center;align-items:center;font-size:18px;line-height:1;display:flex}.summary-info[data-v-3101e1ae]{flex:1;min-width:0}.plugin-name[data-v-3101e1ae]{color:var(--text-main,#1f2329);margin-right:6px;font-size:13px;font-weight:600;line-height:1.3}.plugin-desc[data-v-3101e1ae]{color:var(--text-muted,#86909c);white-space:nowrap;text-overflow:ellipsis;margin:2px 0 0;font-size:12px;overflow:hidden}.version-tag[data-v-3101e1ae]{color:#4b5563;background-color:#f3f4f6;border-radius:9999px;align-items:center;padding:2px 8px;font-family:monospace;font-size:12px;font-weight:500;line-height:1;display:inline-flex}.switch-wrapper[data-v-3101e1ae]{align-items:center;display:flex}.plugin-details[data-v-3101e1ae]{border-top:1px solid var(--border-color,#e5e6eb);margin-top:12px;padding-top:12px}.plugin-meta-bar[data-v-3101e1ae]{align-items:center;gap:6px;margin-bottom:10px;display:flex}.custom-tag[data-v-3101e1ae]{border-radius:4px;margin-right:0;font-size:11px}.open-plugin-btn[data-v-3101e1ae]{height:auto;margin-left:auto;padding:0;font-size:12px}.runtime-alert[data-v-3101e1ae]{color:var(--text-regular,#4e5969);background:var(--bg-subtle,#f2f3f5);border-radius:6px;margin-bottom:12px;padding:6px 10px;font-size:11px;line-height:1.4}.section-divider[data-v-3101e1ae]{color:var(--text-muted,#86909c);text-transform:uppercase;letter-spacing:.5px;align-items:center;margin:14px 0 8px;font-size:11px;font-weight:600;display:flex}.section-divider[data-v-3101e1ae]:after{content:\"\";background-color:var(--border-color,#e5e6eb);flex:1;height:1px;margin-left:8px}.match-context-card[data-v-3101e1ae]{border:1px solid var(--border-color,#e5e6eb);background:#fafafa;border-radius:6px;margin-bottom:8px;padding:10px}.context-header[data-v-3101e1ae]{justify-content:space-between;align-items:center;margin-bottom:8px;display:flex}.context-title[data-v-3101e1ae]{align-items:center;gap:8px;font-size:12px;display:flex}.context-title strong[data-v-3101e1ae]{color:var(--text-main,#1f2329)}.context-hint[data-v-3101e1ae]{color:var(--text-muted,#86909c);font-size:11px}.match-preview-result[data-v-3101e1ae]{align-items:center;gap:6px;margin-top:8px;font-size:11px;display:flex}.reason-text[data-v-3101e1ae]{color:var(--text-regular,#4e5969)}.context-disabled-tip[data-v-3101e1ae]{color:var(--text-muted,#86909c);font-size:11px}.drawer-footer-content[data-v-3101e1ae]{justify-content:space-between;align-items:center;width:100%;display:flex}.status-indicator[data-v-3101e1ae]{align-items:center;gap:6px;font-size:12px;display:flex}.status-dot[data-v-3101e1ae]{border-radius:50%;width:6px;height:6px}.status-dot.warning[data-v-3101e1ae]{background-color:#f59e0b}.status-dot.success[data-v-3101e1ae]{background-color:#10b981}.pending-text[data-v-3101e1ae]{color:#d97706}.saved-text[data-v-3101e1ae]{color:var(--text-muted,#86909c)}.footer-actions[data-v-3101e1ae]{gap:8px;display:flex}.btn-secondary[data-v-3101e1ae],.btn-primary[data-v-3101e1ae]{border-radius:6px;font-size:12px}.jx-fab-container[data-v-62d89bf2]{--fab-size:36px;--fab-radius-dock-right:50% 0 0 50%;--fab-radius-dock-left:0 50% 50% 0;--fab-radius-dragging:50%;z-index:var(--jx-floating-z-index,2147480000);width:var(--fab-size);height:var(--fab-size);cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none;position:fixed}.jx-fab-container.is-dragging[data-v-62d89bf2]{cursor:grabbing}.jx-fab-backdrop[data-v-62d89bf2]{-webkit-backdrop-filter:blur(14px);background:#ffffffa6;transition:border-radius .3s cubic-bezier(.16,1,.3,1),background .2s;position:absolute;inset:0;overflow:hidden;box-shadow:0 2px 16px #0000001f}.jx-fab-container.side-right:not(.is-dragging) .jx-fab-backdrop[data-v-62d89bf2]{border-radius:var(--fab-radius-dock-right)}.jx-fab-container.side-left:not(.is-dragging) .jx-fab-backdrop[data-v-62d89bf2]{border-radius:var(--fab-radius-dock-left)}.jx-fab-container.is-dragging .jx-fab-backdrop[data-v-62d89bf2],.jx-fab-container:hover:not(.is-dragging) .jx-fab-backdrop[data-v-62d89bf2]{border-radius:var(--fab-radius-dragging);background:#ffffffd9}.jx-fab-content[data-v-62d89bf2]{color:#111;pointer-events:none;flex-direction:column;justify-content:center;align-items:center;width:100%;height:100%;display:flex}.jx-fab-icon[data-v-62d89bf2]{width:12px;height:12px}.jx-fab-text[data-v-62d89bf2]{letter-spacing:-.5px;font-size:10px;font-weight:800}.jx-recall-list[data-v-62d89bf2]{z-index:var(--jx-floating-list-z-index,2147480000);opacity:0;visibility:hidden;-webkit-backdrop-filter:blur(16px);background:#fffc;border-radius:12px;flex-direction:column;justify-content:center;align-items:center;gap:8px;width:36px;max-height:calc(100vh - 16px);transition:opacity .2s cubic-bezier(.16,1,.3,1),visibility .2s cubic-bezier(.16,1,.3,1),transform .2s cubic-bezier(.16,1,.3,1);display:flex;position:fixed;overflow:auto;transform:scale(.95);box-shadow:0 10px 30px -5px #0000001a,0 4px 12px -2px #0000000d}.jx-recall-list[data-v-62d89bf2]::-webkit-scrollbar{width:4px}.jx-recall-list[data-v-62d89bf2]::-webkit-scrollbar-thumb{background:#00000026;border-radius:4px}.jx-fab-container:hover~.jx-recall-list[data-v-62d89bf2],.jx-recall-list[data-v-62d89bf2]:hover{opacity:1;visibility:visible;transform:scale(1)}.jx-recall-item[data-v-62d89bf2]{color:#262626;cursor:pointer;width:32px;height:32px;font:inherit;background:0 0;border:1px solid #0000;border-radius:10px;justify-content:center;align-items:center;padding:0;transition:all .2s cubic-bezier(.16,1,.3,1);display:flex;position:relative}.jx-recall-icon[data-v-62d89bf2]{justify-content:center;align-items:center;font-size:16px;line-height:1;transition:transform .2s;display:flex}.jx-recall-item[data-v-62d89bf2]:hover:not(:disabled){background:#ffffffe6;border-color:#0000000f;transform:translateY(-1px);box-shadow:0 4px 12px #00000014}.jx-recall-item:hover:not(:disabled) .jx-recall-icon[data-v-62d89bf2]{transform:scale(1.1)}.jx-recall-item[data-v-62d89bf2]:active:not(:disabled){transform:translateY(0)scale(.96)}.jx-recall-item[data-v-62d89bf2]:disabled{opacity:.4;cursor:not-allowed}@media (prefers-color-scheme:dark){.jx-recall-list[data-v-62d89bf2]{background:#1e1e1ecc;border:1px solid #ffffff14;box-shadow:0 10px 30px -5px #0006}.jx-recall-list[data-v-62d89bf2]::-webkit-scrollbar-thumb{background:#fff3}.jx-recall-item[data-v-62d89bf2]{color:#f3f4f6}.jx-recall-item[data-v-62d89bf2]:hover:not(:disabled){background:#ffffff1a;border-color:#ffffff14}.jx-fab-backdrop[data-v-62d89bf2]{background:#1a1a1aa6}.jx-fab-container.is-dragging .jx-fab-backdrop[data-v-62d89bf2],.jx-fab-container:hover:not(.is-dragging) .jx-fab-backdrop[data-v-62d89bf2]{background:#262626d9}.jx-fab-content[data-v-62d89bf2]{color:#f3f4f6}}.example-plugin p[data-v-bada61c7],.example-plugin p[data-v-8df22ec7]{color:#555;margin:0 0 14px}.split-layout[data-v-03f784d7]{gap:16px;width:100%;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;display:flex;line-height:1.2!important}.col[data-v-03f784d7]{box-sizing:border-box;background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;flex-direction:column;flex:1;gap:12px;min-width:0;padding:12px;display:flex}.col-header[data-v-03f784d7]{color:#374151;border-bottom:1px solid #e5e7eb;justify-content:space-between;align-items:center;padding-bottom:8px;font-size:13px;font-weight:700;display:flex}.col-header img[data-v-03f784d7]{vertical-align:middle;margin-right:6px}.control-box[data-v-03f784d7]{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:10px}.split-control[data-v-03f784d7]{gap:12px;display:flex}.split-left[data-v-03f784d7]{flex-direction:column;flex:1;justify-content:space-between;display:flex}.split-right[data-v-03f784d7]{border-left:1px dashed #e5e7eb;flex-direction:column;flex:.9;padding-left:12px;display:flex}.current-consent-title[data-v-03f784d7]{color:#6b7280;margin-bottom:6px;font-size:11px;font-weight:700}.current-consent-item[data-v-03f784d7]{justify-content:space-between;align-items:center;margin-bottom:2px;font-size:11px;display:flex}.chk-grid[data-v-03f784d7]{grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:10px;display:grid}.chk-grid label[data-v-03f784d7]{color:#4b5563;cursor:pointer;align-items:center;gap:4px;font-size:12px;font-weight:500;display:flex}.chk-grid input[data-v-03f784d7]{accent-color:#000;cursor:pointer;width:12px;height:12px;margin:0}.action-row[data-v-03f784d7]{gap:8px;display:flex}.global-stats[data-v-03f784d7]{color:#4b5563;background:#fff;border:1px solid #e5e7eb;border-radius:8px;gap:12px;padding:8px 10px;font-size:12px;font-weight:600;display:flex}.table-wrapper[data-v-03f784d7]{background:#fff;border:1px solid #e5e7eb;border-radius:6px;max-height:350px;overflow-y:auto}.table-wrapper[data-v-03f784d7]::-webkit-scrollbar{width:4px}.table-wrapper[data-v-03f784d7]::-webkit-scrollbar-thumb{background:#ccc;border-radius:2px}table[data-v-03f784d7]{border-collapse:collapse;table-layout:fixed;width:100%}thead[data-v-03f784d7]{z-index:2;background:#f3f4f6;position:sticky;top:0;box-shadow:0 1px #e5e7eb}th[data-v-03f784d7]{text-align:left;color:#666;padding:6px 8px;font-size:11px;font-weight:600}td[data-v-03f784d7]{vertical-align:top;word-break:break-all;border-top:1px solid #f3f4f6;padding:8px;font-size:12px}.inline-flex-box[data-v-03f784d7]{align-items:center;display:inline-flex}.inline-flex-box-column[data-v-03f784d7]{flex-direction:column;align-items:flex-start;display:inline-flex}.btn[data-v-03f784d7]{cursor:pointer;color:#333;background:#fff;border:1px solid #d2d5d8;border-radius:6px;padding:6px 12px;font-size:12px;font-weight:600;transition:all .2s}.btn[data-v-03f784d7]:hover{background:#f8f9fa;border-color:#b0b4b8}.btn[data-v-03f784d7]:disabled{opacity:.5;cursor:not-allowed}.sm-btn[data-v-03f784d7]{margin-left:4px;padding:2px 6px;font-size:11px}.btn-primary[data-v-03f784d7]{color:#fff;background:#000;border:none}.btn-primary[data-v-03f784d7]:hover{background:#333}.btn-google[data-v-03f784d7]{color:#fff;background:linear-gradient(135deg,#1a73e8,#7c3aed);border:none}.btn-google[data-v-03f784d7]:hover{background:linear-gradient(135deg,#1557b0,#6d28d9)}.badge[data-v-03f784d7]{text-transform:uppercase;border-radius:4px;padding:2px 4px;font-size:10px;font-weight:700;line-height:1;display:inline-block}.b-true[data-v-03f784d7]{color:#059669;background:#d1fae5}.b-false[data-v-03f784d7]{color:#dc2626;background:#fee2e2}.b-neu[data-v-03f784d7]{color:#4b5563;background:#f3f4f6}.b-purp[data-v-03f784d7]{color:#6b21a8;background:#f3e8ff}.b-blue[data-v-03f784d7]{color:#1e40af;background:#dbeafe}.mini-status[data-v-03f784d7]{border-bottom:1px dashed #eee;justify-content:space-between;margin-bottom:2px;padding-bottom:2px;font-size:11px;display:flex}.diff-item[data-v-03f784d7]{color:#374151;margin-bottom:4px;font-size:11px}details summary[data-v-03f784d7]{cursor:pointer;color:#2563eb;outline:none;font-size:10px;font-weight:600}pre[data-v-03f784d7]{color:#333;white-space:pre-wrap;background:#f4f6f8;border-radius:4px;max-height:100px;margin:4px 0 0;padding:6px;font-family:monospace;font-size:10px;overflow:auto}.jx-intercept-container[data-v-721985c9]{font-family:PingFang SC,Microsoft YaHei,sans-serif}.jx-modal-desc[data-v-721985c9]{color:#666;word-break:break-all;text-align:left;background:#f5f5f7;border-radius:8px;margin-top:8px;padding:12px;font-size:14px;line-height:1.6}.jx-modal-option[data-v-721985c9]{justify-content:flex-end;margin-top:12px;font-size:13px;display:flex}.dialog-title[data-v-be854003]{cursor:move;-webkit-user-select:none;user-select:none;touch-action:none;justify-content:space-between;align-items:center;gap:10px;display:flex}.main-title[data-v-be854003]{flex-shrink:0;align-items:center;gap:8px;display:flex}.custom-header[data-v-be854003]{flex:1;min-width:0}.header-extra[data-v-be854003]{align-items:center;gap:6px;display:flex}.plugin-icon[data-v-be854003]{font-size:18px}.drawer-title[data-v-92d662b3]{align-items:center;gap:10px;display:flex}.main-title[data-v-92d662b3]{flex-shrink:0;align-items:center;gap:8px;display:flex}.custom-header[data-v-92d662b3]{flex:1;min-width:0}.header-extra[data-v-92d662b3]{align-items:center;gap:6px;display:flex}.plugin-icon[data-v-92d662b3]{font-size:18px}.jx-assistant-root{color:#171717;font-family:Inter,system-ui,sans-serif}.jx-fab-container,.jx-recall-list{pointer-events:auto}\n/*$vite$:1*/ ");
 	var __defProp = Object.defineProperty;
 	var __exportAll = (all, no_symbols) => {
 		let target = {};
@@ -46,11 +46,11 @@
 		if (!no_symbols) __defProp(target, Symbol.toStringTag, { value: "Module" });
 		return target;
 	};
-	var style_default = ":host{all:initial!important;z-index:var(--jx-root-z-index,2147480000)!important;pointer-events:none!important;isolation:isolate!important;position:fixed!important;inset:0!important}#jx-app-root{all:initial;z-index:var(--jx-root-z-index,2147480000);isolation:isolate;pointer-events:none;color:#171717;font-synthesis:none;text-rendering:optimizelegibility;-webkit-font-smoothing:antialiased;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;font-size:14px;line-height:1.5;display:block;position:fixed;inset:0}#jx-app-root,#jx-app-root *,#jx-app-root :before,#jx-app-root :after{box-sizing:border-box}";
+	var style_default = ":host{all:initial!important;z-index:var(--jx-root-z-index,2147480000)!important;pointer-events:none!important;isolation:isolate!important;position:fixed!important;inset:0!important}#jx-app-root{all:initial;z-index:var(--jx-root-z-index,2147480000);isolation:isolate;pointer-events:none;color:#171717;font-synthesis:none;text-rendering:optimizelegibility;-webkit-font-smoothing:antialiased;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;font-size:14px;line-height:1.5;display:block;position:fixed;inset:0}#jx-app-root,#jx-app-root *,#jx-app-root :before,#jx-app-root :after{box-sizing:border-box}#jx-app-root .ant-message,#jx-app-root .ant-tooltip{pointer-events:none}#jx-app-root .ant-notification,#jx-app-root .ant-popover,#jx-app-root .ant-dropdown,#jx-app-root .ant-select-dropdown,#jx-app-root .ant-picker-dropdown,#jx-app-root .ant-cascader-dropdown,#jx-app-root .ant-tree-select-dropdown{pointer-events:auto}#jx-app-root .ant-message,#jx-app-root .ant-notification{z-index:var(--jx-overlay-z-index,2147480000)!important}";
 	var _GM_getValue = (() => typeof GM_getValue != "undefined" ? GM_getValue : void 0)();
 	var _GM_registerMenuCommand = (() => typeof GM_registerMenuCommand != "undefined" ? GM_registerMenuCommand : void 0)();
 	var _GM_setValue = (() => typeof GM_setValue != "undefined" ? GM_setValue : void 0)();
-	var _hoisted_1$12 = { class: "url-rule-editor" };
+	var _hoisted_1$13 = { class: "url-rule-editor" };
 	var MatchContextEditor_vue_vue_type_script_setup_true_lang_default = (0, vue.defineComponent)({
 		__name: "MatchContextEditor",
 		props: { rules: {} },
@@ -65,7 +65,7 @@
 				});
 			}
 			return (_ctx, _cache) => {
-				return (0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_1$12, [(0, vue.createElementVNode)("label", null, [_cache[2] || (_cache[2] = (0, vue.createElementVNode)("span", null, [(0, vue.createTextVNode)("Include "), (0, vue.createElementVNode)("small", { class: "tip-text" }, "（至少一行；`*` 匹配所有 URL，多条规则为任意命中）")], -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Input).TextArea, {
+				return (0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_1$13, [(0, vue.createElementVNode)("label", null, [_cache[2] || (_cache[2] = (0, vue.createElementVNode)("span", null, [(0, vue.createTextVNode)("Include "), (0, vue.createElementVNode)("small", { class: "tip-text" }, "（至少一行；`*` 匹配所有 URL，多条规则为任意命中）")], -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Input).TextArea, {
 					value: (props.rules.include ?? []).join("\n"),
 					"auto-size": {
 						minRows: 3,
@@ -93,33 +93,33 @@
 		return target;
 	};
 	var MatchContextEditor_default = _plugin_vue_export_helper_default(MatchContextEditor_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-ec03e8d3"]]);
-	var _hoisted_1$11 = { class: "config-grid" };
-	var _hoisted_2$8 = { class: "wide" };
-	var _hoisted_3$5 = { key: 0 };
+	var _hoisted_1$12 = { class: "config-grid" };
+	var _hoisted_2$9 = { class: "wide" };
+	var _hoisted_3$6 = { key: 0 };
 	var _hoisted_4$4 = { key: 1 };
 	var _hoisted_5$3 = {
 		key: 2,
 		class: "wide"
 	};
-	var _hoisted_6$2 = { class: "switch-grid" };
-	var _hoisted_7$2 = {
+	var _hoisted_6$3 = { class: "switch-grid" };
+	var _hoisted_7$3 = {
 		key: 0,
 		title: "页面加载时将插件收起到快捷入口。"
 	};
-	var _hoisted_8$2 = {
+	var _hoisted_8$3 = {
 		key: 1,
 		title: "显示模态遮罩。"
 	};
-	var _hoisted_9$2 = {
+	var _hoisted_9$3 = {
 		key: 2,
 		title: "显示模态遮罩。"
 	};
-	var _hoisted_10$2 = {
+	var _hoisted_10$3 = {
 		key: 3,
 		title: "允许拖动 Dialog 窗口调整位置。"
 	};
-	var _hoisted_11$2 = { title: "记住窗口位置和折叠状态。" };
-	var _hoisted_12$2 = { title: "在插件列表中显示此插件。" };
+	var _hoisted_11$3 = { title: "记住窗口位置和折叠状态。" };
+	var _hoisted_12$3 = { title: "在插件列表中显示此插件。" };
 	var UiSettings_default = _plugin_vue_export_helper_default((0, vue.defineComponent)({
 		__name: "UiSettings",
 		props: {
@@ -146,7 +146,7 @@
 					ref: containerRef
 				}, [
 					_cache[24] || (_cache[24] = (0, vue.createElementVNode)("h3", { class: "section-title" }, "窗口 UI", -1)),
-					(0, vue.createElementVNode)("div", _hoisted_1$11, [
+					(0, vue.createElementVNode)("div", _hoisted_1$12, [
 						(0, vue.createElementVNode)("label", null, [_cache[12] || (_cache[12] = (0, vue.createElementVNode)("span", null, "当前布局", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Select), {
 							value: props.ui.currentUi,
 							options: props.availableLayouts,
@@ -157,11 +157,11 @@
 							value: props.ui.icon,
 							"onUpdate:value": _cache[1] || (_cache[1] = ($event) => set("icon", $event))
 						}, null, 8, ["value"])]),
-						(0, vue.createElementVNode)("label", _hoisted_2$8, [_cache[14] || (_cache[14] = (0, vue.createElementVNode)("span", null, "标题", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Input), {
+						(0, vue.createElementVNode)("label", _hoisted_2$9, [_cache[14] || (_cache[14] = (0, vue.createElementVNode)("span", null, "标题", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Input), {
 							value: props.ui.title,
 							"onUpdate:value": _cache[2] || (_cache[2] = ($event) => set("title", $event))
 						}, null, 8, ["value"])]),
-						props.ui.currentUi !== "none" ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("label", _hoisted_3$5, [_cache[15] || (_cache[15] = (0, vue.createElementVNode)("span", null, "宽度", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.InputNumber), {
+						props.ui.currentUi !== "none" ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("label", _hoisted_3$6, [_cache[15] || (_cache[15] = (0, vue.createElementVNode)("span", null, "宽度", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.InputNumber), {
 							value: active()?.width,
 							min: 240,
 							"onUpdate:value": _cache[3] || (_cache[3] = ($event) => set(`layout.${props.ui.currentUi}.width`, $event))
@@ -185,33 +185,33 @@
 						}, null, 8, ["value"])])) : (0, vue.createCommentVNode)("", true)
 					]),
 					_cache[25] || (_cache[25] = (0, vue.createElementVNode)("h3", { class: "section-title" }, "当前布局设置", -1)),
-					(0, vue.createElementVNode)("div", _hoisted_6$2, [
-						props.ui.currentUi !== "none" ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("label", _hoisted_7$2, [_cache[18] || (_cache[18] = (0, vue.createElementVNode)("span", null, "默认折叠", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
+					(0, vue.createElementVNode)("div", _hoisted_6$3, [
+						props.ui.currentUi !== "none" ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("label", _hoisted_7$3, [_cache[18] || (_cache[18] = (0, vue.createElementVNode)("span", null, "默认折叠", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
 							checked: active()?.defaultCollapsed,
 							size: "small",
 							"onUpdate:checked": _cache[6] || (_cache[6] = ($event) => set(`layout.${props.ui.currentUi}.defaultCollapsed`, $event))
 						}, null, 8, ["checked"])])) : (0, vue.createCommentVNode)("", true),
-						props.ui.currentUi === "dialog" ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("label", _hoisted_8$2, [_cache[19] || (_cache[19] = (0, vue.createElementVNode)("span", null, "显示模态层", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
+						props.ui.currentUi === "dialog" ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("label", _hoisted_8$3, [_cache[19] || (_cache[19] = (0, vue.createElementVNode)("span", null, "显示模态层", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
 							checked: props.ui.layout.dialog?.showModal,
 							size: "small",
 							"onUpdate:checked": _cache[7] || (_cache[7] = ($event) => set("layout.dialog.showModal", $event))
 						}, null, 8, ["checked"])])) : (0, vue.createCommentVNode)("", true),
-						props.ui.currentUi === "drawer" ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("label", _hoisted_9$2, [_cache[20] || (_cache[20] = (0, vue.createElementVNode)("span", null, "显示模态层", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
+						props.ui.currentUi === "drawer" ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("label", _hoisted_9$3, [_cache[20] || (_cache[20] = (0, vue.createElementVNode)("span", null, "显示模态层", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
 							checked: props.ui.layout.drawer?.showModal,
 							size: "small",
 							"onUpdate:checked": _cache[8] || (_cache[8] = ($event) => set("layout.drawer.showModal", $event))
 						}, null, 8, ["checked"])])) : (0, vue.createCommentVNode)("", true),
-						props.ui.currentUi === "dialog" ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("label", _hoisted_10$2, [_cache[21] || (_cache[21] = (0, vue.createElementVNode)("span", null, "允许拖拽", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
+						props.ui.currentUi === "dialog" ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("label", _hoisted_10$3, [_cache[21] || (_cache[21] = (0, vue.createElementVNode)("span", null, "允许拖拽", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
 							checked: props.ui.layout.dialog?.draggable,
 							size: "small",
 							"onUpdate:checked": _cache[9] || (_cache[9] = ($event) => set("layout.dialog.draggable", $event))
 						}, null, 8, ["checked"])])) : (0, vue.createCommentVNode)("", true),
-						(0, vue.createElementVNode)("label", _hoisted_11$2, [_cache[22] || (_cache[22] = (0, vue.createElementVNode)("span", null, "记住位置", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
+						(0, vue.createElementVNode)("label", _hoisted_11$3, [_cache[22] || (_cache[22] = (0, vue.createElementVNode)("span", null, "记住位置", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
 							checked: props.ui.rememberPosition,
 							size: "small",
 							"onUpdate:checked": _cache[10] || (_cache[10] = ($event) => set("rememberPosition", $event))
 						}, null, 8, ["checked"])]),
-						(0, vue.createElementVNode)("label", _hoisted_12$2, [_cache[23] || (_cache[23] = (0, vue.createElementVNode)("span", null, "显示在控制中心", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
+						(0, vue.createElementVNode)("label", _hoisted_12$3, [_cache[23] || (_cache[23] = (0, vue.createElementVNode)("span", null, "显示在控制中心", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
 							checked: props.ui.showInHost,
 							size: "small",
 							"onUpdate:checked": _cache[11] || (_cache[11] = ($event) => set("showInHost", $event))
@@ -221,7 +221,7 @@
 			};
 		}
 	}), [["__scopeId", "data-v-aa3837de"]]);
-	var _hoisted_1$10 = { class: "business-fields" };
+	var _hoisted_1$11 = { class: "business-fields" };
 	var BusinessConfig_default = _plugin_vue_export_helper_default((0, vue.defineComponent)({
 		__name: "BusinessConfig",
 		props: {
@@ -233,7 +233,7 @@
 			const props = __props;
 			const emit = __emit;
 			return (_ctx, _cache) => {
-				return (0, vue.openBlock)(), (0, vue.createElementBlock)("section", null, [_cache[0] || (_cache[0] = (0, vue.createElementVNode)("h3", { class: "section-title" }, "插件业务配置", -1)), (0, vue.createElementVNode)("div", _hoisted_1$10, [((0, vue.openBlock)(true), (0, vue.createElementBlock)(vue.Fragment, null, (0, vue.renderList)(props.config, (value, key) => {
+				return (0, vue.openBlock)(), (0, vue.createElementBlock)("section", null, [_cache[0] || (_cache[0] = (0, vue.createElementVNode)("h3", { class: "section-title" }, "插件业务配置", -1)), (0, vue.createElementVNode)("div", _hoisted_1$11, [((0, vue.openBlock)(true), (0, vue.createElementBlock)(vue.Fragment, null, (0, vue.renderList)(props.config, (value, key) => {
 					return (0, vue.openBlock)(), (0, vue.createElementBlock)("label", {
 						key,
 						class: "business-field"
@@ -291,12 +291,13 @@
 		activePlugin: 2147483200,
 		floatingBall: 2147483300,
 		floatingList: 2147483301,
-		host: 2147483600
+		host: 2147483600,
+		overlay: 2147483700
 	};
 	var HOST_CONFIG = {
 		id: "jx-work-assistant",
 		name: "JX Work Assistant",
-		version: "1.0.0",
+		version: "0.0.1",
 		releaseNotes: "Host 版本管理与更新检测功能。",
 		zIndex: UI_LAYERS
 	};
@@ -306,17 +307,32 @@
 	async function saveUpdateCheckState(state) {
 		await _GM_setValue(UPDATE_STATE_KEY, state);
 	}
-	var _hoisted_1$9 = { class: "update-item-heading" };
-	var _hoisted_2$7 = ["href"];
+	var _hoisted_1$10 = { class: "update-manager" };
+	var _hoisted_2$8 = { class: "popover-panel" };
+	var _hoisted_3$5 = { class: "panel-header" };
+	var _hoisted_4$3 = { class: "panel-title" };
+	var _hoisted_5$2 = {
+		key: 0,
+		class: "panel-empty"
+	};
+	var _hoisted_6$2 = { class: "version-tag" };
+	var _hoisted_7$2 = {
+		key: 1,
+		class: "panel-body"
+	};
+	var _hoisted_8$2 = { class: "item-head" };
+	var _hoisted_9$2 = { class: "name" };
+	var _hoisted_10$2 = { class: "ver-change" };
+	var _hoisted_11$2 = { class: "notes" };
+	var _hoisted_12$2 = ["href"];
+	var _hoisted_13$2 = { class: "trigger-text" };
 	var UpdateManager_default = _plugin_vue_export_helper_default((0, vue.defineComponent)({
 		__name: "UpdateManager",
 		props: { modules: {} },
 		setup(__props) {
 			const state = (0, vue.ref)(getUpdateCheckState());
 			const checking = (0, vue.ref)(false);
-			const detailsOpen = (0, vue.ref)(false);
 			const updates = (0, vue.computed)(() => state.value.updates ?? []);
-			const badgeText = (0, vue.computed)(() => updates.value.length ? `发现 ${updates.value.length} 项更新` : "检查更新");
 			function compareVersions(a, b) {
 				const left = a.split(/[.+-]/).map((part) => Number(part) || 0);
 				const right = b.split(/[.+-]/).map((part) => Number(part) || 0);
@@ -347,7 +363,7 @@
 							name: current.name,
 							currentVersion: current.version,
 							latestVersion: remote.version,
-							releaseNotes: remote.releaseNotes || "暂无更新说明"
+							releaseNotes: remote.releaseNotes || "性能优化与细节改进"
 						}] : [];
 					});
 					state.value = {
@@ -355,7 +371,7 @@
 						updates: found
 					};
 					await saveUpdateCheckState(state.value);
-					if (force) ant_design_vue.message.success(found.length ? `发现 ${found.length} 项更新` : "当前已是最新版本");
+					if (force) ant_design_vue.message.success(found.length ? `发现 ${found.length} 个可用更新` : "已是最新版本");
 				} catch (error) {
 					console.warn("[JX Work Assistant] update check failed", error);
 					if (force) ant_design_vue.message.warning("检查更新失败，请稍后重试");
@@ -368,60 +384,59 @@
 				if (UPDATE_CONFIG.autoCheck) check();
 			});
 			return (_ctx, _cache) => {
-				return (0, vue.openBlock)(), (0, vue.createElementBlock)("div", { class: (0, vue.normalizeClass)(["update-manager", { available: updates.value.length }]) }, [updates.value.length ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("button", {
-					key: 0,
-					class: "update-banner",
-					onClick: _cache[0] || (_cache[0] = ($event) => detailsOpen.value = true)
-				}, [
-					_cache[4] || (_cache[4] = (0, vue.createElementVNode)("span", { class: "update-dot" }, null, -1)),
-					(0, vue.createTextVNode)((0, vue.toDisplayString)(badgeText.value), 1),
-					_cache[5] || (_cache[5] = (0, vue.createElementVNode)("span", { class: "update-arrow" }, "查看详情 ›", -1))
-				])) : ((0, vue.openBlock)(), (0, vue.createBlock)((0, vue.unref)(ant_design_vue.Button), {
-					key: 1,
-					type: "link",
-					size: "small",
-					loading: checking.value,
-					class: "check-button",
-					onClick: _cache[1] || (_cache[1] = ($event) => check(true))
+				return (0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_1$10, [(0, vue.createVNode)((0, vue.unref)(ant_design_vue.Popover), {
+					placement: "bottomRight",
+					trigger: "click",
+					"overlay-class-name": "monochrome-popover"
 				}, {
-					default: (0, vue.withCtx)(() => [(0, vue.createTextVNode)((0, vue.toDisplayString)(checking.value ? "检查中…" : "检查更新"), 1)]),
+					content: (0, vue.withCtx)(() => [(0, vue.createElementVNode)("div", _hoisted_2$8, [(0, vue.createElementVNode)("div", _hoisted_3$5, [(0, vue.createElementVNode)("span", _hoisted_4$3, (0, vue.toDisplayString)(updates.value.length ? `发现 ${updates.value.length} 个新版本` : "版本信息"), 1), (0, vue.createElementVNode)("button", {
+						class: (0, vue.normalizeClass)(["icon-refresh", { spinning: checking.value }]),
+						title: "检查更新",
+						onClick: _cache[0] || (_cache[0] = ($event) => check(true))
+					}, " ↻ ", 2)]), !updates.value.length ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_5$2, [_cache[1] || (_cache[1] = (0, vue.createElementVNode)("p", { class: "status-text" }, "已是最新状态", -1)), (0, vue.createElementVNode)("span", _hoisted_6$2, (0, vue.toDisplayString)((0, vue.unref)(HOST_CONFIG).version), 1)])) : ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_7$2, [((0, vue.openBlock)(true), (0, vue.createElementBlock)(vue.Fragment, null, (0, vue.renderList)(updates.value, (item) => {
+						return (0, vue.openBlock)(), (0, vue.createElementBlock)("div", {
+							key: item.id,
+							class: "update-item"
+						}, [(0, vue.createElementVNode)("div", _hoisted_8$2, [(0, vue.createElementVNode)("span", _hoisted_9$2, (0, vue.toDisplayString)(item.name), 1), (0, vue.createElementVNode)("span", _hoisted_10$2, (0, vue.toDisplayString)(item.currentVersion) + " → " + (0, vue.toDisplayString)(item.latestVersion), 1)]), (0, vue.createElementVNode)("p", _hoisted_11$2, (0, vue.toDisplayString)(item.releaseNotes), 1)]);
+					}), 128)), (0, vue.createElementVNode)("a", {
+						class: "update-btn",
+						href: (0, vue.unref)(UPDATE_CONFIG).scriptUpdateUrl,
+						target: "_blank",
+						rel: "noreferrer"
+					}, " 立即更新 ↗ ", 8, _hoisted_12$2)]))])]),
+					default: (0, vue.withCtx)(() => [(0, vue.createElementVNode)("div", { class: (0, vue.normalizeClass)(["trigger-entry", { "has-update": updates.value.length }]) }, [_cache[2] || (_cache[2] = (0, vue.createElementVNode)("span", { class: "status-dot" }, null, -1)), (0, vue.createElementVNode)("span", _hoisted_13$2, (0, vue.toDisplayString)(updates.value.length ? "发现新版本" : `${(0, vue.unref)(HOST_CONFIG).version}`), 1)], 2)]),
 					_: 1
-				}, 8, ["loading"])), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Modal), {
-					open: detailsOpen.value,
-					"onUpdate:open": _cache[3] || (_cache[3] = ($event) => detailsOpen.value = $event),
-					title: "主脚本更新",
-					footer: null,
-					width: "460px"
-				}, {
-					default: (0, vue.withCtx)(() => [
-						_cache[7] || (_cache[7] = (0, vue.createElementVNode)("p", { class: "update-intro" }, "Host 或插件有新版本时，请通过油猴管理器更新主脚本。", -1)),
-						((0, vue.openBlock)(true), (0, vue.createElementBlock)(vue.Fragment, null, (0, vue.renderList)(updates.value, (item) => {
-							return (0, vue.openBlock)(), (0, vue.createElementBlock)("article", {
-								key: item.id,
-								class: "update-item"
-							}, [(0, vue.createElementVNode)("div", _hoisted_1$9, [(0, vue.createElementVNode)("strong", null, (0, vue.toDisplayString)(item.name), 1), (0, vue.createElementVNode)("span", null, "v" + (0, vue.toDisplayString)(item.currentVersion) + " → v" + (0, vue.toDisplayString)(item.latestVersion), 1)]), (0, vue.createElementVNode)("p", null, (0, vue.toDisplayString)(item.releaseNotes), 1)]);
-						}), 128)),
-						(0, vue.createVNode)((0, vue.unref)(ant_design_vue.Button), {
-							type: "link",
-							size: "small",
-							loading: checking.value,
-							onClick: _cache[2] || (_cache[2] = ($event) => check(true))
-						}, {
-							default: (0, vue.withCtx)(() => [..._cache[6] || (_cache[6] = [(0, vue.createTextVNode)("重新检查", -1)])]),
-							_: 1
-						}, 8, ["loading"]),
-						(0, vue.createElementVNode)("a", {
-							class: "install-link",
-							href: (0, vue.unref)(UPDATE_CONFIG).scriptUpdateUrl,
-							target: "_blank",
-							rel: "noreferrer"
-						}, "打开主脚本更新地址 ↗", 8, _hoisted_2$7)
-					]),
-					_: 1
-				}, 8, ["open"])], 2);
+				})]);
 			};
 		}
-	}), [["__scopeId", "data-v-3683db9e"]]);
+	}), [["__scopeId", "data-v-cbb4ed5d"]]);
+	var _hoisted_1$9 = {
+		class: "plugin-icon",
+		"aria-hidden": "true"
+	};
+	var _hoisted_2$7 = ["src"];
+	var PluginIcon_default = _plugin_vue_export_helper_default((0, vue.defineComponent)({
+		__name: "PluginIcon",
+		props: {
+			config: {},
+			icon: {},
+			title: {}
+		},
+		setup(__props) {
+			const props = __props;
+			const iconValue = (0, vue.computed)(() => props.icon ?? props.config?.icon ?? "");
+			const titleValue = (0, vue.computed)(() => props.title ?? props.config?.title ?? "");
+			const imageUrl = (0, vue.computed)(() => /^(https?:)?\/\//i.test(iconValue.value.trim()) ? iconValue.value.trim() : "");
+			const character = (0, vue.computed)(() => iconValue.value.trim() || Array.from(titleValue.value.trim())[0] || "◇");
+			return (_ctx, _cache) => {
+				return (0, vue.openBlock)(), (0, vue.createElementBlock)("span", _hoisted_1$9, [imageUrl.value ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("img", {
+					key: 0,
+					src: imageUrl.value,
+					alt: ""
+				}, null, 8, _hoisted_2$7)) : ((0, vue.openBlock)(), (0, vue.createElementBlock)(vue.Fragment, { key: 1 }, [(0, vue.createTextVNode)((0, vue.toDisplayString)(character.value), 1)], 64))]);
+			};
+		}
+	}), [["__scopeId", "data-v-807a1c8c"]]);
 	function isRecord(value) {
 		return !!value && typeof value === "object" && !Array.isArray(value);
 	}
@@ -865,18 +880,18 @@
 	var _hoisted_1$8 = { class: "drawer-header" };
 	var _hoisted_2$6 = { class: "drawer-title-group" };
 	var _hoisted_3$4 = { class: "main-title" };
-	var _hoisted_4$3 = {
+	var _hoisted_4$2 = {
 		key: 0,
 		class: "status-badge warning"
 	};
-	var _hoisted_5$2 = { class: "list-summary-bar" };
+	var _hoisted_5$1 = { class: "list-summary-bar" };
 	var _hoisted_6$1 = { class: "count-text" };
 	var _hoisted_7$1 = { class: "plugin-list" };
 	var _hoisted_8$1 = ["onClick"];
 	var _hoisted_9$1 = ["aria-expanded", "aria-label"];
-	var _hoisted_10$1 = { class: "plugin-icon" };
-	var _hoisted_11$1 = { class: "summary-info" };
-	var _hoisted_12$1 = { class: "plugin-name" };
+	var _hoisted_10$1 = { class: "summary-info" };
+	var _hoisted_11$1 = { class: "plugin-name" };
+	var _hoisted_12$1 = { class: "version-tag" };
 	var _hoisted_13$1 = { class: "plugin-desc" };
 	var _hoisted_14$1 = {
 		key: 0,
@@ -953,7 +968,15 @@
 					"mask-closable": true,
 					onClose: close
 				}, {
-					title: (0, vue.withCtx)(() => [(0, vue.createElementVNode)("div", _hoisted_1$8, [(0, vue.createElementVNode)("div", _hoisted_2$6, [(0, vue.createElementVNode)("span", _hoisted_3$4, (0, vue.toDisplayString)((0, vue.unref)(HOST_CONFIG).name), 1), (0, vue.unref)(hasPendingChanges) ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("span", _hoisted_4$3, "待保存")) : (0, vue.createCommentVNode)("", true)]), (0, vue.createElementVNode)("button", {
+					title: (0, vue.withCtx)(() => [(0, vue.createElementVNode)("div", _hoisted_1$8, [(0, vue.createElementVNode)("div", _hoisted_2$6, [
+						(0, vue.createElementVNode)("span", _hoisted_3$4, (0, vue.toDisplayString)((0, vue.unref)(HOST_CONFIG).name), 1),
+						(0, vue.createVNode)(UpdateManager_default, { modules: __props.entries.map(({ manifest }) => ({
+							id: manifest.id,
+							name: manifest.name,
+							version: manifest.version || "0.0.0"
+						})) }, null, 8, ["modules"]),
+						(0, vue.unref)(hasPendingChanges) ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("span", _hoisted_4$2, "待保存")) : (0, vue.createCommentVNode)("", true)
+					]), (0, vue.createElementVNode)("button", {
 						class: "icon-btn-close",
 						"aria-label": "关闭控制中心",
 						onClick: close
@@ -981,119 +1004,121 @@
 						default: (0, vue.withCtx)(() => [..._cache[7] || (_cache[7] = [(0, vue.createTextVNode)("保存并刷新", -1)])]),
 						_: 1
 					}, 8, ["disabled"])])])]),
-					default: (0, vue.withCtx)(() => [
-						(0, vue.createVNode)(UpdateManager_default, { modules: __props.entries.map(({ manifest }) => ({
-							id: manifest.id,
-							name: manifest.name,
-							version: manifest.version || "0.0.0"
-						})) }, null, 8, ["modules"]),
-						(0, vue.createElementVNode)("div", _hoisted_5$2, [(0, vue.createElementVNode)("span", _hoisted_6$1, "共 " + (0, vue.toDisplayString)(__props.entries.length) + " 款插件", 1), (0, vue.unref)(hiddenPluginCount) ? ((0, vue.openBlock)(), (0, vue.createBlock)((0, vue.unref)(ant_design_vue.Button), {
-							key: 0,
-							type: "link",
-							size: "small",
-							class: "toggle-hidden-btn",
-							onClick: _cache[0] || (_cache[0] = ($event) => showHiddenPlugins.value = !(0, vue.unref)(showHiddenPlugins))
-						}, {
-							default: (0, vue.withCtx)(() => [(0, vue.createTextVNode)((0, vue.toDisplayString)((0, vue.unref)(showHiddenPlugins) ? "隐藏" : "显示") + "已隐藏插件（" + (0, vue.toDisplayString)((0, vue.unref)(hiddenPluginCount)) + "） ", 1)]),
-							_: 1
-						})) : (0, vue.createCommentVNode)("", true)]),
-						(0, vue.createElementVNode)("div", _hoisted_7$1, [((0, vue.openBlock)(true), (0, vue.createElementBlock)(vue.Fragment, null, (0, vue.renderList)(__props.entries, (entry) => {
-							return (0, vue.withDirectives)(((0, vue.openBlock)(), (0, vue.createElementBlock)("section", {
-								key: entry.manifest.id,
-								class: (0, vue.normalizeClass)(["plugin-card", {
-									"is-expanded": (0, vue.unref)(expanded)[entry.manifest.id],
-									"is-disabled": !(0, vue.unref)(draft).plugins[entry.manifest.id]?.isEnable
-								}])
-							}, [(0, vue.unref)(draft).plugins[entry.manifest.id] ? ((0, vue.openBlock)(), (0, vue.createElementBlock)(vue.Fragment, { key: 0 }, [(0, vue.createElementVNode)("div", {
-								class: "plugin-summary",
-								onClick: ($event) => (0, vue.unref)(expanded)[entry.manifest.id] = !(0, vue.unref)(expanded)[entry.manifest.id]
-							}, [
-								(0, vue.createElementVNode)("button", {
-									class: (0, vue.normalizeClass)(["expand-icon-btn", { "expanded": (0, vue.unref)(expanded)[entry.manifest.id] }]),
-									"aria-expanded": Boolean((0, vue.unref)(expanded)[entry.manifest.id]),
-									"aria-label": (0, vue.unref)(expanded)[entry.manifest.id] ? "折叠插件配置" : "展开插件配置"
-								}, [..._cache[3] || (_cache[3] = [(0, vue.createElementVNode)("svg", {
-									viewBox: "0 0 24 24",
-									width: "14",
-									height: "14",
-									fill: "currentColor"
-								}, [(0, vue.createElementVNode)("path", { d: "M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" })], -1)])], 10, _hoisted_9$1),
-								(0, vue.createElementVNode)("span", _hoisted_10$1, (0, vue.toDisplayString)((0, vue.unref)(draft).plugins[entry.manifest.id].ui?.icon || (0, vue.unref)(pluginConfig)(entry).ui.icon), 1),
-								(0, vue.createElementVNode)("div", _hoisted_11$1, [(0, vue.createElementVNode)("strong", _hoisted_12$1, (0, vue.toDisplayString)((0, vue.unref)(draft).plugins[entry.manifest.id].ui?.title || (0, vue.unref)(pluginConfig)(entry).ui.title), 1), (0, vue.createElementVNode)("p", _hoisted_13$1, [(0, vue.createElementVNode)("span", null, (0, vue.toDisplayString)("v" + (entry.manifest.version || "1.0.0")), 1), (0, vue.createTextVNode)(" | " + (0, vue.toDisplayString)(entry.manifest.description || "暂无描述"), 1)])]),
-								(0, vue.createElementVNode)("div", {
-									class: "switch-wrapper",
-									onClick: _cache[1] || (_cache[1] = (0, vue.withModifiers)(() => {}, ["stop"]))
-								}, [(0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
-									checked: (0, vue.unref)(draft).plugins[entry.manifest.id].isEnable,
-									"onUpdate:checked": ($event) => (0, vue.unref)(draft).plugins[entry.manifest.id].isEnable = $event,
+					default: (0, vue.withCtx)(() => [(0, vue.createElementVNode)("div", _hoisted_5$1, [(0, vue.createElementVNode)("span", _hoisted_6$1, "共 " + (0, vue.toDisplayString)(__props.entries.length) + " 款插件", 1), (0, vue.unref)(hiddenPluginCount) ? ((0, vue.openBlock)(), (0, vue.createBlock)((0, vue.unref)(ant_design_vue.Button), {
+						key: 0,
+						type: "link",
+						size: "small",
+						class: "toggle-hidden-btn",
+						onClick: _cache[0] || (_cache[0] = ($event) => showHiddenPlugins.value = !(0, vue.unref)(showHiddenPlugins))
+					}, {
+						default: (0, vue.withCtx)(() => [(0, vue.createTextVNode)((0, vue.toDisplayString)((0, vue.unref)(showHiddenPlugins) ? "隐藏" : "显示") + "已隐藏插件（" + (0, vue.toDisplayString)((0, vue.unref)(hiddenPluginCount)) + "） ", 1)]),
+						_: 1
+					})) : (0, vue.createCommentVNode)("", true)]), (0, vue.createElementVNode)("div", _hoisted_7$1, [((0, vue.openBlock)(true), (0, vue.createElementBlock)(vue.Fragment, null, (0, vue.renderList)(__props.entries, (entry) => {
+						return (0, vue.withDirectives)(((0, vue.openBlock)(), (0, vue.createElementBlock)("section", {
+							key: entry.manifest.id,
+							class: (0, vue.normalizeClass)(["plugin-card", {
+								"is-expanded": (0, vue.unref)(expanded)[entry.manifest.id],
+								"is-disabled": !(0, vue.unref)(draft).plugins[entry.manifest.id]?.isEnable
+							}])
+						}, [(0, vue.unref)(draft).plugins[entry.manifest.id] ? ((0, vue.openBlock)(), (0, vue.createElementBlock)(vue.Fragment, { key: 0 }, [(0, vue.createElementVNode)("div", {
+							class: "plugin-summary",
+							onClick: ($event) => (0, vue.unref)(expanded)[entry.manifest.id] = !(0, vue.unref)(expanded)[entry.manifest.id]
+						}, [
+							(0, vue.createElementVNode)("button", {
+								class: (0, vue.normalizeClass)(["expand-icon-btn", { "expanded": (0, vue.unref)(expanded)[entry.manifest.id] }]),
+								"aria-expanded": Boolean((0, vue.unref)(expanded)[entry.manifest.id]),
+								"aria-label": (0, vue.unref)(expanded)[entry.manifest.id] ? "折叠插件配置" : "展开插件配置"
+							}, [..._cache[3] || (_cache[3] = [(0, vue.createElementVNode)("svg", {
+								viewBox: "0 0 24 24",
+								width: "14",
+								height: "14",
+								fill: "currentColor"
+							}, [(0, vue.createElementVNode)("path", { d: "M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" })], -1)])], 10, _hoisted_9$1),
+							(0, vue.createVNode)(PluginIcon_default, {
+								class: "plugin-icon",
+								config: {
+									icon: (0, vue.unref)(draft).plugins[entry.manifest.id].ui?.icon || (0, vue.unref)(pluginConfig)(entry).ui.icon,
+									title: (0, vue.unref)(draft).plugins[entry.manifest.id].ui?.title || (0, vue.unref)(pluginConfig)(entry).ui.title
+								}
+							}, null, 8, ["config"]),
+							(0, vue.createElementVNode)("div", _hoisted_10$1, [
+								(0, vue.createElementVNode)("strong", _hoisted_11$1, (0, vue.toDisplayString)((0, vue.unref)(draft).plugins[entry.manifest.id].ui?.title || (0, vue.unref)(pluginConfig)(entry).ui.title), 1),
+								(0, vue.createElementVNode)("span", _hoisted_12$1, (0, vue.toDisplayString)(entry.manifest.version || "1.0.0"), 1),
+								(0, vue.createElementVNode)("p", _hoisted_13$1, (0, vue.toDisplayString)(entry.manifest.description || "暂无描述"), 1)
+							]),
+							(0, vue.createElementVNode)("div", {
+								class: "switch-wrapper",
+								onClick: _cache[1] || (_cache[1] = (0, vue.withModifiers)(() => {}, ["stop"]))
+							}, [(0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
+								checked: (0, vue.unref)(draft).plugins[entry.manifest.id].isEnable,
+								"onUpdate:checked": ($event) => (0, vue.unref)(draft).plugins[entry.manifest.id].isEnable = $event,
+								size: "small"
+							}, null, 8, ["checked", "onUpdate:checked"])])
+						], 8, _hoisted_8$1), (0, vue.unref)(expanded)[entry.manifest.id] ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_14$1, [
+							(0, vue.createElementVNode)("div", _hoisted_15$1, [(0, vue.createVNode)((0, vue.unref)(ant_design_vue.Tag), {
+								color: entry.isRunning ? "success" : "default",
+								class: "custom-tag"
+							}, {
+								default: (0, vue.withCtx)(() => [(0, vue.createTextVNode)((0, vue.toDisplayString)(entry.isRunning ? (0, vue.unref)(draft).plugins[entry.manifest.id].isEnable ? "当前运行中" : "运行中 · 刷新停用" : !(0, vue.unref)(draft).plugins[entry.manifest.id].isEnable ? "已停用" : entry.isMatched ? "已启用 · 刷新生效" : "页面未匹配"), 1)]),
+								_: 2
+							}, 1032, ["color"]), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Button), {
+								type: "link",
+								size: "small",
+								class: "open-plugin-btn",
+								disabled: !entry.isRunning || !(0, vue.unref)(draft).plugins[entry.manifest.id].isEnable,
+								onClick: (0, vue.withModifiers)(($event) => openPlugin(entry.manifest.id), ["stop"])
+							}, {
+								default: (0, vue.withCtx)(() => [..._cache[4] || (_cache[4] = [(0, vue.createTextVNode)(" 打开插件 ", -1)])]),
+								_: 1
+							}, 8, ["disabled", "onClick"])]),
+							(0, vue.createElementVNode)("div", _hoisted_16$1, [(0, vue.createElementVNode)("strong", null, "快照 (" + (0, vue.toDisplayString)((0, vue.unref)(environment).type === "top" ? "Top Window" : "iframe") + ")：", 1), (0, vue.createElementVNode)("span", null, (0, vue.toDisplayString)(entry.isMatched ? "匹配通过" : entry.matchReason.join("；") || "规则未通过"), 1)]),
+							_cache[5] || (_cache[5] = (0, vue.createElementVNode)("div", { class: "section-divider" }, "运行环境与 URL 匹配", -1)),
+							((0, vue.openBlock)(true), (0, vue.createElementBlock)(vue.Fragment, null, (0, vue.renderList)((0, vue.unref)(contexts), (context) => {
+								return (0, vue.openBlock)(), (0, vue.createElementBlock)("section", {
+									key: context,
+									class: "match-context-card"
+								}, [(0, vue.createElementVNode)("div", _hoisted_17$1, [(0, vue.createElementVNode)("div", _hoisted_18$1, [(0, vue.createElementVNode)("strong", null, (0, vue.toDisplayString)(context === "top" ? "Top Window" : "iframe"), 1), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
+									checked: (0, vue.unref)(matchDraft)[entry.manifest.id][context].enabled,
+									"onUpdate:checked": ($event) => (0, vue.unref)(matchDraft)[entry.manifest.id][context].enabled = $event,
 									size: "small"
-								}, null, 8, ["checked", "onUpdate:checked"])])
-							], 8, _hoisted_8$1), (0, vue.unref)(expanded)[entry.manifest.id] ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_14$1, [
-								(0, vue.createElementVNode)("div", _hoisted_15$1, [(0, vue.createVNode)((0, vue.unref)(ant_design_vue.Tag), {
-									color: entry.isRunning ? "success" : "default",
+								}, null, 8, ["checked", "onUpdate:checked"])]), (0, vue.createElementVNode)("span", _hoisted_19$1, (0, vue.toDisplayString)((0, vue.unref)(environment).type === context ? "当前环境" : "按当前 URL 预览"), 1)]), (0, vue.unref)(matchDraft)[entry.manifest.id][context].enabled ? ((0, vue.openBlock)(), (0, vue.createElementBlock)(vue.Fragment, { key: 0 }, [(0, vue.createVNode)(MatchContextEditor_default, {
+									rules: (0, vue.unref)(matchDraft)[entry.manifest.id][context].rules,
+									"onUpdate:rules": ($event) => (0, vue.unref)(setContextRules)(entry.manifest.id, context, $event)
+								}, null, 8, ["rules", "onUpdate:rules"]), (0, vue.createElementVNode)("div", _hoisted_20$1, [(0, vue.createVNode)((0, vue.unref)(ant_design_vue.Tag), {
+									color: (0, vue.unref)(rulePreview)(entry.manifest.id, context).matched ? "success" : "error",
 									class: "custom-tag"
 								}, {
-									default: (0, vue.withCtx)(() => [(0, vue.createTextVNode)((0, vue.toDisplayString)(entry.isRunning ? (0, vue.unref)(draft).plugins[entry.manifest.id].isEnable ? "当前运行中" : "运行中 · 刷新停用" : !(0, vue.unref)(draft).plugins[entry.manifest.id].isEnable ? "已停用" : entry.isMatched ? "已启用 · 刷新生效" : "页面未匹配"), 1)]),
+									default: (0, vue.withCtx)(() => [(0, vue.createTextVNode)((0, vue.toDisplayString)((0, vue.unref)(rulePreview)(entry.manifest.id, context).matched ? "通过" : "未通过"), 1)]),
 									_: 2
-								}, 1032, ["color"]), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Button), {
-									type: "link",
-									size: "small",
-									class: "open-plugin-btn",
-									disabled: !entry.isRunning || !(0, vue.unref)(draft).plugins[entry.manifest.id].isEnable,
-									onClick: (0, vue.withModifiers)(($event) => openPlugin(entry.manifest.id), ["stop"])
-								}, {
-									default: (0, vue.withCtx)(() => [..._cache[4] || (_cache[4] = [(0, vue.createTextVNode)(" 打开插件 ", -1)])]),
-									_: 1
-								}, 8, ["disabled", "onClick"])]),
-								(0, vue.createElementVNode)("div", _hoisted_16$1, [(0, vue.createElementVNode)("strong", null, "快照 (" + (0, vue.toDisplayString)((0, vue.unref)(environment).type === "top" ? "Top Window" : "iframe") + ")：", 1), (0, vue.createElementVNode)("span", null, (0, vue.toDisplayString)(entry.isMatched ? "匹配通过" : entry.matchReason.join("；") || "规则未通过"), 1)]),
-								_cache[5] || (_cache[5] = (0, vue.createElementVNode)("div", { class: "section-divider" }, "运行环境与 URL 匹配", -1)),
-								((0, vue.openBlock)(true), (0, vue.createElementBlock)(vue.Fragment, null, (0, vue.renderList)((0, vue.unref)(contexts), (context) => {
-									return (0, vue.openBlock)(), (0, vue.createElementBlock)("section", {
-										key: context,
-										class: "match-context-card"
-									}, [(0, vue.createElementVNode)("div", _hoisted_17$1, [(0, vue.createElementVNode)("div", _hoisted_18$1, [(0, vue.createElementVNode)("strong", null, (0, vue.toDisplayString)(context === "top" ? "Top Window" : "iframe"), 1), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
-										checked: (0, vue.unref)(matchDraft)[entry.manifest.id][context].enabled,
-										"onUpdate:checked": ($event) => (0, vue.unref)(matchDraft)[entry.manifest.id][context].enabled = $event,
-										size: "small"
-									}, null, 8, ["checked", "onUpdate:checked"])]), (0, vue.createElementVNode)("span", _hoisted_19$1, (0, vue.toDisplayString)((0, vue.unref)(environment).type === context ? "当前环境" : "按当前 URL 预览"), 1)]), (0, vue.unref)(matchDraft)[entry.manifest.id][context].enabled ? ((0, vue.openBlock)(), (0, vue.createElementBlock)(vue.Fragment, { key: 0 }, [(0, vue.createVNode)(MatchContextEditor_default, {
-										rules: (0, vue.unref)(matchDraft)[entry.manifest.id][context].rules,
-										"onUpdate:rules": ($event) => (0, vue.unref)(setContextRules)(entry.manifest.id, context, $event)
-									}, null, 8, ["rules", "onUpdate:rules"]), (0, vue.createElementVNode)("div", _hoisted_20$1, [(0, vue.createVNode)((0, vue.unref)(ant_design_vue.Tag), {
-										color: (0, vue.unref)(rulePreview)(entry.manifest.id, context).matched ? "success" : "error",
-										class: "custom-tag"
-									}, {
-										default: (0, vue.withCtx)(() => [(0, vue.createTextVNode)((0, vue.toDisplayString)((0, vue.unref)(rulePreview)(entry.manifest.id, context).matched ? "通过" : "未通过"), 1)]),
-										_: 2
-									}, 1032, ["color"]), (0, vue.createElementVNode)("span", _hoisted_21$1, (0, vue.toDisplayString)((0, vue.unref)(rulePreview)(entry.manifest.id, context).reason.join("；") || "符合全部匹配规则"), 1)])], 64)) : ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_22$1, "此环境规则已被禁启用"))]);
-								}), 128)),
-								(0, vue.createVNode)(UiSettings_default, {
-									ui: (0, vue.unref)(draftUi)(entry),
-									"available-layouts": (0, vue.unref)(availableLayouts)(entry),
-									onUpdate: ($event) => (0, vue.unref)(updateUi)(entry.manifest.id, $event.path, $event.value)
-								}, null, 8, [
-									"ui",
-									"available-layouts",
-									"onUpdate"
-								]),
-								(0, vue.createVNode)(BusinessConfig_default, {
-									config: (0, vue.unref)(configDraft)[entry.manifest.id],
-									text: Object.fromEntries(Object.entries((0, vue.unref)(configText)).filter(([key]) => key.startsWith(`${entry.manifest.id}:`)).map(([key, value]) => [key.slice(entry.manifest.id.length + 1), value])),
-									"onUpdate:value": ($event) => (0, vue.unref)(updatePrimitive)(entry.manifest.id, $event.key, $event.value),
-									"onUpdate:text": ($event) => (0, vue.unref)(updateBusinessText)(entry.manifest.id, $event.key, $event.value)
-								}, null, 8, [
-									"config",
-									"text",
-									"onUpdate:value",
-									"onUpdate:text"
-								])
-							])) : (0, vue.createCommentVNode)("", true)], 64)) : (0, vue.createCommentVNode)("", true)], 2)), [[vue.vShow, (0, vue.unref)(showHiddenPlugins) || ((0, vue.unref)(draft).plugins[entry.manifest.id]?.ui?.showInHost ?? (0, vue.unref)(pluginConfig)(entry).ui.showInHost) !== false]]);
-						}), 128))])
-					]),
+								}, 1032, ["color"]), (0, vue.createElementVNode)("span", _hoisted_21$1, (0, vue.toDisplayString)((0, vue.unref)(rulePreview)(entry.manifest.id, context).reason.join("；") || "符合全部匹配规则"), 1)])], 64)) : ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_22$1, "此环境规则已被禁启用"))]);
+							}), 128)),
+							(0, vue.createVNode)(UiSettings_default, {
+								ui: (0, vue.unref)(draftUi)(entry),
+								"available-layouts": (0, vue.unref)(availableLayouts)(entry),
+								onUpdate: ($event) => (0, vue.unref)(updateUi)(entry.manifest.id, $event.path, $event.value)
+							}, null, 8, [
+								"ui",
+								"available-layouts",
+								"onUpdate"
+							]),
+							(0, vue.createVNode)(BusinessConfig_default, {
+								config: (0, vue.unref)(configDraft)[entry.manifest.id],
+								text: Object.fromEntries(Object.entries((0, vue.unref)(configText)).filter(([key]) => key.startsWith(`${entry.manifest.id}:`)).map(([key, value]) => [key.slice(entry.manifest.id.length + 1), value])),
+								"onUpdate:value": ($event) => (0, vue.unref)(updatePrimitive)(entry.manifest.id, $event.key, $event.value),
+								"onUpdate:text": ($event) => (0, vue.unref)(updateBusinessText)(entry.manifest.id, $event.key, $event.value)
+							}, null, 8, [
+								"config",
+								"text",
+								"onUpdate:value",
+								"onUpdate:text"
+							])
+						])) : (0, vue.createCommentVNode)("", true)], 64)) : (0, vue.createCommentVNode)("", true)], 2)), [[vue.vShow, (0, vue.unref)(showHiddenPlugins) || ((0, vue.unref)(draft).plugins[entry.manifest.id]?.ui?.showInHost ?? (0, vue.unref)(pluginConfig)(entry).ui.showInHost) !== false]]);
+					}), 128))])]),
 					_: 1
 				}, 8, ["open", "z-index"]);
 			};
 		}
-	}), [["__scopeId", "data-v-1526274b"]]);
+	}), [["__scopeId", "data-v-3101e1ae"]]);
 	var _hoisted_1$7 = [
 		"disabled",
 		"aria-label",
@@ -1269,13 +1294,16 @@
 							"aria-label": plugin.name,
 							role: "menuitem",
 							onClick: ($event) => _ctx.$emit("activate-plugin", plugin.id)
-						}, [(0, vue.createElementVNode)("span", _hoisted_2$5, (0, vue.toDisplayString)(plugin.icon), 1)], 8, _hoisted_1$7)]),
+						}, [(0, vue.createElementVNode)("span", _hoisted_2$5, [(0, vue.createVNode)(PluginIcon_default, { config: {
+							icon: plugin.icon,
+							title: plugin.name
+						} }, null, 8, ["config"])])], 8, _hoisted_1$7)]),
 						_: 2
 					}, 1032, ["title", "placement"]);
 				}), 128))], 4)) : (0, vue.createCommentVNode)("", true)], 64);
 			};
 		}
-	}), [["__scopeId", "data-v-35a4817e"]]);
+	}), [["__scopeId", "data-v-62d89bf2"]]);
 	var _hoisted_1$6 = { class: "example-plugin" };
 	var example_default = _plugin_vue_export_helper_default((0, vue.defineComponent)({
 		name: "example",
@@ -1292,7 +1320,7 @@
 		id: "example",
 		name: "示例插件",
 		description: "用于验证插件自动注册、运行规则和窗口容器。",
-		version: "1.0.1",
+		version: "1.0.0",
 		releaseNotes: "初始版本。",
 		component: (0, vue.markRaw)(example_default),
 		config: {
@@ -1338,7 +1366,7 @@
 		id: "example2",
 		name: "示例插件2",
 		description: "用于验证插件自动注册、运行规则和窗口容器。",
-		version: "1.0.1",
+		version: "1.0.0",
 		releaseNotes: "初始版本。",
 		component: (0, vue.markRaw)(example2_default),
 		config: {
@@ -1371,8 +1399,8 @@
 	var _hoisted_1$4 = { class: "split-layout" };
 	var _hoisted_2$4 = { class: "col" };
 	var _hoisted_3$3 = { class: "col-header" };
-	var _hoisted_4$2 = ["disabled"];
-	var _hoisted_5$1 = {
+	var _hoisted_4$1 = ["disabled"];
+	var _hoisted_5 = {
 		key: 0,
 		class: "global-stats"
 	};
@@ -1801,12 +1829,12 @@
 						class: "btn sm-btn",
 						disabled: shopifyLoading.value,
 						onClick: handleLoadShopifyApi
-					}, (0, vue.toDisplayString)(shopifyLoading.value ? "Loading..." : "Load API"), 9, _hoisted_4$2)) : (0, vue.createCommentVNode)("", true), shopifyApiLoaded.value ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("button", {
+					}, (0, vue.toDisplayString)(shopifyLoading.value ? "Loading..." : "Load API"), 9, _hoisted_4$1)) : (0, vue.createCommentVNode)("", true), shopifyApiLoaded.value ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("button", {
 						key: 1,
 						class: "btn sm-btn",
 						onClick: _cache[0] || (_cache[0] = ($event) => recordShopify("query"))
 					}, "Query")) : (0, vue.createCommentVNode)("", true)])]),
-					shopifyApiLoaded.value ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_5$1, [(0, vue.createElementVNode)("div", null, [_cache[4] || (_cache[4] = (0, vue.createTextVNode)("shouldShowBanner: ", -1)), (0, vue.createElementVNode)("span", { class: (0, vue.normalizeClass)(["badge", getBadge(shopifyGlobal.shouldShowBanner).cls]) }, (0, vue.toDisplayString)(getBadge(shopifyGlobal.shouldShowBanner).text), 3)]), (0, vue.createElementVNode)("div", null, [_cache[5] || (_cache[5] = (0, vue.createTextVNode)("userCanBeTracked: ", -1)), (0, vue.createElementVNode)("span", { class: (0, vue.normalizeClass)(["badge", getBadge(shopifyGlobal.userCanBeTracked).cls]) }, (0, vue.toDisplayString)(getBadge(shopifyGlobal.userCanBeTracked).text), 3)])])) : (0, vue.createCommentVNode)("", true),
+					shopifyApiLoaded.value ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_5, [(0, vue.createElementVNode)("div", null, [_cache[4] || (_cache[4] = (0, vue.createTextVNode)("shouldShowBanner: ", -1)), (0, vue.createElementVNode)("span", { class: (0, vue.normalizeClass)(["badge", getBadge(shopifyGlobal.shouldShowBanner).cls]) }, (0, vue.toDisplayString)(getBadge(shopifyGlobal.shouldShowBanner).text), 3)]), (0, vue.createElementVNode)("div", null, [_cache[5] || (_cache[5] = (0, vue.createTextVNode)("userCanBeTracked: ", -1)), (0, vue.createElementVNode)("span", { class: (0, vue.normalizeClass)(["badge", getBadge(shopifyGlobal.userCanBeTracked).cls]) }, (0, vue.toDisplayString)(getBadge(shopifyGlobal.userCanBeTracked).text), 3)])])) : (0, vue.createCommentVNode)("", true),
 					(0, vue.createElementVNode)("div", _hoisted_6, [(0, vue.createElementVNode)("div", _hoisted_7, [((0, vue.openBlock)(), (0, vue.createElementBlock)(vue.Fragment, null, (0, vue.renderList)(shopifyOptions, (opt) => {
 						return (0, vue.createElementVNode)("label", { key: opt.id }, [(0, vue.withDirectives)((0, vue.createElementVNode)("input", {
 							type: "checkbox",
@@ -1893,7 +1921,7 @@
 		id: "jx-consent-inspector",
 		name: "同意状态监测器",
 		description: "用于验证插件自动注册、运行规则和窗口容器。",
-		version: "1.0.2",
+		version: "26.11.6",
 		releaseNotes: "初始版本。",
 		component: (0, vue.markRaw)(jxConsentInspector_default),
 		config: {
@@ -2035,7 +2063,7 @@
 		id: "jx-nav-blocker",
 		name: "页面跳转拦截器",
 		description: "用于拦截和控制页面导航行为。",
-		version: "1.0.0",
+		version: "26.11.6",
 		releaseNotes: "初始版本。",
 		component: (0, vue.markRaw)(jxNavBlocker_default),
 		config: {
@@ -2162,12 +2190,11 @@
 		};
 	}
 	var _hoisted_1$2 = { class: "main-title" };
-	var _hoisted_2$2 = { class: "plugin-icon" };
-	var _hoisted_3$1 = {
+	var _hoisted_2$2 = {
 		key: 0,
 		class: "custom-header"
 	};
-	var _hoisted_4$1 = {
+	var _hoisted_3$1 = {
 		key: 1,
 		class: "header-extra"
 	};
@@ -2254,9 +2281,12 @@
 						onPointerup: _cache[1] || (_cache[1] = (...args) => (0, vue.unref)(drag).pointerup && (0, vue.unref)(drag).pointerup(...args)),
 						onPointercancel: _cache[2] || (_cache[2] = (...args) => (0, vue.unref)(drag).pointercancel && (0, vue.unref)(drag).pointercancel(...args))
 					}, [
-						(0, vue.createElementVNode)("div", _hoisted_1$2, [(0, vue.createElementVNode)("span", _hoisted_2$2, (0, vue.toDisplayString)(__props.ui.icon), 1), (0, vue.createElementVNode)("span", null, (0, vue.toDisplayString)(__props.ui.title), 1)]),
-						_ctx.$slots.header ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_3$1, [(0, vue.renderSlot)(_ctx.$slots, "header", {}, void 0, true)])) : (0, vue.createCommentVNode)("", true),
-						_ctx.$slots.extra ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_4$1, [(0, vue.renderSlot)(_ctx.$slots, "extra", {}, void 0, true)])) : (0, vue.createCommentVNode)("", true)
+						(0, vue.createElementVNode)("div", _hoisted_1$2, [(0, vue.createVNode)(PluginIcon_default, {
+							class: "plugin-icon",
+							config: __props.ui
+						}, null, 8, ["config"]), (0, vue.createElementVNode)("span", null, (0, vue.toDisplayString)(__props.ui.title), 1)]),
+						_ctx.$slots.header ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_2$2, [(0, vue.renderSlot)(_ctx.$slots, "header", {}, void 0, true)])) : (0, vue.createCommentVNode)("", true),
+						_ctx.$slots.extra ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_3$1, [(0, vue.renderSlot)(_ctx.$slots, "extra", {}, void 0, true)])) : (0, vue.createCommentVNode)("", true)
 					], 32)]),
 					default: (0, vue.withCtx)(() => [(0, vue.renderSlot)(_ctx.$slots, "default", {}, void 0, true)]),
 					_: 2
@@ -2274,15 +2304,14 @@
 				]);
 			};
 		}
-	}), [["__scopeId", "data-v-62f6653d"]]);
+	}), [["__scopeId", "data-v-be854003"]]);
 	var _hoisted_1$1 = { class: "drawer-title" };
 	var _hoisted_2$1 = { class: "main-title" };
-	var _hoisted_3 = { class: "plugin-icon" };
-	var _hoisted_4 = {
+	var _hoisted_3 = {
 		key: 0,
 		class: "custom-header"
 	};
-	var _hoisted_5 = {
+	var _hoisted_4 = {
 		key: 1,
 		class: "header-extra"
 	};
@@ -2318,9 +2347,12 @@
 					mask: __props.ui.showModal
 				}, (0, vue.createSlots)({
 					title: (0, vue.withCtx)(() => [(0, vue.createElementVNode)("div", _hoisted_1$1, [
-						(0, vue.createElementVNode)("div", _hoisted_2$1, [(0, vue.createElementVNode)("span", _hoisted_3, (0, vue.toDisplayString)(__props.ui.icon), 1), (0, vue.createElementVNode)("span", null, (0, vue.toDisplayString)(__props.ui.title), 1)]),
-						_ctx.$slots.header ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_4, [(0, vue.renderSlot)(_ctx.$slots, "header", {}, void 0, true)])) : (0, vue.createCommentVNode)("", true),
-						_ctx.$slots.extra ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_5, [(0, vue.renderSlot)(_ctx.$slots, "extra", {}, void 0, true)])) : (0, vue.createCommentVNode)("", true)
+						(0, vue.createElementVNode)("div", _hoisted_2$1, [(0, vue.createVNode)(PluginIcon_default, {
+							class: "plugin-icon",
+							config: __props.ui
+						}, null, 8, ["config"]), (0, vue.createElementVNode)("span", null, (0, vue.toDisplayString)(__props.ui.title), 1)]),
+						_ctx.$slots.header ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_3, [(0, vue.renderSlot)(_ctx.$slots, "header", {}, void 0, true)])) : (0, vue.createCommentVNode)("", true),
+						_ctx.$slots.extra ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_4, [(0, vue.renderSlot)(_ctx.$slots, "extra", {}, void 0, true)])) : (0, vue.createCommentVNode)("", true)
 					])]),
 					default: (0, vue.withCtx)(() => [(0, vue.renderSlot)(_ctx.$slots, "default", {}, void 0, true)]),
 					_: 2
@@ -2338,13 +2370,15 @@
 				]);
 			};
 		}
-	}), [["__scopeId", "data-v-797cb8e7"]]);
+	}), [["__scopeId", "data-v-92d662b3"]]);
 	function getAppContainer(triggerNode) {
 		const root = triggerNode?.getRootNode();
-		if (root instanceof ShadowRoot) {
+		if (root instanceof ShadowRoot || root instanceof Document) {
 			const container = root.querySelector("#jx-app-root");
 			if (container) return container;
 		}
+		const container = document.querySelector("#jx-app-root");
+		if (container) return container;
 		return document.body;
 	}
 	var _hoisted_1 = { class: "jx-assistant-root" };
@@ -2352,6 +2386,10 @@
 	var App_default = (0, vue.defineComponent)({
 		__name: "App",
 		setup(__props) {
+			ant_design_vue.message.config({
+				getContainer: () => getAppContainer(),
+				top: "24px"
+			});
 			function pluginConfig(entry) {
 				return getPluginConfig(entry.manifest);
 			}
@@ -2475,6 +2513,7 @@
 	root.style.setProperty("--jx-root-z-index", String(UI_LAYERS.root));
 	root.style.setProperty("--jx-floating-z-index", String(UI_LAYERS.floatingBall));
 	root.style.setProperty("--jx-floating-list-z-index", String(UI_LAYERS.floatingList));
+	root.style.setProperty("--jx-overlay-z-index", String(UI_LAYERS.overlay));
 	(document.body ?? document.documentElement).append(root);
 	var style = document.createElement("style");
 	style.textContent = style_default;
