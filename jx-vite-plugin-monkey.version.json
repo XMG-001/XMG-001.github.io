@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T18:11:46.979Z",
+  "generatedAt": "2026-11-06T19:41:18.617Z",
   "modules": [
     {
       "id": "jx-work-assistant",
@@ -9,25 +9,25 @@
     },
     {
       "id": "example",
-      "name": "示例插件",
-      "version": "1.0.0",
+      "name": "JX - 示例插件1",
+      "version": "0.0.1",
       "releaseNotes": "初始版本。"
     },
     {
       "id": "example2",
-      "name": "示例插件2",
-      "version": "1.0.0",
+      "name": "JX - 示例插件2",
+      "version": "0.0.2",
       "releaseNotes": "初始版本。"
     },
     {
       "id": "jx-consent-inspector",
-      "name": "同意状态监测器",
+      "name": "JX - 同意状态监测器",
       "version": "26.11.6",
       "releaseNotes": "初始版本。"
     },
     {
       "id": "jx-nav-blocker",
-      "name": "页面跳转拦截器",
+      "name": "JX - 页面跳转拦截器",
       "version": "26.11.6",
       "releaseNotes": "初始版本。"
     }
