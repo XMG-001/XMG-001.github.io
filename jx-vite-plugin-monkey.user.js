@@ -1315,19 +1315,19 @@
 			};
 		}
 	}), [["__scopeId", "data-v-bada61c7"]]);
-	var config_exports$3 = __exportAll({ default: () => examplePlugin$3 });
-	var examplePlugin$3 = {
+	var config_exports$3 = __exportAll({ default: () => plugin$3 });
+	var plugin$3 = {
 		id: "example",
-		name: "示例插件",
+		name: "JX - 示例插件1",
 		description: "用于验证插件自动注册、运行规则和窗口容器。",
-		version: "1.0.0",
+		version: "0.0.1",
 		releaseNotes: "初始版本。",
 		component: (0, vue.markRaw)(example_default),
 		config: {
 			env: { contexts: { top: { include: ["*"] } } },
 			business: { message: "插件已按页面规则启动。" },
 			ui: {
-				title: "示例插件",
+				title: "示例插件1",
 				icon: "🧩",
 				showInHost: true,
 				currentUi: "dialog",
@@ -1361,12 +1361,12 @@
 			};
 		}
 	}), [["__scopeId", "data-v-8df22ec7"]]);
-	var config_exports$2 = __exportAll({ default: () => examplePlugin$2 });
-	var examplePlugin$2 = {
+	var config_exports$2 = __exportAll({ default: () => plugin$2 });
+	var plugin$2 = {
 		id: "example2",
-		name: "示例插件2",
-		description: "用于验证插件自动注册、运行规则和窗口容器。",
-		version: "1.0.0",
+		name: "JX - 示例插件2",
+		description: "用于验证插件抽屉窗口容器的功能。",
+		version: "0.0.2",
 		releaseNotes: "初始版本。",
 		component: (0, vue.markRaw)(example2_default),
 		config: {
@@ -1916,10 +1916,10 @@
 			};
 		}
 	}), [["__scopeId", "data-v-03f784d7"]]);
-	var config_exports$1 = __exportAll({ default: () => examplePlugin$1 });
-	var examplePlugin$1 = {
+	var config_exports$1 = __exportAll({ default: () => plugin$1 });
+	var plugin$1 = {
 		id: "jx-consent-inspector",
-		name: "同意状态监测器",
+		name: "JX - 同意状态监测器",
 		description: "用于验证插件自动注册、运行规则和窗口容器。",
 		version: "26.11.6",
 		releaseNotes: "初始版本。",
@@ -1928,8 +1928,8 @@
 			env: { contexts: { top: { include: ["*"] } } },
 			business: { message: "插件已按页面规则启动。" },
 			ui: {
-				title: "同意状态监测器",
-				icon: "😈",
+				title: "Consent Inspector",
+				icon: "👀",
 				showInHost: true,
 				currentUi: "dialog",
 				rememberPosition: true,
@@ -2058,10 +2058,10 @@
 			};
 		}
 	}), [["__scopeId", "data-v-721985c9"]]);
-	var config_exports = __exportAll({ default: () => examplePlugin });
-	var examplePlugin = {
+	var config_exports = __exportAll({ default: () => plugin });
+	var plugin = {
 		id: "jx-nav-blocker",
-		name: "页面跳转拦截器",
+		name: "JX - 页面跳转拦截器",
 		description: "用于拦截和控制页面导航行为。",
 		version: "26.11.6",
 		releaseNotes: "初始版本。",
