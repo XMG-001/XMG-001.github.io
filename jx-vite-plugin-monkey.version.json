@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-06T19:41:18.617Z",
+  "generatedAt": "2026-11-08T06:29:32.728Z",
   "modules": [
     {
       "id": "jx-work-assistant",
       "name": "JX Work Assistant",
-      "version": "0.0.1",
-      "releaseNotes": "Host 版本管理与更新检测功能。"
+      "version": "0.0.3",
+      "releaseNotes": "版本0.0.3：基础架构完善"
     },
     {
       "id": "example",
@@ -22,8 +22,8 @@
     {
       "id": "jx-consent-inspector",
       "name": "JX - 同意状态监测器",
-      "version": "26.11.6",
-      "releaseNotes": "初始版本。"
+      "version": "26.11.7",
+      "releaseNotes": "正式版本，优化了获取内部同意状态的逻辑。"
     },
     {
       "id": "jx-nav-blocker",
