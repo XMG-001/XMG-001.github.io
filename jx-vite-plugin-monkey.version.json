@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-08T07:34:30.383Z",
+  "generatedAt": "2026-11-10T01:57:11.319Z",
   "modules": [
     {
       "id": "jx-work-assistant",
       "name": "JX Work Assistant",
-      "version": "0.0.3",
-      "releaseNotes": "版本0.0.3：基础架构完善"
+      "version": "0.0.4",
+      "releaseNotes": "版本0.0.4：架构更新优化，预计下一版本迭代store状态管理层"
     },
     {
       "id": "example",

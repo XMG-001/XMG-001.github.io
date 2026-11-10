@@ -45,7 +45,7 @@
 			shadowRoot.append(style);
 		})(t);
 	};
-	_css(" .url-rule-editor[data-v-ec03e8d3]{gap:8px;margin-top:8px;display:grid}label[data-v-ec03e8d3]{color:#374151;gap:4px;font-size:11px;font-weight:500;display:grid}.tip-text[data-v-ec03e8d3]{color:#9ca3af;font-size:10px;font-weight:400}.modern-textarea[data-v-ec03e8d3]{border-radius:6px;font-size:12px}.section-title[data-v-ec09f86a]{color:#374151;border-top:1px solid #f0f0f2;margin:14px 0 8px;padding-top:10px;font-size:13px;font-weight:600}.style-title[data-v-ec09f86a]{margin-top:12px}.config-grid[data-v-ec09f86a]{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 10px;display:grid}.meta-grid[data-v-ec09f86a]{margin-bottom:10px}.wide[data-v-ec09f86a]{grid-column:1/-1}label[data-v-ec09f86a]{color:#6b7280;flex-direction:column;gap:4px;min-width:0;font-size:11px;display:flex}.config-grid[data-v-ec09f86a] .ant-input-number,.config-grid[data-v-ec09f86a] .ant-input,.config-grid[data-v-ec09f86a] .ant-select{width:100%}.behavior-grid[data-v-ec09f86a]{margin-top:9px}.base-options[data-v-ec09f86a]{margin-top:8px}.switch-row[data-v-ec09f86a]{box-sizing:border-box;color:#374151;border:1px solid #eef0f2;border-radius:6px;flex-direction:row;justify-content:space-between;align-items:center;min-height:34px;padding:6px 8px}.advanced-style[data-v-ec09f86a]{color:#4b5563;background:#fafbfc;border-radius:6px;margin-top:8px;padding:8px;font-size:11px}.advanced-style p[data-v-ec09f86a]{color:#8b9098;margin:5px 0}.custom-row[data-v-ec09f86a]{grid-template-columns:1fr 1fr auto;gap:5px;margin:5px 0;display:grid}.add-custom[data-v-ec09f86a]{color:#1677ff;cursor:pointer;background:0 0;border:0}.update-manager[data-v-cbb4ed5d]{display:inline-flex}.trigger-entry[data-v-cbb4ed5d]{color:#525252;cursor:pointer;-webkit-user-select:none;user-select:none;background:#fff;border:1px solid #e5e5e5;border-radius:99px;align-items:center;gap:3px;padding:1px 8px;font-size:11px;font-weight:500;transition:all .2s cubic-bezier(.4,0,.2,1);display:flex}.trigger-entry[data-v-cbb4ed5d]:hover{color:#171717;border-color:#171717}.status-dot[data-v-cbb4ed5d]{background:#a3a3a3;border-radius:50%;width:3px;height:3px;transition:background .2s}.trigger-entry.has-update[data-v-cbb4ed5d]{color:#fff;background:#171717;border-color:#171717}.trigger-entry.has-update .status-dot[data-v-cbb4ed5d]{background:#fff;box-shadow:0 0 6px #fff9}.popover-panel[data-v-cbb4ed5d]{color:#171717;width:210px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;font-size:12px}.panel-header[data-v-cbb4ed5d]{border-bottom:1px solid #f4f4f5;justify-content:space-between;align-items:center;margin-bottom:4px;padding-bottom:8px;display:flex}.panel-title[data-v-cbb4ed5d]{letter-spacing:-.01em;font-size:12px;font-weight:600}.icon-refresh[data-v-cbb4ed5d]{cursor:pointer;color:#a3a3a3;background:0 0;border:none;padding:2px;font-size:13px;line-height:1;transition:color .15s}.icon-refresh[data-v-cbb4ed5d]:hover{color:#171717}.icon-refresh.spinning[data-v-cbb4ed5d]{animation:.8s linear infinite spin-cbb4ed5d}.panel-empty[data-v-cbb4ed5d]{text-align:center;padding:12px 0 6px}.status-text[data-v-cbb4ed5d]{color:#737373;margin:0;font-size:11px}.version-tag[data-v-cbb4ed5d]{color:#a3a3a3;margin-top:4px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;display:inline-block}.panel-body[data-v-cbb4ed5d]{padding-top:2px}.update-item[data-v-cbb4ed5d]{border-bottom:1px solid #fafafa;padding:6px 0}.update-item[data-v-cbb4ed5d]:last-child{border-bottom:none}.item-head[data-v-cbb4ed5d]{justify-content:space-between;align-items:center;gap:8px;display:flex}.item-head .name[data-v-cbb4ed5d]{color:#171717;font-weight:500}.ver-change[data-v-cbb4ed5d]{color:#737373;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px}.notes[data-v-cbb4ed5d]{color:#737373;white-space:pre-wrap;margin:3px 0 0;font-size:11px;line-height:1.4}.update-btn[data-v-cbb4ed5d]{color:#fff;letter-spacing:.02em;background:#171717;border-radius:6px;justify-content:center;align-items:center;margin-top:10px;padding:6px 0;font-size:11px;font-weight:500;text-decoration:none;transition:background .15s;display:flex}.update-btn[data-v-cbb4ed5d]:hover{color:#fff;background:#333}@keyframes spin-cbb4ed5d{0%{transform:rotate(0)}to{transform:rotate(360deg)}}.monochrome-popover .ant-popover-inner{border:1px solid #e5e5e5;border-radius:8px;padding:10px 12px;box-shadow:0 10px 15px -3px #0000000d,0 4px 6px -4px #0000000d}.plugin-icon[data-v-807a1c8c]{vertical-align:middle;flex:none;justify-content:center;align-items:center;width:1em;height:1em;line-height:1;display:inline-flex}img[data-v-807a1c8c]{object-fit:contain;width:100%;height:100%;display:block}.drawer-header[data-v-48e2f2d1]{justify-content:space-between;align-items:center;width:100%;display:flex}.drawer-title-group[data-v-48e2f2d1]{align-items:center;gap:8px;display:flex}.main-title[data-v-48e2f2d1]{color:#1f2329;font-size:14px;font-weight:600}.status-badge[data-v-48e2f2d1]{border-radius:10px;padding:1px 6px;font-size:10px;font-weight:500;line-height:1.3}.status-badge.warning[data-v-48e2f2d1]{color:#b45309;background-color:#fef3c7}.icon-btn-close[data-v-48e2f2d1]{color:#86909c;cursor:pointer;background:0 0;border:none;border-radius:4px;justify-content:center;align-items:center;width:24px;height:24px;transition:all .2s;display:flex}.icon-btn-close[data-v-48e2f2d1]:hover{color:#1f2329;background-color:#f2f3f5}.list-summary-bar[data-v-48e2f2d1]{justify-content:space-between;align-items:center;margin-bottom:8px;padding:0 2px;display:flex}.count-text[data-v-48e2f2d1],.toggle-hidden-btn[data-v-48e2f2d1]{color:#86909c;font-size:12px}.toggle-hidden-btn[data-v-48e2f2d1]{padding:0}.dot[data-v-48e2f2d1]{border-radius:50%;flex-shrink:0;width:6px;height:6px;display:inline-block}.dot-success[data-v-48e2f2d1]{background-color:#52c41a}.dot-error[data-v-48e2f2d1]{background-color:#ff4d4f}.dot-warning[data-v-48e2f2d1]{background-color:#faad14}.plugin-list[data-v-48e2f2d1]{flex-direction:column;gap:8px;display:flex}.plugin-card[data-v-48e2f2d1]{background:#fff;border:1px solid #e5e6eb;border-radius:6px;padding:8px 10px;transition:border-color .2s}.plugin-card[data-v-48e2f2d1]:hover{border-color:#c9cdd4}.plugin-card.is-disabled[data-v-48e2f2d1]{opacity:.6}.plugin-summary[data-v-48e2f2d1]{cursor:pointer;-webkit-user-select:none;user-select:none;align-items:center;gap:8px;display:flex}.expand-icon-btn[data-v-48e2f2d1]{color:#4e5969;cursor:pointer;background:#f2f3f5;border:none;border-radius:4px;justify-content:center;align-items:center;width:18px;height:18px;padding:0;transition:transform .2s,background .2s;display:flex}.expand-icon-btn.expanded[data-v-48e2f2d1]{transform:rotate(90deg)}.expand-icon-btn[data-v-48e2f2d1]:hover{background-color:#e5e6eb}.plugin-icon[data-v-48e2f2d1]{align-items:center;font-size:16px;display:flex}.summary-info[data-v-48e2f2d1]{flex-wrap:wrap;flex:1;align-items:center;gap:4px 6px;min-width:0;display:flex}.plugin-name[data-v-48e2f2d1]{color:#1f2329;font-size:13px;font-weight:600;line-height:1.2}.version-tag[data-v-48e2f2d1]{color:#86909c;background-color:#f2f3f5;border-radius:3px;padding:0 4px;font-family:monospace;font-size:10px;line-height:1.4}.plugin-desc[data-v-48e2f2d1]{color:#86909c;white-space:nowrap;text-overflow:ellipsis;width:100%;margin:0;font-size:11px;overflow:hidden}.runtime-tag[data-v-48e2f2d1]{margin-right:0;font-size:10px}.switch-wrapper[data-v-48e2f2d1]{align-items:center;display:flex}.plugin-details[data-v-48e2f2d1]{border-top:1px solid #e5e6eb;margin-top:8px;padding-top:8px}.plugin-meta-bar[data-v-48e2f2d1]{align-items:center;gap:6px;margin-bottom:6px;display:flex}.open-plugin-btn[data-v-48e2f2d1]{margin-left:auto;padding:0;font-size:11px}.runtime-snapshot-row[data-v-48e2f2d1]{background:#f7f8fa;border:1px solid #e5e6eb;border-radius:4px;flex:1;align-items:center;gap:6px;padding:4px 8px;font-size:11px;display:flex}.snapshot-tag[data-v-48e2f2d1]{color:#4e5969;background:#fff;border:1px solid #e5e6eb;border-radius:3px;padding:0 4px;font-size:10px;font-weight:600}.snapshot-desc[data-v-48e2f2d1]{color:#4e5969;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.section-divider[data-v-48e2f2d1]{color:#86909c;text-transform:uppercase;letter-spacing:.3px;align-items:center;margin:8px 0 6px;font-size:11px;font-weight:600;display:flex}.section-divider[data-v-48e2f2d1]:after{content:\"\";background-color:#e5e6eb;flex:1;height:1px;margin-left:6px}.match-context-card[data-v-48e2f2d1]{background:#fafafa;border:1px solid #e5e6eb;border-radius:4px;margin-bottom:6px;padding:6px 8px}.context-row[data-v-48e2f2d1]{justify-content:space-between;align-items:center;font-size:11px;display:flex}.context-left[data-v-48e2f2d1]{align-items:center;gap:6px;display:flex}.context-left strong[data-v-48e2f2d1]{color:#1f2329}.context-hint[data-v-48e2f2d1]{color:#86909c;font-size:10px}.context-right-status[data-v-48e2f2d1]{align-items:center;gap:5px;max-width:220px;display:flex}.reason-text[data-v-48e2f2d1]{color:#4e5969;white-space:nowrap;text-overflow:ellipsis;font-size:11px;overflow:hidden}.context-disabled-tip[data-v-48e2f2d1]{color:#86909c;font-size:10px;font-style:italic}.context-editor-wrap[data-v-48e2f2d1]{border-top:1px dashed #e5e6eb;margin-top:6px;padding-top:6px}.drawer-footer-content[data-v-48e2f2d1]{justify-content:space-between;align-items:center;width:100%;display:flex}.status-indicator[data-v-48e2f2d1]{align-items:center;gap:6px;font-size:11px;display:flex}.pending-text[data-v-48e2f2d1]{color:#d97706}.saved-text[data-v-48e2f2d1]{color:#86909c}.footer-actions[data-v-48e2f2d1]{gap:6px;display:flex}.btn-action[data-v-48e2f2d1]{border-radius:4px;font-size:11px}.jx-fab-container[data-v-16984016]{--fab-size:36px;--fab-radius-dock-right:50% 0 0 50%;--fab-radius-dock-left:0 50% 50% 0;--fab-radius-dragging:50%;z-index:var(--jx-floating-z-index,2147480000);width:var(--fab-size);height:var(--fab-size);cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none;position:fixed}.jx-fab-container.is-dragging[data-v-16984016]{cursor:grabbing}.jx-fab-backdrop[data-v-16984016]{-webkit-backdrop-filter:blur(14px);background:#ffffffa6;transition:border-radius .3s cubic-bezier(.16,1,.3,1),background .2s;position:absolute;inset:0;overflow:hidden;box-shadow:0 2px 16px #0000001f}.jx-fab-container.side-right:not(.is-dragging) .jx-fab-backdrop[data-v-16984016]{border-radius:var(--fab-radius-dock-right)}.jx-fab-container.side-left:not(.is-dragging) .jx-fab-backdrop[data-v-16984016]{border-radius:var(--fab-radius-dock-left)}.jx-fab-container.is-dragging .jx-fab-backdrop[data-v-16984016],.jx-fab-container:hover:not(.is-dragging) .jx-fab-backdrop[data-v-16984016]{border-radius:var(--fab-radius-dragging);background:#ffffffd9}.jx-fab-content[data-v-16984016]{color:#111;pointer-events:none;flex-direction:column;justify-content:center;align-items:center;width:100%;height:100%;display:flex}.jx-fab-icon[data-v-16984016]{width:12px;height:12px}.jx-fab-text[data-v-16984016]{letter-spacing:-.5px;font-size:10px;font-weight:800}.jx-recall-list[data-v-16984016]{z-index:var(--jx-floating-list-z-index,2147480000);opacity:0;visibility:hidden;-webkit-backdrop-filter:blur(16px);border-radius:12px;flex-direction:column;justify-content:center;align-items:center;gap:4px;width:36px;max-height:calc(100vh - 16px);transition:opacity .2s cubic-bezier(.16,1,.3,1),visibility .2s cubic-bezier(.16,1,.3,1),transform .2s cubic-bezier(.16,1,.3,1);display:flex;position:fixed;overflow:auto;transform:scale(.95);box-shadow:0 10px 30px -5px #0000001a,0 4px 12px -2px #0000000d}.jx-recall-list[data-v-16984016]::-webkit-scrollbar{width:4px}.jx-recall-list[data-v-16984016]::-webkit-scrollbar-thumb{background:#00000026;border-radius:4px}.jx-fab-container:hover~.jx-recall-list[data-v-16984016],.jx-recall-list[data-v-16984016]:hover{opacity:1;visibility:visible;transform:scale(1)}.jx-recall-item[data-v-16984016]{color:#262626;cursor:pointer;width:36px;height:36px;font:inherit;background:0 0;border:1px solid #0000;border-radius:10px;justify-content:center;align-items:center;padding:0;transition:all .2s cubic-bezier(.16,1,.3,1);display:flex;position:relative}.jx-recall-icon[data-v-16984016]{justify-content:center;align-items:center;font-size:16px;line-height:1;transition:transform .2s;display:flex}.jx-recall-item[data-v-16984016]:hover:not(:disabled){background:#ffffffe6;border-color:#0000000f;transform:translateY(-1px);box-shadow:0 4px 12px #00000014}.jx-recall-item:hover:not(:disabled) .jx-recall-icon[data-v-16984016]{transform:scale(1.1)}.jx-recall-item[data-v-16984016]:active:not(:disabled){transform:translateY(0)scale(.96)}.jx-recall-item[data-v-16984016]:disabled{opacity:.4;cursor:not-allowed}@media (prefers-color-scheme:dark){.jx-recall-list[data-v-16984016]{background:#1e1e1ecc;border:1px solid #ffffff14;box-shadow:0 10px 30px -5px #0006}.jx-recall-list[data-v-16984016]::-webkit-scrollbar-thumb{background:#fff3}.jx-recall-item[data-v-16984016]{color:#f3f4f6}.jx-recall-item[data-v-16984016]:hover:not(:disabled){background:#ffffff1a;border-color:#ffffff14}.jx-fab-backdrop[data-v-16984016]{background:#1a1a1aa6}.jx-fab-container.is-dragging .jx-fab-backdrop[data-v-16984016],.jx-fab-container:hover:not(.is-dragging) .jx-fab-backdrop[data-v-16984016]{background:#262626d9}.jx-fab-content[data-v-16984016]{color:#f3f4f6}}.example-plugin p[data-v-2f64fac3],.example-plugin p[data-v-2461ab84]{color:#555;margin:0 0 14px}.split-layout[data-v-620a6eb4]{gap:16px;width:100%;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;display:flex;line-height:1.25!important}.col[data-v-620a6eb4]{box-sizing:border-box;background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;flex-direction:column;flex:1;gap:12px;min-width:0;padding:12px;display:flex}.col-header[data-v-620a6eb4]{color:#374151;border-bottom:1px solid #e5e7eb;justify-content:space-between;align-items:center;padding-bottom:8px;font-size:13px;font-weight:700;display:flex}.col-header img[data-v-620a6eb4]{vertical-align:middle;margin-right:6px}.control-box[data-v-620a6eb4]{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:10px}.split-control[data-v-620a6eb4]{gap:12px;display:flex}.split-left[data-v-620a6eb4]{flex-direction:column;flex:1;justify-content:space-between;display:flex}.split-right[data-v-620a6eb4]{border-left:1px dashed #e5e7eb;flex-direction:column;flex:.9;padding-left:12px;display:flex}.current-consent-title[data-v-620a6eb4]{color:#6b7280;margin-bottom:6px;font-size:11px;font-weight:700}.current-consent-item[data-v-620a6eb4]{border-bottom:1px dashed #eee;justify-content:space-between;align-items:center;margin-bottom:2px;padding-bottom:2px;font-size:11px;display:flex}.chk-grid[data-v-620a6eb4]{grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:10px;display:grid}.chk-grid label[data-v-620a6eb4]{color:#4b5563;cursor:pointer;align-items:center;gap:4px;font-size:12px;font-weight:500;display:flex}.chk-grid input[data-v-620a6eb4]{accent-color:#000;cursor:pointer;width:12px;height:12px;margin:0}.action-row[data-v-620a6eb4]{gap:8px;display:flex}.global-stats[data-v-620a6eb4]{color:#4b5563;background:#fff;border:1px solid #e5e7eb;border-radius:8px;gap:12px;padding:8px 10px;font-size:12px;font-weight:600;display:flex}.table-wrapper[data-v-620a6eb4]{background:#fff;border:1px solid #e5e7eb;border-radius:6px;max-height:350px;overflow-y:auto}.table-wrapper[data-v-620a6eb4]::-webkit-scrollbar{width:4px}.table-wrapper[data-v-620a6eb4]::-webkit-scrollbar-thumb{background:#ccc;border-radius:2px}table[data-v-620a6eb4]{border-collapse:collapse;table-layout:fixed;width:100%}thead[data-v-620a6eb4]{z-index:2;background:#f3f4f6;position:sticky;top:0;box-shadow:0 1px #e5e7eb}th[data-v-620a6eb4]{text-align:left;color:#666;padding:6px 8px;font-size:11px;font-weight:600}td[data-v-620a6eb4]{vertical-align:top;word-break:break-all;border-top:1px solid #f3f4f6;padding:8px;font-size:12px}.inline-flex-box[data-v-620a6eb4]{align-items:center;display:inline-flex}.inline-flex-box-column[data-v-620a6eb4]{flex-direction:column;align-items:flex-start;display:inline-flex}.btn[data-v-620a6eb4]{cursor:pointer;color:#333;background:#fff;border:1px solid #d2d5d8;border-radius:6px;padding:6px 12px;font-size:12px;font-weight:600;transition:all .2s}.btn[data-v-620a6eb4]:hover{background:#f8f9fa;border-color:#b0b4b8}.btn[data-v-620a6eb4]:disabled{opacity:.5;cursor:not-allowed}.sm-btn[data-v-620a6eb4]{margin-left:4px;padding:2px 6px;font-size:11px}.btn-primary[data-v-620a6eb4]{color:#fff;background:#000;border:none}.btn-primary[data-v-620a6eb4]:hover{background:#333}.btn-google[data-v-620a6eb4]{color:#fff;background:linear-gradient(135deg,#1a73e8,#7c3aed);border:none}.btn-google[data-v-620a6eb4]:hover{background:linear-gradient(135deg,#1557b0,#6d28d9)}.badge[data-v-620a6eb4]{text-transform:uppercase;border-radius:4px;padding:3px 5px;font-size:10px;font-weight:700;line-height:1;display:inline-block}.b-true[data-v-620a6eb4]{color:#059669;background:#d1fae5;padding:2px 3px}.b-false[data-v-620a6eb4]{color:#dc2626;background:#fee2e2;padding:2px 3px}.b-neu[data-v-620a6eb4]{color:#4b5563;background:#f3f4f6}.b-purp[data-v-620a6eb4]{color:#6b21a8;background:#f3e8ff}.b-blue[data-v-620a6eb4]{color:#1e40af;background:#dbeafe}.timestamp[data-v-620a6eb4]{color:#5d5d5d;font-variant-numeric:tabular-nums;margin-top:4px;font-size:11px;font-weight:500}.mini-status[data-v-620a6eb4]{border-bottom:1px dashed #eee;justify-content:space-between;margin-bottom:2px;padding-bottom:2px;font-size:11px;display:flex}.diff-item[data-v-620a6eb4]{color:#374151;justify-content:space-between;margin-bottom:2px;font-size:11px;display:flex}details summary[data-v-620a6eb4]{cursor:pointer;color:#2563eb;outline:none;font-size:10px;font-weight:600}pre[data-v-620a6eb4]{color:#333;white-space:pre-wrap;background:#f4f6f8;border-radius:4px;max-height:100px;margin:4px 0 0;padding:6px;font-family:monospace;font-size:10px;overflow:auto}.jx-intercept-container[data-v-dc10590d]{font-family:PingFang SC,Microsoft YaHei,sans-serif}.jx-modal-desc[data-v-dc10590d]{color:#666;word-break:break-all;text-align:left;background:#f5f5f7;border-radius:8px;margin-top:8px;padding:12px;font-size:14px;line-height:1.6}.jx-modal-option[data-v-dc10590d]{justify-content:flex-end;margin-top:12px;font-size:13px;display:flex}.dialog-title[data-v-c651460e]{cursor:move;-webkit-user-select:none;user-select:none;touch-action:none;justify-content:space-between;align-items:center;gap:10px;display:flex}.main-title[data-v-c651460e]{flex-shrink:0;align-items:center;gap:8px;display:flex}.custom-header[data-v-c651460e]{flex:1;min-width:0}.header-extra[data-v-c651460e]{align-items:center;gap:6px;display:flex}.plugin-icon[data-v-c651460e]{font-size:18px}.drawer-title[data-v-1f830925]{align-items:center;gap:10px;display:flex}.main-title[data-v-1f830925]{flex-shrink:0;align-items:center;gap:8px;display:flex}.custom-header[data-v-1f830925]{flex:1;min-width:0}.header-extra[data-v-1f830925]{align-items:center;gap:6px;display:flex}.plugin-icon[data-v-1f830925]{font-size:18px}.jx-assistant-root{color:#171717;font-family:Inter,system-ui,sans-serif}.jx-fab-container,.jx-recall-list{pointer-events:auto}\n/*$vite$:1*/ ");
+	_css(" .url-rule-editor[data-v-e992e162]{gap:8px;margin-top:8px;display:grid}label[data-v-e992e162]{color:#374151;gap:4px;font-size:11px;font-weight:500;display:grid}.tip-text[data-v-e992e162]{color:#9ca3af;font-size:10px;font-weight:400}.modern-textarea[data-v-e992e162]{border-radius:6px;font-size:12px}.section-title[data-v-009c6c06]{color:#374151;border-top:1px solid #f0f0f2;margin:14px 0 8px;padding-top:10px;font-size:13px;font-weight:600}.style-title[data-v-009c6c06]{margin-top:12px}.config-grid[data-v-009c6c06]{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 10px;display:grid}.meta-grid[data-v-009c6c06]{margin-bottom:10px}.wide[data-v-009c6c06]{grid-column:1/-1}label[data-v-009c6c06]{color:#6b7280;flex-direction:column;gap:4px;min-width:0;font-size:11px;display:flex}.config-grid[data-v-009c6c06] .ant-input-number,.config-grid[data-v-009c6c06] .ant-input,.config-grid[data-v-009c6c06] .ant-select{width:100%}.behavior-grid[data-v-009c6c06]{margin-top:9px}.base-options[data-v-009c6c06]{margin-top:8px}.switch-row[data-v-009c6c06]{box-sizing:border-box;color:#374151;border:1px solid #eef0f2;border-radius:6px;flex-direction:row;justify-content:space-between;align-items:center;min-height:34px;padding:6px 8px}.advanced-style[data-v-009c6c06]{color:#4b5563;background:#fafbfc;border-radius:6px;margin-top:8px;padding:8px;font-size:11px}.advanced-style p[data-v-009c6c06]{color:#8b9098;margin:5px 0}.custom-row[data-v-009c6c06]{grid-template-columns:1fr 1fr auto;gap:5px;margin:5px 0;display:grid}.add-custom[data-v-009c6c06]{color:#1677ff;cursor:pointer;background:0 0;border:0}.update-manager[data-v-f0ab82a7]{display:inline-flex}.trigger-entry[data-v-f0ab82a7]{color:#525252;cursor:pointer;-webkit-user-select:none;user-select:none;background:#fff;border:1px solid #e5e5e5;border-radius:99px;align-items:center;gap:3px;padding:1px 8px;font-size:11px;font-weight:500;transition:all .2s cubic-bezier(.4,0,.2,1);display:flex}.trigger-entry[data-v-f0ab82a7]:hover{color:#171717;border-color:#171717}.status-dot[data-v-f0ab82a7]{background:#a3a3a3;border-radius:50%;width:3px;height:3px;transition:background .2s}.trigger-entry.has-update[data-v-f0ab82a7]{color:#fff;background:#171717;border-color:#171717}.trigger-entry.has-update .status-dot[data-v-f0ab82a7]{background:#fff;box-shadow:0 0 6px #fff9}.popover-panel[data-v-f0ab82a7]{color:#171717;width:210px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;font-size:12px}.panel-header[data-v-f0ab82a7]{border-bottom:1px solid #f4f4f5;justify-content:space-between;align-items:center;margin-bottom:4px;padding-bottom:8px;display:flex}.panel-title[data-v-f0ab82a7]{letter-spacing:-.01em;font-size:12px;font-weight:600}.icon-refresh[data-v-f0ab82a7]{cursor:pointer;color:#a3a3a3;background:0 0;border:none;padding:2px;font-size:13px;line-height:1;transition:color .15s}.icon-refresh[data-v-f0ab82a7]:hover{color:#171717}.icon-refresh.spinning[data-v-f0ab82a7]{animation:.8s linear infinite spin-f0ab82a7}.panel-empty[data-v-f0ab82a7]{text-align:center;padding:12px 0 6px}.status-text[data-v-f0ab82a7]{color:#737373;margin:0;font-size:11px}.version-tag[data-v-f0ab82a7]{color:#a3a3a3;margin-top:4px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px;display:inline-block}.panel-body[data-v-f0ab82a7]{padding-top:2px}.update-item[data-v-f0ab82a7]{border-bottom:1px solid #fafafa;padding:6px 0}.update-item[data-v-f0ab82a7]:last-child{border-bottom:none}.update-item .name[data-v-f0ab82a7]{color:#171717;font-weight:500;line-height:1.3}.ver-change[data-v-f0ab82a7]{color:#737373;margin-top:1px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px}.notes[data-v-f0ab82a7]{color:#737373;white-space:pre-wrap;margin:3px 0 0;font-size:11px;line-height:1.4}.update-btn[data-v-f0ab82a7]{color:#fff;letter-spacing:.02em;background:#171717;border-radius:6px;justify-content:center;align-items:center;margin-top:10px;padding:6px 0;font-size:11px;font-weight:500;text-decoration:none;transition:background .15s;display:flex}.update-btn[data-v-f0ab82a7]:hover{color:#fff;background:#333}@keyframes spin-f0ab82a7{0%{transform:rotate(0)}to{transform:rotate(360deg)}}.monochrome-popover .ant-popover-inner{border:1px solid #e5e5e5;border-radius:8px;padding:10px 12px;box-shadow:0 10px 15px -3px #0000000d,0 4px 6px -4px #0000000d}.plugin-icon[data-v-b9f78ba8]{vertical-align:middle;flex:none;justify-content:center;align-items:center;width:1em;height:1em;line-height:1;display:inline-flex}img[data-v-b9f78ba8]{object-fit:contain;width:100%;height:100%;display:block}.drawer-header[data-v-11147bf7]{justify-content:space-between;align-items:center;width:100%;display:flex}.drawer-title-group[data-v-11147bf7]{align-items:center;gap:8px;display:flex}.main-title[data-v-11147bf7]{color:#1f2329;font-size:14px;font-weight:600}.status-badge[data-v-11147bf7]{border-radius:10px;padding:1px 6px;font-size:10px;font-weight:500;line-height:1.3}.status-badge.warning[data-v-11147bf7]{color:#b45309;background-color:#fef3c7}.icon-btn-close[data-v-11147bf7]{color:#86909c;cursor:pointer;background:0 0;border:none;border-radius:4px;justify-content:center;align-items:center;width:24px;height:24px;transition:all .2s;display:flex}.icon-btn-close[data-v-11147bf7]:hover{color:#1f2329;background-color:#f2f3f5}.env-summary-bar[data-v-11147bf7]{color:#64748b;background:#f8fafc;border-radius:4px;align-items:center;gap:6px;margin-top:-10px;margin-bottom:10px;padding:4px 8px;font-size:12px;display:flex}.env-dot[data-v-11147bf7]{background:#22c55e;border-radius:50%;flex-shrink:0;width:5px;height:5px}.env-domain[data-v-11147bf7]{color:#94a3b8;text-overflow:ellipsis;white-space:nowrap;background:#f1f5f9;border-radius:3px;max-width:130px;margin-left:auto;padding:0 4px;font-family:monospace;font-size:11px;overflow:hidden}.list-summary-bar[data-v-11147bf7]{justify-content:space-between;align-items:center;margin-bottom:8px;padding:0 2px;display:flex}.count-text[data-v-11147bf7],.toggle-hidden-btn[data-v-11147bf7]{color:#86909c;font-size:12px}.toggle-hidden-btn[data-v-11147bf7]{padding:0}.dot[data-v-11147bf7]{border-radius:50%;flex-shrink:0;width:6px;height:6px;display:inline-block}.dot-success[data-v-11147bf7]{background-color:#52c41a}.dot-error[data-v-11147bf7]{background-color:#ff4d4f}.dot-warning[data-v-11147bf7]{background-color:#faad14}.plugin-list[data-v-11147bf7]{flex-direction:column;gap:8px;display:flex}.plugin-card[data-v-11147bf7]{background:#fff;border:1px solid #e5e6eb;border-radius:6px;padding:8px 10px;transition:border-color .2s}.plugin-card[data-v-11147bf7]:hover{border-color:#c9cdd4}.plugin-card.is-disabled[data-v-11147bf7]{opacity:.6}.plugin-summary[data-v-11147bf7]{cursor:pointer;-webkit-user-select:none;user-select:none;align-items:center;gap:8px;display:flex}.expand-icon-btn[data-v-11147bf7]{color:#4e5969;cursor:pointer;background:#f2f3f5;border:none;border-radius:4px;justify-content:center;align-items:center;width:18px;height:18px;padding:0;transition:transform .2s,background .2s;display:flex}.expand-icon-btn.expanded[data-v-11147bf7]{transform:rotate(90deg)}.expand-icon-btn[data-v-11147bf7]:hover{background-color:#e5e6eb}.plugin-icon[data-v-11147bf7]{align-items:center;font-size:16px;display:flex}.summary-info[data-v-11147bf7]{flex-wrap:wrap;flex:1;align-items:center;gap:4px 6px;min-width:0;display:flex}.plugin-name[data-v-11147bf7]{color:#1f2329;font-size:13px;font-weight:600;line-height:1.2}.version-tag[data-v-11147bf7]{color:#86909c;background-color:#f2f3f5;border-radius:3px;padding:0 4px;font-family:monospace;font-size:10px;line-height:1.4}.plugin-desc[data-v-11147bf7]{color:#86909c;white-space:nowrap;text-overflow:ellipsis;width:100%;margin:0;font-size:11px;overflow:hidden}.runtime-tag[data-v-11147bf7]{margin-right:0;font-size:10px}.switch-wrapper[data-v-11147bf7]{align-items:center;display:flex}.plugin-details[data-v-11147bf7]{border-top:1px solid #e5e6eb;margin-top:8px;padding-top:8px}.plugin-meta-bar[data-v-11147bf7]{align-items:center;gap:6px;margin-bottom:6px;display:flex}.open-plugin-btn[data-v-11147bf7]{margin-left:auto;padding:0;font-size:11px}.runtime-snapshot-row[data-v-11147bf7]{background:#f7f8fa;border:1px solid #e5e6eb;border-radius:4px;flex:1;align-items:center;gap:6px;padding:4px 8px;font-size:11px;display:flex}.snapshot-tag[data-v-11147bf7]{color:#4e5969;background:#fff;border:1px solid #e5e6eb;border-radius:3px;padding:0 4px;font-size:10px;font-weight:600}.snapshot-desc[data-v-11147bf7]{color:#4e5969;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.section-divider[data-v-11147bf7]{color:#86909c;text-transform:uppercase;letter-spacing:.3px;align-items:center;margin:8px 0 6px;font-size:11px;font-weight:600;display:flex}.section-divider[data-v-11147bf7]:after{content:\"\";background-color:#e5e6eb;flex:1;height:1px;margin-left:6px}.match-context-card[data-v-11147bf7]{background:#fafafa;border:1px solid #e5e6eb;border-radius:4px;margin-bottom:6px;padding:6px 8px}.context-row[data-v-11147bf7]{justify-content:space-between;align-items:center;font-size:11px;display:flex}.context-left[data-v-11147bf7]{align-items:center;gap:6px;display:flex}.context-left strong[data-v-11147bf7]{color:#1f2329}.context-hint[data-v-11147bf7]{color:#86909c;font-size:10px}.context-right-status[data-v-11147bf7]{align-items:center;gap:5px;max-width:220px;display:flex}.reason-text[data-v-11147bf7]{color:#4e5969;white-space:nowrap;text-overflow:ellipsis;font-size:11px;overflow:hidden}.context-disabled-tip[data-v-11147bf7]{color:#86909c;font-size:10px;font-style:italic}.context-editor-wrap[data-v-11147bf7]{border-top:1px dashed #e5e6eb;margin-top:6px;padding-top:6px}.drawer-footer-content[data-v-11147bf7]{justify-content:space-between;align-items:center;width:100%;display:flex}.status-indicator[data-v-11147bf7]{align-items:center;gap:6px;font-size:11px;display:flex}.pending-text[data-v-11147bf7]{color:#d97706}.saved-text[data-v-11147bf7]{color:#86909c}.footer-actions[data-v-11147bf7]{gap:6px;display:flex}.btn-action[data-v-11147bf7]{border-radius:4px;font-size:11px}.jx-fab-container[data-v-8f19e714]{--fab-size:36px;--fab-radius-dock-right:50% 0 0 50%;--fab-radius-dock-left:0 50% 50% 0;--fab-radius-dragging:50%;z-index:var(--jx-floating-z-index,2147480000);width:var(--fab-size);height:var(--fab-size);cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none;position:fixed}.jx-fab-container.is-dragging[data-v-8f19e714]{cursor:grabbing}.jx-fab-backdrop[data-v-8f19e714]{-webkit-backdrop-filter:blur(14px);background:#ffffffa6;transition:border-radius .3s cubic-bezier(.16,1,.3,1),background .2s;position:absolute;inset:0;overflow:hidden;box-shadow:0 2px 16px #0000001f}.jx-fab-container.side-right:not(.is-dragging) .jx-fab-backdrop[data-v-8f19e714]{border-radius:var(--fab-radius-dock-right)}.jx-fab-container.side-left:not(.is-dragging) .jx-fab-backdrop[data-v-8f19e714]{border-radius:var(--fab-radius-dock-left)}.jx-fab-container.is-dragging .jx-fab-backdrop[data-v-8f19e714],.jx-fab-container:hover:not(.is-dragging) .jx-fab-backdrop[data-v-8f19e714]{border-radius:var(--fab-radius-dragging);background:#ffffffd9}.jx-fab-content[data-v-8f19e714]{color:#111;pointer-events:none;flex-direction:column;justify-content:center;align-items:center;width:100%;height:100%;display:flex}.jx-fab-icon[data-v-8f19e714]{width:12px;height:12px}.jx-fab-text[data-v-8f19e714]{letter-spacing:-.5px;font-size:10px;font-weight:800}.jx-recall-list[data-v-8f19e714]{z-index:var(--jx-floating-list-z-index,2147480000);opacity:0;visibility:hidden;-webkit-backdrop-filter:blur(16px);border-radius:12px;flex-direction:column;justify-content:center;align-items:center;gap:4px;width:36px;max-height:calc(100vh - 16px);transition:opacity .2s cubic-bezier(.16,1,.3,1),visibility .2s cubic-bezier(.16,1,.3,1),transform .2s cubic-bezier(.16,1,.3,1);display:flex;position:fixed;overflow:auto;transform:scale(.95);box-shadow:0 10px 30px -5px #0000001a,0 4px 12px -2px #0000000d}.jx-recall-list[data-v-8f19e714]::-webkit-scrollbar{width:4px}.jx-recall-list[data-v-8f19e714]::-webkit-scrollbar-thumb{background:#00000026;border-radius:4px}.jx-fab-container:hover~.jx-recall-list[data-v-8f19e714],.jx-recall-list[data-v-8f19e714]:hover{opacity:1;visibility:visible;transform:scale(1)}.jx-recall-item[data-v-8f19e714]{color:#262626;cursor:pointer;width:36px;height:36px;font:inherit;background:0 0;border:1px solid #0000;border-radius:10px;justify-content:center;align-items:center;padding:0;transition:all .2s cubic-bezier(.16,1,.3,1);display:flex;position:relative}.jx-recall-icon[data-v-8f19e714]{justify-content:center;align-items:center;font-size:16px;line-height:1;transition:transform .2s;display:flex}.jx-recall-item[data-v-8f19e714]:hover:not(:disabled){background:#ffffffe6;border-color:#0000000f;transform:translateY(-1px);box-shadow:0 4px 12px #00000014}.jx-recall-item:hover:not(:disabled) .jx-recall-icon[data-v-8f19e714]{transform:scale(1.1)}.jx-recall-item[data-v-8f19e714]:active:not(:disabled){transform:translateY(0)scale(.96)}.jx-recall-item[data-v-8f19e714]:disabled{opacity:.4;cursor:not-allowed}@media (prefers-color-scheme:dark){.jx-recall-list[data-v-8f19e714]{background:#1e1e1ecc;border:1px solid #ffffff14;box-shadow:0 10px 30px -5px #0006}.jx-recall-list[data-v-8f19e714]::-webkit-scrollbar-thumb{background:#fff3}.jx-recall-item[data-v-8f19e714]{color:#f3f4f6}.jx-recall-item[data-v-8f19e714]:hover:not(:disabled){background:#ffffff1a;border-color:#ffffff14}.jx-fab-backdrop[data-v-8f19e714]{background:#1a1a1aa6}.jx-fab-container.is-dragging .jx-fab-backdrop[data-v-8f19e714],.jx-fab-container:hover:not(.is-dragging) .jx-fab-backdrop[data-v-8f19e714]{background:#262626d9}.jx-fab-content[data-v-8f19e714]{color:#f3f4f6}}.example-plugin p[data-v-0621908c],.example-plugin p[data-v-d0ebd857]{color:#555;margin:0 0 14px}.split-layout[data-v-e79f6150]{gap:16px;width:100%;max-height:600px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;display:flex;line-height:1.25!important}.col[data-v-e79f6150]{box-sizing:border-box;background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;flex-direction:column;flex:1;gap:12px;min-width:0;padding:12px;display:flex}.col-header[data-v-e79f6150]{color:#374151;border-bottom:1px solid #e5e7eb;justify-content:space-between;align-items:center;padding-bottom:8px;font-size:13px;font-weight:700;display:flex}.col-header img[data-v-e79f6150]{vertical-align:middle;margin-right:6px}.control-box[data-v-e79f6150]{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:10px}.split-control[data-v-e79f6150]{gap:12px;display:flex}.split-left[data-v-e79f6150]{flex-direction:column;flex:1;justify-content:space-between;display:flex}.split-right[data-v-e79f6150]{border-left:1px dashed #e5e7eb;flex-direction:column;flex:.9;padding-left:12px;display:flex}.current-consent-title[data-v-e79f6150]{color:#6b7280;margin-bottom:6px;font-size:11px;font-weight:700}.current-consent-item[data-v-e79f6150]{border-bottom:1px dashed #eee;justify-content:space-between;align-items:center;margin-bottom:2px;padding-bottom:2px;font-size:11px;display:flex}.chk-grid[data-v-e79f6150]{grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:10px;display:grid}.chk-grid label[data-v-e79f6150]{color:#4b5563;cursor:pointer;align-items:center;gap:4px;font-size:12px;font-weight:500;display:flex}.chk-grid input[data-v-e79f6150]{accent-color:#000;cursor:pointer;width:12px;height:12px;margin:0}.action-row[data-v-e79f6150]{gap:8px;display:flex}.global-stats[data-v-e79f6150]{color:#4b5563;background:#fff;border:1px solid #e5e7eb;border-radius:8px;gap:12px;padding:8px 10px;font-size:12px;font-weight:600;display:flex}.table-wrapper[data-v-e79f6150]{background:#fff;border:1px solid #e5e7eb;border-radius:6px;overflow-y:auto}.table-wrapper[data-v-e79f6150]::-webkit-scrollbar{width:4px}.table-wrapper[data-v-e79f6150]::-webkit-scrollbar-thumb{background:#ccc;border-radius:2px}table[data-v-e79f6150]{border-collapse:collapse;table-layout:fixed;width:100%}thead[data-v-e79f6150]{z-index:2;background:#f3f4f6;position:sticky;top:0;box-shadow:0 1px #e5e7eb}th[data-v-e79f6150]{text-align:left;color:#666;padding:6px 8px;font-size:11px;font-weight:600}td[data-v-e79f6150]{vertical-align:top;word-break:break-all;border-top:1px solid #f3f4f6;padding:8px;font-size:12px}.inline-flex-box[data-v-e79f6150]{align-items:center;display:inline-flex}.inline-flex-box-column[data-v-e79f6150]{flex-direction:column;align-items:flex-start;display:inline-flex}.btn[data-v-e79f6150]{cursor:pointer;color:#333;background:#fff;border:1px solid #d2d5d8;border-radius:6px;padding:6px 12px;font-size:12px;font-weight:600;transition:all .2s}.btn[data-v-e79f6150]:hover{background:#f8f9fa;border-color:#b0b4b8}.btn[data-v-e79f6150]:disabled{opacity:.5;cursor:not-allowed}.sm-btn[data-v-e79f6150]{margin-left:4px;padding:2px 6px;font-size:11px}.btn-primary[data-v-e79f6150]{color:#fff;background:#000;border:none}.btn-primary[data-v-e79f6150]:hover{background:#333}.btn-google[data-v-e79f6150]{color:#fff;background:linear-gradient(135deg,#1a73e8,#7c3aed);border:none}.btn-google[data-v-e79f6150]:hover{background:linear-gradient(135deg,#1557b0,#6d28d9)}.badge[data-v-e79f6150]{text-transform:uppercase;border-radius:4px;padding:3px 5px;font-size:10px;font-weight:700;line-height:1;display:inline-block}.b-true[data-v-e79f6150]{color:#059669;background:#d1fae5;padding:2px 3px}.b-false[data-v-e79f6150]{color:#dc2626;background:#fee2e2;padding:2px 3px}.b-neu[data-v-e79f6150]{color:#4b5563;background:#f3f4f6}.b-purp[data-v-e79f6150]{color:#6b21a8;background:#f3e8ff}.b-blue[data-v-e79f6150]{color:#1e40af;background:#dbeafe}.timestamp[data-v-e79f6150]{color:#5d5d5d;font-variant-numeric:tabular-nums;margin-top:4px;font-size:11px;font-weight:500}.mini-status[data-v-e79f6150]{border-bottom:1px dashed #eee;justify-content:space-between;margin-bottom:2px;padding-bottom:2px;font-size:11px;display:flex}.diff-item[data-v-e79f6150]{color:#374151;justify-content:space-between;margin-bottom:2px;font-size:11px;display:flex}details summary[data-v-e79f6150]{cursor:pointer;color:#2563eb;outline:none;font-size:10px;font-weight:600}pre[data-v-e79f6150]{color:#333;white-space:pre-wrap;background:#f4f6f8;border-radius:4px;max-height:100px;margin:4px 0 0;padding:6px;font-family:monospace;font-size:10px;overflow:auto}.jx-intercept-container[data-v-f8a53668]{font-family:PingFang SC,Microsoft YaHei,sans-serif}.jx-modal-desc[data-v-f8a53668]{color:#666;word-break:break-all;text-align:left;background:#f5f5f7;border-radius:8px;margin-top:8px;padding:12px;font-size:14px;line-height:1.6}.jx-modal-option[data-v-f8a53668]{justify-content:flex-end;margin-top:12px;font-size:13px;display:flex}.dialog-title[data-v-c651460e]{cursor:move;-webkit-user-select:none;user-select:none;touch-action:none;justify-content:space-between;align-items:center;gap:10px;display:flex}.main-title[data-v-c651460e]{flex-shrink:0;align-items:center;gap:8px;display:flex}.custom-header[data-v-c651460e]{flex:1;min-width:0}.header-extra[data-v-c651460e]{align-items:center;gap:6px;display:flex}.plugin-icon[data-v-c651460e]{font-size:18px}.drawer-title[data-v-1f830925]{align-items:center;gap:10px;display:flex}.main-title[data-v-1f830925]{flex-shrink:0;align-items:center;gap:8px;display:flex}.custom-header[data-v-1f830925]{flex:1;min-width:0}.header-extra[data-v-1f830925]{align-items:center;gap:6px;display:flex}.plugin-icon[data-v-1f830925]{font-size:18px}.jx-assistant-root{color:#171717;font-family:Inter,system-ui,sans-serif}.jx-fab-container,.jx-recall-list{pointer-events:auto}\n/*$vite$:1*/ ");
 	var __defProp = Object.defineProperty;
 	var __exportAll = (all, no_symbols) => {
 		let target = {};
@@ -99,7 +99,7 @@
 		for (const [key, val] of props) target[key] = val;
 		return target;
 	};
-	var MatchContextEditor_default = _plugin_vue_export_helper_default(MatchContextEditor_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-ec03e8d3"]]);
+	var MatchContextEditor_default = _plugin_vue_export_helper_default(MatchContextEditor_vue_vue_type_script_setup_true_lang_default, [["__scopeId", "data-v-e992e162"]]);
 	function isRecord(value) {
 		return !!value && typeof value === "object" && !Array.isArray(value);
 	}
@@ -282,7 +282,7 @@
 		class: "config-grid behavior-grid"
 	};
 	var _hoisted_12$3 = { class: "switch-row" };
-	var _hoisted_13$3 = { class: "switch-row" };
+	var _hoisted_13$2 = { class: "switch-row" };
 	var _hoisted_14$2 = { class: "switch-row" };
 	var _hoisted_15$2 = {
 		key: 2,
@@ -387,7 +387,7 @@
 							size: "small",
 							"onUpdate:checked": _cache[8] || (_cache[8] = ($event) => set("layout.dialog.defaultCollapsed", $event))
 						}, null, 8, ["checked"])]),
-						(0, vue.createElementVNode)("label", _hoisted_13$3, [_cache[21] || (_cache[21] = (0, vue.createElementVNode)("span", null, "允许拖动窗口", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
+						(0, vue.createElementVNode)("label", _hoisted_13$2, [_cache[21] || (_cache[21] = (0, vue.createElementVNode)("span", null, "允许拖动窗口", -1)), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
 							checked: props.ui.layout.dialog?.draggable,
 							size: "small",
 							"onUpdate:checked": _cache[9] || (_cache[9] = ($event) => set("layout.dialog.draggable", $event))
@@ -448,7 +448,7 @@
 				], 512);
 			};
 		}
-	}), [["__scopeId", "data-v-ec09f86a"]]);
+	}), [["__scopeId", "data-v-009c6c06"]]);
 	var STORAGE_PREFIX = "jx-work-assistant";
 	var STORAGE_KEYS = {
 		settings: (version) => `${STORAGE_PREFIX}:settings:v${version}`,
@@ -482,12 +482,17 @@
 	var HOST_CONFIG = {
 		id: "jx-work-assistant",
 		name: NAME,
-		version: "0.0.3",
-		releaseNotes: "版本0.0.3：基础架构完善",
+		version: "0.0.4",
+		releaseNotes: "版本0.0.4：架构更新优化，预计下一版本迭代store状态管理层",
+		env: { contexts: {
+			top: { include: ["*"] },
+			iframe: { exclude: ["*"] }
+		} },
 		zIndex: UI_LAYERS,
 		ui: {
 			title: NAME,
-			icon: "🧩"
+			icon: "🧩",
+			hiddenIframeUI: true
 		}
 	};
 	var storage = {
@@ -517,12 +522,11 @@
 		key: 1,
 		class: "panel-body"
 	};
-	var _hoisted_8$2 = { class: "item-head" };
-	var _hoisted_9$2 = { class: "name" };
-	var _hoisted_10$2 = { class: "ver-change" };
-	var _hoisted_11$2 = { class: "notes" };
-	var _hoisted_12$2 = ["href"];
-	var _hoisted_13$2 = { class: "trigger-text" };
+	var _hoisted_8$2 = { class: "name" };
+	var _hoisted_9$2 = { class: "ver-change" };
+	var _hoisted_10$2 = { class: "notes" };
+	var _hoisted_11$2 = ["href"];
+	var _hoisted_12$2 = { class: "trigger-text" };
 	var UpdateManager_default = _plugin_vue_export_helper_default((0, vue.defineComponent)({
 		__name: "UpdateManager",
 		props: { modules: {} },
@@ -590,23 +594,27 @@
 						class: (0, vue.normalizeClass)(["icon-refresh", { spinning: checking.value }]),
 						title: "检查更新",
 						onClick: _cache[0] || (_cache[0] = ($event) => check(true))
-					}, " ↻ ", 2)]), !updates.value.length ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_5$2, [_cache[1] || (_cache[1] = (0, vue.createElementVNode)("p", { class: "status-text" }, "已是最新状态", -1)), (0, vue.createElementVNode)("span", _hoisted_6$2, (0, vue.toDisplayString)((0, vue.unref)(HOST_CONFIG).version), 1)])) : ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_7$2, [((0, vue.openBlock)(true), (0, vue.createElementBlock)(vue.Fragment, null, (0, vue.renderList)(updates.value, (item) => {
+					}, "↻", 2)]), !updates.value.length ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_5$2, [_cache[1] || (_cache[1] = (0, vue.createElementVNode)("p", { class: "status-text" }, "已是最新状态", -1)), (0, vue.createElementVNode)("span", _hoisted_6$2, (0, vue.toDisplayString)((0, vue.unref)(HOST_CONFIG).version), 1)])) : ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_7$2, [((0, vue.openBlock)(true), (0, vue.createElementBlock)(vue.Fragment, null, (0, vue.renderList)(updates.value, (item) => {
 						return (0, vue.openBlock)(), (0, vue.createElementBlock)("div", {
 							key: item.id,
 							class: "update-item"
-						}, [(0, vue.createElementVNode)("div", _hoisted_8$2, [(0, vue.createElementVNode)("span", _hoisted_9$2, (0, vue.toDisplayString)(item.name), 1), (0, vue.createElementVNode)("span", _hoisted_10$2, (0, vue.toDisplayString)(item.currentVersion) + " → " + (0, vue.toDisplayString)(item.latestVersion), 1)]), (0, vue.createElementVNode)("p", _hoisted_11$2, (0, vue.toDisplayString)(item.releaseNotes), 1)]);
+						}, [
+							(0, vue.createElementVNode)("div", _hoisted_8$2, (0, vue.toDisplayString)(item.name), 1),
+							(0, vue.createElementVNode)("div", _hoisted_9$2, (0, vue.toDisplayString)(item.currentVersion) + " → " + (0, vue.toDisplayString)(item.latestVersion), 1),
+							(0, vue.createElementVNode)("p", _hoisted_10$2, (0, vue.toDisplayString)(item.releaseNotes), 1)
+						]);
 					}), 128)), (0, vue.createElementVNode)("a", {
 						class: "update-btn",
 						href: (0, vue.unref)(UPDATE_CONFIG).scriptUpdateUrl,
 						target: "_blank",
 						rel: "noreferrer"
-					}, " 立即更新 ↗ ", 8, _hoisted_12$2)]))])]),
-					default: (0, vue.withCtx)(() => [(0, vue.createElementVNode)("div", { class: (0, vue.normalizeClass)(["trigger-entry", { "has-update": updates.value.length }]) }, [_cache[2] || (_cache[2] = (0, vue.createElementVNode)("span", { class: "status-dot" }, null, -1)), (0, vue.createElementVNode)("span", _hoisted_13$2, (0, vue.toDisplayString)(updates.value.length ? "发现新版本" : `${(0, vue.unref)(HOST_CONFIG).version}`), 1)], 2)]),
+					}, " 立即更新 ↗ ", 8, _hoisted_11$2)]))])]),
+					default: (0, vue.withCtx)(() => [(0, vue.createElementVNode)("div", { class: (0, vue.normalizeClass)(["trigger-entry", { "has-update": updates.value.length }]) }, [_cache[2] || (_cache[2] = (0, vue.createElementVNode)("span", { class: "status-dot" }, null, -1)), (0, vue.createElementVNode)("span", _hoisted_12$2, (0, vue.toDisplayString)(updates.value.length ? "发现新版本" : `${(0, vue.unref)(HOST_CONFIG).version}`), 1)], 2)]),
 					_: 1
 				})]);
 			};
 		}
-	}), [["__scopeId", "data-v-cbb4ed5d"]]);
+	}), [["__scopeId", "data-v-f0ab82a7"]]);
 	var _hoisted_1$9 = {
 		class: "plugin-icon",
 		"aria-hidden": "true"
@@ -633,7 +641,7 @@
 				}, null, 8, _hoisted_2$7)) : ((0, vue.openBlock)(), (0, vue.createElementBlock)(vue.Fragment, { key: 1 }, [(0, vue.createTextVNode)((0, vue.toDisplayString)(character.value), 1)], 64))]);
 			};
 		}
-	}), [["__scopeId", "data-v-807a1c8c"]]);
+	}), [["__scopeId", "data-v-b9f78ba8"]]);
 	function getEnvironment() {
 		return {
 			type: window.top === window.self ? "top" : "iframe",
@@ -885,42 +893,47 @@
 		key: 0,
 		class: "status-badge warning"
 	};
-	var _hoisted_5$1 = { class: "list-summary-bar" };
-	var _hoisted_6$1 = { class: "count-text" };
-	var _hoisted_7$1 = { class: "plugin-list" };
-	var _hoisted_8$1 = ["onClick"];
-	var _hoisted_9$1 = ["aria-expanded", "aria-label"];
-	var _hoisted_10$1 = { class: "summary-info" };
-	var _hoisted_11$1 = { class: "plugin-name" };
-	var _hoisted_12$1 = { class: "version-tag" };
-	var _hoisted_13$1 = { class: "plugin-desc" };
-	var _hoisted_14$1 = {
+	var _hoisted_5$1 = {
+		key: 0,
+		class: "env-summary-bar"
+	};
+	var _hoisted_6$1 = ["title"];
+	var _hoisted_7$1 = { class: "list-summary-bar" };
+	var _hoisted_8$1 = { class: "count-text" };
+	var _hoisted_9$1 = { class: "plugin-list" };
+	var _hoisted_10$1 = ["onClick"];
+	var _hoisted_11$1 = ["aria-expanded", "aria-label"];
+	var _hoisted_12$1 = { class: "summary-info" };
+	var _hoisted_13$1 = { class: "plugin-name" };
+	var _hoisted_14$1 = { class: "version-tag" };
+	var _hoisted_15$1 = { class: "plugin-desc" };
+	var _hoisted_16$1 = {
 		key: 0,
 		class: "plugin-details"
 	};
-	var _hoisted_15$1 = { class: "plugin-meta-bar" };
-	var _hoisted_16$1 = { class: "runtime-snapshot-row" };
-	var _hoisted_17$1 = { class: "snapshot-tag" };
-	var _hoisted_18$1 = { class: "snapshot-desc" };
-	var _hoisted_19$1 = { class: "context-row" };
-	var _hoisted_20$1 = { class: "context-left" };
-	var _hoisted_21$1 = { class: "context-hint" };
-	var _hoisted_22$1 = {
+	var _hoisted_17$1 = { class: "plugin-meta-bar" };
+	var _hoisted_18$1 = { class: "runtime-snapshot-row" };
+	var _hoisted_19$1 = { class: "snapshot-tag" };
+	var _hoisted_20$1 = { class: "snapshot-desc" };
+	var _hoisted_21$1 = { class: "context-row" };
+	var _hoisted_22$1 = { class: "context-left" };
+	var _hoisted_23$1 = { class: "context-hint" };
+	var _hoisted_24$1 = {
 		key: 0,
 		class: "context-right-status"
 	};
-	var _hoisted_23$1 = { class: "reason-text" };
-	var _hoisted_24$1 = {
+	var _hoisted_25$1 = { class: "reason-text" };
+	var _hoisted_26$1 = {
 		key: 1,
 		class: "context-disabled-tip"
 	};
-	var _hoisted_25$1 = {
+	var _hoisted_27$1 = {
 		key: 0,
 		class: "context-editor-wrap"
 	};
-	var _hoisted_26$1 = { class: "drawer-footer-content" };
-	var _hoisted_27$1 = { class: "status-indicator" };
-	var _hoisted_28$1 = { class: "footer-actions" };
+	var _hoisted_28$1 = { class: "drawer-footer-content" };
+	var _hoisted_29$1 = { class: "status-indicator" };
+	var _hoisted_30$1 = { class: "footer-actions" };
 	var host_default = _plugin_vue_export_helper_default((0, vue.defineComponent)({
 		__name: "index",
 		props: {
@@ -932,6 +945,13 @@
 			const props = __props;
 			const emit = __emit;
 			const { draft, matchDraft, expanded, showHiddenPlugins, contexts, environment, pluginConfig, draftUi, availableLayouts, hasPendingChanges, hiddenPluginCount, resetDraft, setContextRules, rulePreview, updateUi, saveDraft } = usePluginSettings(() => props.entries);
+			const currentDomain = unsafeWindow.location.hostname;
+			const envDesc = (0, vue.computed)(() => {
+				const ctx = HOST_CONFIG?.env?.contexts;
+				if (!ctx) return "";
+				if (ctx.top?.exclude?.includes("*")) return "主环境已停用";
+				return !ctx.iframe?.exclude?.includes("*") ? "环境：主环境 (Top) · 子环境 (Iframe)" : "环境：仅主环境 (Top)";
+			});
 			(0, vue.watch)(() => props.open, (open) => {
 				if (open) resetDraft();
 			});
@@ -991,13 +1011,13 @@
 						"stroke-width": "2",
 						fill: "none"
 					}, [(0, vue.createElementVNode)("path", { d: "M18 6L6 18M6 6l12 12" })], -1)])])])]),
-					footer: (0, vue.withCtx)(() => [(0, vue.createElementVNode)("div", _hoisted_26$1, [(0, vue.createElementVNode)("div", _hoisted_27$1, [(0, vue.createElementVNode)("span", { class: (0, vue.normalizeClass)(["dot", (0, vue.unref)(hasPendingChanges) ? "dot-warning" : "dot-success"]) }, null, 2), (0, vue.createElementVNode)("span", { class: (0, vue.normalizeClass)((0, vue.unref)(hasPendingChanges) ? "pending-text" : "saved-text") }, (0, vue.toDisplayString)((0, vue.unref)(hasPendingChanges) ? "存在未保存更改" : "配置已实时同步"), 3)]), (0, vue.createElementVNode)("div", _hoisted_28$1, [(0, vue.createVNode)((0, vue.unref)(ant_design_vue.Button), {
+					footer: (0, vue.withCtx)(() => [(0, vue.createElementVNode)("div", _hoisted_28$1, [(0, vue.createElementVNode)("div", _hoisted_29$1, [(0, vue.createElementVNode)("span", { class: (0, vue.normalizeClass)(["dot", (0, vue.unref)(hasPendingChanges) ? "dot-warning" : "dot-success"]) }, null, 2), (0, vue.createElementVNode)("span", { class: (0, vue.normalizeClass)((0, vue.unref)(hasPendingChanges) ? "pending-text" : "saved-text") }, (0, vue.toDisplayString)((0, vue.unref)(hasPendingChanges) ? "存在未保存更改" : "配置已实时同步"), 3)]), (0, vue.createElementVNode)("div", _hoisted_30$1, [(0, vue.createVNode)((0, vue.unref)(ant_design_vue.Button), {
 						disabled: !(0, vue.unref)(hasPendingChanges),
 						class: "btn-action",
 						size: "small",
 						onClick: save
 					}, {
-						default: (0, vue.withCtx)(() => [..._cache[6] || (_cache[6] = [(0, vue.createTextVNode)("仅保存", -1)])]),
+						default: (0, vue.withCtx)(() => [..._cache[7] || (_cache[7] = [(0, vue.createTextVNode)("仅保存", -1)])]),
 						_: 1
 					}, 8, ["disabled"]), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Button), {
 						type: "primary",
@@ -1006,111 +1026,122 @@
 						size: "small",
 						onClick: saveAndRefresh
 					}, {
-						default: (0, vue.withCtx)(() => [..._cache[7] || (_cache[7] = [(0, vue.createTextVNode)("保存并刷新", -1)])]),
+						default: (0, vue.withCtx)(() => [..._cache[8] || (_cache[8] = [(0, vue.createTextVNode)("保存并刷新", -1)])]),
 						_: 1
 					}, 8, ["disabled"])])])]),
-					default: (0, vue.withCtx)(() => [(0, vue.createElementVNode)("div", _hoisted_5$1, [(0, vue.createElementVNode)("span", _hoisted_6$1, "共 " + (0, vue.toDisplayString)(__props.entries.length) + " 款插件", 1), (0, vue.unref)(hiddenPluginCount) ? ((0, vue.openBlock)(), (0, vue.createBlock)((0, vue.unref)(ant_design_vue.Button), {
-						key: 0,
-						type: "link",
-						size: "small",
-						class: "toggle-hidden-btn",
-						onClick: _cache[0] || (_cache[0] = ($event) => showHiddenPlugins.value = !(0, vue.unref)(showHiddenPlugins))
-					}, {
-						default: (0, vue.withCtx)(() => [(0, vue.createTextVNode)((0, vue.toDisplayString)((0, vue.unref)(showHiddenPlugins) ? "隐藏" : "显示") + "已隐藏插件（" + (0, vue.toDisplayString)((0, vue.unref)(hiddenPluginCount)) + "） ", 1)]),
-						_: 1
-					})) : (0, vue.createCommentVNode)("", true)]), (0, vue.createElementVNode)("div", _hoisted_7$1, [((0, vue.openBlock)(true), (0, vue.createElementBlock)(vue.Fragment, null, (0, vue.renderList)(__props.entries, (entry) => {
-						return (0, vue.withDirectives)(((0, vue.openBlock)(), (0, vue.createElementBlock)("section", {
-							key: entry.manifest.id,
-							class: (0, vue.normalizeClass)(["plugin-card", {
-								"is-expanded": (0, vue.unref)(expanded)[entry.manifest.id],
-								"is-disabled": !(0, vue.unref)(draft).plugins[entry.manifest.id]?.isEnable
-							}])
-						}, [(0, vue.unref)(draft).plugins[entry.manifest.id] ? ((0, vue.openBlock)(), (0, vue.createElementBlock)(vue.Fragment, { key: 0 }, [(0, vue.createElementVNode)("div", {
-							class: "plugin-summary",
-							onClick: ($event) => (0, vue.unref)(expanded)[entry.manifest.id] = !(0, vue.unref)(expanded)[entry.manifest.id]
-						}, [
-							(0, vue.createElementVNode)("button", {
-								class: (0, vue.normalizeClass)(["expand-icon-btn", { "expanded": (0, vue.unref)(expanded)[entry.manifest.id] }]),
-								"aria-expanded": Boolean((0, vue.unref)(expanded)[entry.manifest.id]),
-								"aria-label": (0, vue.unref)(expanded)[entry.manifest.id] ? "折叠插件配置" : "展开插件配置"
-							}, [..._cache[3] || (_cache[3] = [(0, vue.createElementVNode)("svg", {
-								viewBox: "0 0 24 24",
-								width: "14",
-								height: "14",
-								fill: "currentColor"
-							}, [(0, vue.createElementVNode)("path", { d: "M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" })], -1)])], 10, _hoisted_9$1),
-							(0, vue.createVNode)(PluginIcon_default, {
-								class: "plugin-icon",
-								config: {
-									icon: (0, vue.unref)(draft).plugins[entry.manifest.id].ui?.icon || (0, vue.unref)(pluginConfig)(entry).ui.icon,
-									title: (0, vue.unref)(draft).plugins[entry.manifest.id].ui?.title || (0, vue.unref)(pluginConfig)(entry).ui.title
-								}
-							}, null, 8, ["config"]),
-							(0, vue.createElementVNode)("div", _hoisted_10$1, [
-								(0, vue.createElementVNode)("span", _hoisted_11$1, (0, vue.toDisplayString)((0, vue.unref)(draft).plugins[entry.manifest.id].ui?.title || (0, vue.unref)(pluginConfig)(entry).ui.title), 1),
-								(0, vue.createElementVNode)("span", _hoisted_12$1, (0, vue.toDisplayString)(entry.manifest.version || "1.0.0"), 1),
-								(0, vue.createElementVNode)("p", _hoisted_13$1, (0, vue.toDisplayString)(entry.manifest.description || "暂无描述"), 1)
-							]),
-							(0, vue.createVNode)((0, vue.unref)(ant_design_vue.Tag), {
-								color: entry.isRunning ? "success" : "default",
-								bordered: false,
-								class: "runtime-tag"
-							}, {
-								default: (0, vue.withCtx)(() => [(0, vue.createTextVNode)((0, vue.toDisplayString)(entry.isRunning ? (0, vue.unref)(draft).plugins[entry.manifest.id].isEnable ? "" : "运行中 · 刷新停用" : !(0, vue.unref)(draft).plugins[entry.manifest.id].isEnable ? "已停用" : entry.isMatched ? "已启用 · 刷新生效" : "页面未匹配"), 1)]),
-								_: 2
-							}, 1032, ["color"]),
-							(0, vue.createElementVNode)("div", {
-								class: "switch-wrapper",
-								onClick: _cache[1] || (_cache[1] = (0, vue.withModifiers)(() => {}, ["stop"]))
-							}, [(0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
-								checked: (0, vue.unref)(draft).plugins[entry.manifest.id].isEnable,
-								"onUpdate:checked": ($event) => (0, vue.unref)(draft).plugins[entry.manifest.id].isEnable = $event,
-								size: "small"
-							}, null, 8, ["checked", "onUpdate:checked"])])
-						], 8, _hoisted_8$1), (0, vue.unref)(expanded)[entry.manifest.id] ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_14$1, [
-							(0, vue.createElementVNode)("div", _hoisted_15$1, [(0, vue.createElementVNode)("div", _hoisted_16$1, [
-								(0, vue.createElementVNode)("span", _hoisted_17$1, "快照 (" + (0, vue.toDisplayString)((0, vue.unref)(environment).type === "top" ? "Top" : "iframe") + ")", 1),
-								(0, vue.createElementVNode)("span", { class: (0, vue.normalizeClass)(["dot", entry.isMatched ? "dot-success" : "dot-error"]) }, null, 2),
-								(0, vue.createElementVNode)("span", _hoisted_18$1, (0, vue.toDisplayString)(entry.isMatched ? "匹配通过" : entry.matchReason.join("；") || "规则未通过"), 1)
-							]), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Button), {
-								type: "link",
-								size: "small",
-								class: "open-plugin-btn",
-								disabled: !entry.isRunning || !(0, vue.unref)(draft).plugins[entry.manifest.id].isEnable,
-								onClick: (0, vue.withModifiers)(($event) => openPlugin(entry.manifest.id), ["stop"])
-							}, {
-								default: (0, vue.withCtx)(() => [..._cache[4] || (_cache[4] = [(0, vue.createTextVNode)(" 打开插件 ", -1)])]),
-								_: 1
-							}, 8, ["disabled", "onClick"])]),
-							_cache[5] || (_cache[5] = (0, vue.createElementVNode)("div", { class: "section-divider" }, "运行环境与 URL 匹配", -1)),
-							((0, vue.openBlock)(true), (0, vue.createElementBlock)(vue.Fragment, null, (0, vue.renderList)((0, vue.unref)(contexts), (context) => {
-								return (0, vue.openBlock)(), (0, vue.createElementBlock)("section", {
-									key: context,
-									class: "match-context-card"
-								}, [(0, vue.createElementVNode)("div", _hoisted_19$1, [(0, vue.createElementVNode)("div", _hoisted_20$1, [
-									(0, vue.createElementVNode)("strong", null, (0, vue.toDisplayString)(context === "top" ? "Top Window" : "iframe"), 1),
-									(0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
-										checked: (0, vue.unref)(matchDraft)[entry.manifest.id][context].enabled,
-										"onUpdate:checked": ($event) => (0, vue.unref)(matchDraft)[entry.manifest.id][context].enabled = $event,
-										size: "small"
-									}, null, 8, ["checked", "onUpdate:checked"]),
-									(0, vue.createElementVNode)("span", _hoisted_21$1, "(" + (0, vue.toDisplayString)((0, vue.unref)(environment).type === context ? "当前环境" : "按当前 URL 预览") + ")", 1)
-								]), (0, vue.unref)(matchDraft)[entry.manifest.id][context].enabled ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_22$1, [(0, vue.createElementVNode)("span", { class: (0, vue.normalizeClass)(["dot", (0, vue.unref)(rulePreview)(entry.manifest.id, context).matched ? "dot-success" : "dot-error"]) }, null, 2), (0, vue.createElementVNode)("span", _hoisted_23$1, (0, vue.toDisplayString)((0, vue.unref)(rulePreview)(entry.manifest.id, context).matched ? "匹配通过" : (0, vue.unref)(rulePreview)(entry.manifest.id, context).reason.join("；") || "未通过"), 1)])) : ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_24$1, "规则已禁用"))]), (0, vue.unref)(matchDraft)[entry.manifest.id][context].enabled ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_25$1, [(0, vue.createVNode)(MatchContextEditor_default, {
-									rules: (0, vue.unref)(matchDraft)[entry.manifest.id][context].rules,
-									"onUpdate:rules": ($event) => (0, vue.unref)(setContextRules)(entry.manifest.id, context, $event)
-								}, null, 8, ["rules", "onUpdate:rules"])])) : (0, vue.createCommentVNode)("", true)]);
-							}), 128)),
-							(0, vue.createVNode)(UiSettings_default, {
-								ui: (0, vue.unref)(draftUi)(entry),
-								"available-layouts": (0, vue.unref)(availableLayouts)(entry),
-								onUpdate: ($event) => (0, vue.unref)(updateUi)(entry.manifest.id, $event.path, $event.value)
-							}, null, 8, [
-								"ui",
-								"available-layouts",
-								"onUpdate"
-							])
-						])) : (0, vue.createCommentVNode)("", true)], 64)) : (0, vue.createCommentVNode)("", true)], 2)), [[vue.vShow, (0, vue.unref)(showHiddenPlugins) || ((0, vue.unref)(draft).plugins[entry.manifest.id]?.ui?.showInHost ?? (0, vue.unref)(pluginConfig)(entry).ui.showInHost) !== false]]);
-					}), 128))])]),
+					default: (0, vue.withCtx)(() => [
+						envDesc.value ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_5$1, [
+							_cache[3] || (_cache[3] = (0, vue.createElementVNode)("span", { class: "env-dot" }, null, -1)),
+							(0, vue.createElementVNode)("span", null, (0, vue.toDisplayString)(envDesc.value), 1),
+							(0, vue.createElementVNode)("span", {
+								class: "env-domain",
+								title: (0, vue.unref)(currentDomain)
+							}, (0, vue.toDisplayString)((0, vue.unref)(currentDomain)), 9, _hoisted_6$1)
+						])) : (0, vue.createCommentVNode)("", true),
+						(0, vue.createElementVNode)("div", _hoisted_7$1, [(0, vue.createElementVNode)("span", _hoisted_8$1, "共 " + (0, vue.toDisplayString)(__props.entries.length) + " 款插件", 1), (0, vue.unref)(hiddenPluginCount) ? ((0, vue.openBlock)(), (0, vue.createBlock)((0, vue.unref)(ant_design_vue.Button), {
+							key: 0,
+							type: "link",
+							size: "small",
+							class: "toggle-hidden-btn",
+							onClick: _cache[0] || (_cache[0] = ($event) => showHiddenPlugins.value = !(0, vue.unref)(showHiddenPlugins))
+						}, {
+							default: (0, vue.withCtx)(() => [(0, vue.createTextVNode)((0, vue.toDisplayString)((0, vue.unref)(showHiddenPlugins) ? "隐藏" : "显示") + "已隐藏插件（" + (0, vue.toDisplayString)((0, vue.unref)(hiddenPluginCount)) + "） ", 1)]),
+							_: 1
+						})) : (0, vue.createCommentVNode)("", true)]),
+						(0, vue.createElementVNode)("div", _hoisted_9$1, [((0, vue.openBlock)(true), (0, vue.createElementBlock)(vue.Fragment, null, (0, vue.renderList)(__props.entries, (entry) => {
+							return (0, vue.withDirectives)(((0, vue.openBlock)(), (0, vue.createElementBlock)("section", {
+								key: entry.manifest.id,
+								class: (0, vue.normalizeClass)(["plugin-card", {
+									"is-expanded": (0, vue.unref)(expanded)[entry.manifest.id],
+									"is-disabled": !(0, vue.unref)(draft).plugins[entry.manifest.id]?.isEnable
+								}])
+							}, [(0, vue.unref)(draft).plugins[entry.manifest.id] ? ((0, vue.openBlock)(), (0, vue.createElementBlock)(vue.Fragment, { key: 0 }, [(0, vue.createElementVNode)("div", {
+								class: "plugin-summary",
+								onClick: ($event) => (0, vue.unref)(expanded)[entry.manifest.id] = !(0, vue.unref)(expanded)[entry.manifest.id]
+							}, [
+								(0, vue.createElementVNode)("button", {
+									class: (0, vue.normalizeClass)(["expand-icon-btn", { "expanded": (0, vue.unref)(expanded)[entry.manifest.id] }]),
+									"aria-expanded": Boolean((0, vue.unref)(expanded)[entry.manifest.id]),
+									"aria-label": (0, vue.unref)(expanded)[entry.manifest.id] ? "折叠插件配置" : "展开插件配置"
+								}, [..._cache[4] || (_cache[4] = [(0, vue.createElementVNode)("svg", {
+									viewBox: "0 0 24 24",
+									width: "14",
+									height: "14",
+									fill: "currentColor"
+								}, [(0, vue.createElementVNode)("path", { d: "M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" })], -1)])], 10, _hoisted_11$1),
+								(0, vue.createVNode)(PluginIcon_default, {
+									class: "plugin-icon",
+									config: {
+										icon: (0, vue.unref)(draft).plugins[entry.manifest.id].ui?.icon || (0, vue.unref)(pluginConfig)(entry).ui.icon,
+										title: (0, vue.unref)(draft).plugins[entry.manifest.id].ui?.title || (0, vue.unref)(pluginConfig)(entry).ui.title
+									}
+								}, null, 8, ["config"]),
+								(0, vue.createElementVNode)("div", _hoisted_12$1, [
+									(0, vue.createElementVNode)("span", _hoisted_13$1, (0, vue.toDisplayString)((0, vue.unref)(draft).plugins[entry.manifest.id].ui?.title || (0, vue.unref)(pluginConfig)(entry).ui.title), 1),
+									(0, vue.createElementVNode)("span", _hoisted_14$1, (0, vue.toDisplayString)(entry.manifest.version || "1.0.0"), 1),
+									(0, vue.createElementVNode)("p", _hoisted_15$1, (0, vue.toDisplayString)(entry.manifest.description || "暂无描述"), 1)
+								]),
+								(0, vue.createVNode)((0, vue.unref)(ant_design_vue.Tag), {
+									color: entry.isRunning ? "success" : "default",
+									bordered: false,
+									class: "runtime-tag"
+								}, {
+									default: (0, vue.withCtx)(() => [(0, vue.createTextVNode)((0, vue.toDisplayString)(entry.isRunning ? (0, vue.unref)(draft).plugins[entry.manifest.id].isEnable ? "" : "运行中 · 刷新停用" : !(0, vue.unref)(draft).plugins[entry.manifest.id].isEnable ? "已停用" : entry.isMatched ? "已启用 · 刷新生效" : "页面未匹配"), 1)]),
+									_: 2
+								}, 1032, ["color"]),
+								(0, vue.createElementVNode)("div", {
+									class: "switch-wrapper",
+									onClick: _cache[1] || (_cache[1] = (0, vue.withModifiers)(() => {}, ["stop"]))
+								}, [(0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
+									checked: (0, vue.unref)(draft).plugins[entry.manifest.id].isEnable,
+									"onUpdate:checked": ($event) => (0, vue.unref)(draft).plugins[entry.manifest.id].isEnable = $event,
+									size: "small"
+								}, null, 8, ["checked", "onUpdate:checked"])])
+							], 8, _hoisted_10$1), (0, vue.unref)(expanded)[entry.manifest.id] ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_16$1, [
+								(0, vue.createElementVNode)("div", _hoisted_17$1, [(0, vue.createElementVNode)("div", _hoisted_18$1, [
+									(0, vue.createElementVNode)("span", _hoisted_19$1, "快照 (" + (0, vue.toDisplayString)((0, vue.unref)(environment).type === "top" ? "Top" : "iframe") + ")", 1),
+									(0, vue.createElementVNode)("span", { class: (0, vue.normalizeClass)(["dot", entry.isMatched ? "dot-success" : "dot-error"]) }, null, 2),
+									(0, vue.createElementVNode)("span", _hoisted_20$1, (0, vue.toDisplayString)(entry.isMatched ? "匹配通过" : entry.matchReason.join("；") || "规则未通过"), 1)
+								]), (0, vue.createVNode)((0, vue.unref)(ant_design_vue.Button), {
+									type: "link",
+									size: "small",
+									class: "open-plugin-btn",
+									disabled: !entry.isRunning || !(0, vue.unref)(draft).plugins[entry.manifest.id].isEnable,
+									onClick: (0, vue.withModifiers)(($event) => openPlugin(entry.manifest.id), ["stop"])
+								}, {
+									default: (0, vue.withCtx)(() => [..._cache[5] || (_cache[5] = [(0, vue.createTextVNode)(" 打开插件 ", -1)])]),
+									_: 1
+								}, 8, ["disabled", "onClick"])]),
+								_cache[6] || (_cache[6] = (0, vue.createElementVNode)("div", { class: "section-divider" }, "运行环境与 URL 匹配", -1)),
+								((0, vue.openBlock)(true), (0, vue.createElementBlock)(vue.Fragment, null, (0, vue.renderList)((0, vue.unref)(contexts), (context) => {
+									return (0, vue.openBlock)(), (0, vue.createElementBlock)("section", {
+										key: context,
+										class: "match-context-card"
+									}, [(0, vue.createElementVNode)("div", _hoisted_21$1, [(0, vue.createElementVNode)("div", _hoisted_22$1, [
+										(0, vue.createElementVNode)("strong", null, (0, vue.toDisplayString)(context === "top" ? "Top Window" : "iframe"), 1),
+										(0, vue.createVNode)((0, vue.unref)(ant_design_vue.Switch), {
+											checked: (0, vue.unref)(matchDraft)[entry.manifest.id][context].enabled,
+											"onUpdate:checked": ($event) => (0, vue.unref)(matchDraft)[entry.manifest.id][context].enabled = $event,
+											size: "small"
+										}, null, 8, ["checked", "onUpdate:checked"]),
+										(0, vue.createElementVNode)("span", _hoisted_23$1, "(" + (0, vue.toDisplayString)((0, vue.unref)(environment).type === context ? "当前环境" : "按当前 URL 预览") + ")", 1)
+									]), (0, vue.unref)(matchDraft)[entry.manifest.id][context].enabled ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_24$1, [(0, vue.createElementVNode)("span", { class: (0, vue.normalizeClass)(["dot", (0, vue.unref)(rulePreview)(entry.manifest.id, context).matched ? "dot-success" : "dot-error"]) }, null, 2), (0, vue.createElementVNode)("span", _hoisted_25$1, (0, vue.toDisplayString)((0, vue.unref)(rulePreview)(entry.manifest.id, context).matched ? "匹配通过" : (0, vue.unref)(rulePreview)(entry.manifest.id, context).reason.join("；") || "未通过"), 1)])) : ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_26$1, "规则已禁用"))]), (0, vue.unref)(matchDraft)[entry.manifest.id][context].enabled ? ((0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_27$1, [(0, vue.createVNode)(MatchContextEditor_default, {
+										rules: (0, vue.unref)(matchDraft)[entry.manifest.id][context].rules,
+										"onUpdate:rules": ($event) => (0, vue.unref)(setContextRules)(entry.manifest.id, context, $event)
+									}, null, 8, ["rules", "onUpdate:rules"])])) : (0, vue.createCommentVNode)("", true)]);
+								}), 128)),
+								(0, vue.createVNode)(UiSettings_default, {
+									ui: (0, vue.unref)(draftUi)(entry),
+									"available-layouts": (0, vue.unref)(availableLayouts)(entry),
+									onUpdate: ($event) => (0, vue.unref)(updateUi)(entry.manifest.id, $event.path, $event.value)
+								}, null, 8, [
+									"ui",
+									"available-layouts",
+									"onUpdate"
+								])
+							])) : (0, vue.createCommentVNode)("", true)], 64)) : (0, vue.createCommentVNode)("", true)], 2)), [[vue.vShow, (0, vue.unref)(showHiddenPlugins) || ((0, vue.unref)(draft).plugins[entry.manifest.id]?.ui?.showInHost ?? (0, vue.unref)(pluginConfig)(entry).ui.showInHost) !== false]]);
+						}), 128))])
+					]),
 					_: 1
 				}, 8, [
 					"open",
@@ -1119,7 +1150,7 @@
 				]);
 			};
 		}
-	}), [["__scopeId", "data-v-48e2f2d1"]]);
+	}), [["__scopeId", "data-v-11147bf7"]]);
 	var _hoisted_1$7 = { class: "jx-fab-backdrop" };
 	var _hoisted_2$5 = { class: "jx-fab-content" };
 	var _hoisted_3$4 = [
@@ -1239,7 +1270,7 @@
 				}
 				const savedPosition = getWindowState("host-floating-ball")?.position;
 				hostPosition.value = getBoundedPosition(savedPosition ?? {
-					left: window.innerWidth - ballSize.value,
+					left: 0,
 					top: Math.round(window.innerHeight * .74)
 				});
 				currentSide.value = hostPosition.value.left + ballSize.value / 2 < window.innerWidth / 2 ? "left" : "right";
@@ -1304,7 +1335,7 @@
 				}), 128))], 4)) : (0, vue.createCommentVNode)("", true)], 64);
 			};
 		}
-	}), [["__scopeId", "data-v-16984016"]]);
+	}), [["__scopeId", "data-v-8f19e714"]]);
 	var _hoisted_1$6 = { class: "example-plugin" };
 	var example_default = _plugin_vue_export_helper_default((0, vue.defineComponent)({
 		name: "example",
@@ -1314,7 +1345,7 @@
 				return (0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_1$6, [..._cache[0] || (_cache[0] = [(0, vue.createElementVNode)("p", null, "窗口类型和交互由 Manifest 与控制中心配置。", -1)])]);
 			};
 		}
-	}), [["__scopeId", "data-v-2f64fac3"]]);
+	}), [["__scopeId", "data-v-0621908c"]]);
 	var config_exports$3 = __exportAll({ default: () => plugin$3 });
 	var plugin$3 = {
 		id: "example",
@@ -1368,7 +1399,7 @@
 				return (0, vue.openBlock)(), (0, vue.createElementBlock)("div", _hoisted_1$5, [..._cache[0] || (_cache[0] = [(0, vue.createElementVNode)("p", null, "窗口类型和交互由 Manifest 与控制中心配置。", -1)])]);
 			};
 		}
-	}), [["__scopeId", "data-v-2461ab84"]]);
+	}), [["__scopeId", "data-v-d0ebd857"]]);
 	var config_exports$2 = __exportAll({ default: () => plugin$2 });
 	var plugin$2 = {
 		id: "example2",
@@ -1399,14 +1430,12 @@
 						}
 					},
 					drawer: {
-						placement: "right",
+						placement: "left",
 						showModal: false,
 						defaultCollapsed: true,
 						style: {
 							width: "400px",
-							height: "480px",
-							maxWidth: "1200px",
-							maxHeight: "900px"
+							maxWidth: "1200px"
 						}
 					}
 				}
@@ -1971,7 +2000,7 @@
 				])]);
 			};
 		}
-	}), [["__scopeId", "data-v-620a6eb4"]]);
+	}), [["__scopeId", "data-v-e79f6150"]]);
 	var config_exports$1 = __exportAll({ default: () => plugin$1 });
 	var plugin$1 = {
 		id: "jx-consent-inspector",
@@ -1997,7 +2026,7 @@
 						style: {
 							width: "1300px",
 							height: "fit-content",
-							maxWidth: "95vw",
+							maxWidth: "100vw",
 							maxHeight: "90vh"
 						}
 					},
@@ -2008,7 +2037,7 @@
 						style: {
 							width: "1300px",
 							height: "580px",
-							maxWidth: "95vw",
+							maxWidth: "100vw",
 							maxHeight: "90vh"
 						}
 					}
@@ -2051,7 +2080,7 @@
 			const triggerNavigation = (action) => {
 				isExecutingNavigation = true;
 				if (navigationTimer) clearTimeout(navigationTimer);
-				navigationTimer = unsafeWindow.setTimeout(() => {
+				navigationTimer = window.setTimeout(() => {
 					isExecutingNavigation = false;
 				}, 50);
 				action();
@@ -2062,14 +2091,14 @@
 				if (e.ctrlKey || e.metaKey) return;
 				e.preventDefault();
 				if (await showConfirm("确认跳转", link.href)) triggerNavigation(() => {
-					modalState.isNewTab ? unsafeWindow.open(link.href, "_blank") : unsafeWindow.location.href = link.href;
+					modalState.isNewTab ? window.open(link.href, "_blank") : window.location.href = link.href;
 				});
 			};
 			const handleFormSubmit = async (e) => {
 				e.preventDefault();
 				const form = e.target;
 				if (!form) return;
-				if (await showConfirm("确认提交表单", form.action || unsafeWindow.location.href)) triggerNavigation(() => {
+				if (await showConfirm("确认提交表单", form.action || window.location.href)) triggerNavigation(() => {
 					if (modalState.isNewTab) form.target = "_blank";
 					form.submit();
 				});
@@ -2081,12 +2110,12 @@
 			(0, vue.onMounted)(() => {
 				document.addEventListener("click", handleLinkClick, true);
 				document.addEventListener("submit", handleFormSubmit, true);
-				unsafeWindow.addEventListener("beforeunload", handleBeforeUnload);
+				window.addEventListener("beforeunload", handleBeforeUnload);
 			});
 			(0, vue.onUnmounted)(() => {
 				document.removeEventListener("click", handleLinkClick, true);
 				document.removeEventListener("submit", handleFormSubmit, true);
-				unsafeWindow.removeEventListener("beforeunload", handleBeforeUnload);
+				window.removeEventListener("beforeunload", handleBeforeUnload);
 				if (navigationTimer) clearTimeout(navigationTimer);
 			});
 			return (_ctx, _cache) => {
@@ -2122,7 +2151,7 @@
 				])]);
 			};
 		}
-	}), [["__scopeId", "data-v-dc10590d"]]);
+	}), [["__scopeId", "data-v-f8a53668"]]);
 	var config_exports = __exportAll({ default: () => plugin });
 	var plugin = {
 		id: "jx-nav-blocker",
@@ -2168,10 +2197,10 @@
 		}
 	};
 	var modules = Object.assign({
-		"../plugins/example/config.ts": config_exports$3,
-		"../plugins/example2/config.ts": config_exports$2,
-		"../plugins/jxConsentInspector/config.ts": config_exports$1,
-		"../plugins/jxNavBlocker/config.ts": config_exports
+		"../plugins/sub/example/config.ts": config_exports$3,
+		"../plugins/sub/example2/config.ts": config_exports$2,
+		"../plugins/sub/jxConsentInspector/config.ts": config_exports$1,
+		"../plugins/sub/jxNavBlocker/config.ts": config_exports
 	});
 	function discoverPlugins() {
 		const manifests = Object.values(modules).map((module) => module.default);
@@ -2203,17 +2232,18 @@
 	}
 	function initializeCore(dependencies) {
 		const entries = schedulePlugins(discoverPlugins(), dependencies);
-		for (const entry of entries) {
-			if (entry.isRunning) continue;
-			try {
-				console.debug(`[JX Work Assistant] skipped ${entry.manifest.id}`, {
-					enabled: entry.isEnable,
-					matched: entry.isMatched
-				});
-			} catch (error) {
-				console.error("Plugin scheduling failed", error);
-			}
+		const env = dependencies.getEnvironment();
+		console.groupCollapsed(`[JX Work Assistant] ${env.href} (${env.type})`);
+		const skipped = entries.filter((e) => !e.isRunning).map((e) => ({
+			ID: e.manifest.id,
+			Enabled: e.isEnable,
+			Matched: e.isMatched
+		}));
+		if (skipped.length) {
+			console.log("%cSkipped Plugins:", "color: #64748b; font-weight: bold;");
+			console.table(skipped);
 		}
+		console.groupEnd();
 		return entries;
 	}
 	function usePointerDrag(options) {
@@ -2459,6 +2489,9 @@
 		__name: "App",
 		setup(__props) {
 			const isDev = false;
+			const environment = getEnvironment();
+			const hostMatches = evaluateMatch(HOST_CONFIG.env, environment).matched;
+			const showHostUI = hostMatches && (!HOST_CONFIG.ui.hiddenIframeUI || environment.type === "top");
 			ant_design_vue.message.config({
 				getContainer: () => getPopupContainer(),
 				top: "24px"
@@ -2487,16 +2520,16 @@
 				collapsedPlugins.value[id] = collapsed;
 			}
 			(0, vue.onMounted)(() => {
-				entries.value = initializeCore({
+				entries.value = hostMatches ? initializeCore({
 					getEnvironment,
 					getPluginConfig
-				});
+				}) : [];
 				for (const entry of entries.value) {
 					const ui = pluginUI(entry);
 					const saved = ui.rememberPosition ? getWindowState(entry.manifest.id) : {};
 					collapsedPlugins.value[entry.manifest.id] = saved.collapsed ?? ui.defaultCollapsed;
 				}
-				GM_registerMenuCommand(`打开插件配置中心`, () => {
+				if (showHostUI) GM_registerMenuCommand(`打开插件配置中心`, () => {
 					hostOpen.value = true;
 				});
 			});
@@ -2511,7 +2544,9 @@
 					failedPlugins.add(plugin.manifest.id);
 					plugin.isRunning = false;
 				}
-				console.error("[JX Work Assistant] isolated plugin error", error);
+				console.groupCollapsed(`[JX Work Assistant] Plugin error isolated: ${plugin?.manifest.id || "Unknown"}`);
+				console.error(error);
+				console.groupEnd();
 				return false;
 			});
 			return (_ctx, _cache) => {
@@ -2525,7 +2560,7 @@
 						} }
 					}, {
 						default: (0, vue.withCtx)(() => [(0, vue.createVNode)((0, vue.unref)(MessageContext)), (0, vue.createElementVNode)("div", _hoisted_1, [
-							!hostOpen.value ? ((0, vue.openBlock)(), (0, vue.createBlock)(FloatingBall_default, {
+							(0, vue.unref)(showHostUI) && !hostOpen.value ? ((0, vue.openBlock)(), (0, vue.createBlock)(FloatingBall_default, {
 								key: 0,
 								onClick: _cache[0] || (_cache[0] = ($event) => hostOpen.value = true),
 								"host-config": (0, vue.unref)(HOST_CONFIG),
@@ -2537,14 +2572,15 @@
 								})),
 								onActivatePlugin: openPlugin
 							}, null, 8, ["host-config", "plugins"])) : (0, vue.createCommentVNode)("", true),
-							(0, vue.createVNode)(host_default, {
+							(0, vue.unref)(showHostUI) ? ((0, vue.openBlock)(), (0, vue.createBlock)(host_default, {
+								key: 1,
 								open: hostOpen.value,
 								"onUpdate:open": _cache[1] || (_cache[1] = ($event) => hostOpen.value = $event),
 								entries: entries.value,
 								onOpenPlugin: openPlugin
-							}, null, 8, ["open", "entries"]),
+							}, null, 8, ["open", "entries"])) : (0, vue.createCommentVNode)("", true),
 							((0, vue.openBlock)(true), (0, vue.createElementBlock)(vue.Fragment, null, (0, vue.renderList)(entries.value.filter((item) => item.isRunning && !(0, vue.unref)(failedPlugins).has(item.manifest.id)), (entry) => {
-								return (0, vue.openBlock)(), (0, vue.createElementBlock)(vue.Fragment, { key: entry.manifest.id }, [pluginUI(entry).layout === "dialog" ? ((0, vue.openBlock)(), (0, vue.createBlock)(Dialog_default, {
+								return (0, vue.openBlock)(), (0, vue.createElementBlock)(vue.Fragment, { key: entry.manifest.id }, [(0, vue.unref)(showHostUI) && pluginUI(entry).layout === "dialog" ? ((0, vue.openBlock)(), (0, vue.createBlock)(Dialog_default, {
 									key: 0,
 									"plugin-id": entry.manifest.id,
 									ui: pluginUI(entry),
@@ -2560,7 +2596,7 @@
 									"collapsed",
 									"active",
 									"onUpdate:collapsed"
-								])) : pluginUI(entry).layout === "drawer" ? ((0, vue.openBlock)(), (0, vue.createBlock)(Drawer_default, {
+								])) : (0, vue.unref)(showHostUI) && pluginUI(entry).layout === "drawer" ? ((0, vue.openBlock)(), (0, vue.createBlock)(Drawer_default, {
 									key: 1,
 									"plugin-id": entry.manifest.id,
 									ui: pluginUI(entry),
