@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-10T01:57:11.319Z",
+  "generatedAt": "2026-11-23T19:05:56.453Z",
   "modules": [
     {
       "id": "jx-work-assistant",
       "name": "JX Work Assistant",
-      "version": "0.0.4",
-      "releaseNotes": "版本0.0.4：架构更新优化，预计下一版本迭代store状态管理层"
+      "version": "0.5.4",
+      "releaseNotes": "底层架构重构；数据结构、样式重构"
     },
     {
       "id": "example",
@@ -22,14 +22,20 @@
     {
       "id": "jx-consent-inspector",
       "name": "JX - 同意状态监测器",
-      "version": "26.11.7",
-      "releaseNotes": "正式版本，优化了获取内部同意状态的逻辑。"
+      "version": "26.11.23",
+      "releaseNotes": "完善了获取google内部同意状态的逻辑。"
+    },
+    {
+      "id": "jx-ga4-monitor",
+      "name": "JX - GA4 事件监控",
+      "version": "26.11.23",
+      "releaseNotes": "初版"
     },
     {
       "id": "jx-nav-blocker",
       "name": "JX - 页面跳转拦截器",
-      "version": "26.11.6",
-      "releaseNotes": "初始版本。"
+      "version": "26.11.9",
+      "releaseNotes": "unsafeWindow版本。"
     }
   ]
 }
