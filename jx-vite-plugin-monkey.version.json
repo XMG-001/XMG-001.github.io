@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-24T05:37:31.304Z",
+  "generatedAt": "2026-11-24T06:22:43.127Z",
   "modules": [
     {
       "id": "jx-work-assistant",
       "name": "JX Work Assistant",
-      "version": "0.5.5",
-      "releaseNotes": "底层架构重构；数据结构、样式重构"
+      "version": "0.5.6",
+      "releaseNotes": "调整文案"
     },
     {
       "id": "example",
