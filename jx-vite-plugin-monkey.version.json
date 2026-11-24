@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-24T06:22:43.127Z",
+  "generatedAt": "2026-11-24T06:34:51.194Z",
   "modules": [
     {
       "id": "jx-work-assistant",
       "name": "JX Work Assistant",
-      "version": "0.5.6",
+      "version": "0.5.7",
       "releaseNotes": "调整文案"
     },
     {
