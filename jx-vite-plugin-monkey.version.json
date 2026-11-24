@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-23T19:05:56.453Z",
+  "generatedAt": "2026-11-24T05:37:31.304Z",
   "modules": [
     {
       "id": "jx-work-assistant",
       "name": "JX Work Assistant",
-      "version": "0.5.4",
+      "version": "0.5.5",
       "releaseNotes": "底层架构重构；数据结构、样式重构"
     },
     {
@@ -17,6 +17,18 @@
       "id": "example2",
       "name": "JX - 示例插件2",
       "version": "0.0.2",
+      "releaseNotes": "初始版本。"
+    },
+    {
+      "id": "jx-batch-list",
+      "name": "JX - 列表批量操作助手",
+      "version": "26.11.24",
+      "releaseNotes": "重构为独立插件，支持模板、元素拾取和批量操作。"
+    },
+    {
+      "id": "jx-button-generator",
+      "name": "JX - 按钮生成器",
+      "version": "0.0.1",
       "releaseNotes": "初始版本。"
     },
     {
@@ -36,6 +48,12 @@
       "name": "JX - 页面跳转拦截器",
       "version": "26.11.9",
       "releaseNotes": "unsafeWindow版本。"
+    },
+    {
+      "id": "jx-var-hook",
+      "name": "JX - 变量 Hook",
+      "version": "26.11.24",
+      "releaseNotes": "初始版本。"
     }
   ]
 }
