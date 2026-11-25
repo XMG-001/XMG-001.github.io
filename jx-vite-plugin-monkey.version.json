@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-25T02:30:50.925Z",
+  "generatedAt": "2026-11-25T10:34:50.482Z",
   "modules": [
     {
       "id": "jx-work-assistant",
       "name": "JX Work Assistant",
-      "version": "0.5.7",
-      "releaseNotes": "调整文案"
+      "version": "0.6.0",
+      "releaseNotes": "优化插件上下文，存储结构等。"
     },
     {
       "id": "example",
@@ -22,7 +22,7 @@
     {
       "id": "jx-batch-list",
       "name": "JX - 列表批量操作助手",
-      "version": "26.11.24",
+      "version": "26.11.25",
       "releaseNotes": "重构为独立插件，支持模板、元素拾取和批量操作。"
     },
     {
