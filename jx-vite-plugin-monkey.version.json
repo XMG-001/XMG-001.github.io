@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T06:34:51.194Z",
+  "generatedAt": "2026-11-25T02:30:50.925Z",
   "modules": [
     {
       "id": "jx-work-assistant",
@@ -40,8 +40,8 @@
     {
       "id": "jx-ga4-monitor",
       "name": "JX - GA4 事件监控",
-      "version": "26.11.23",
-      "releaseNotes": "初版"
+      "version": "26.11.25",
+      "releaseNotes": "优化了虚拟列表及状态管理等功能，提升了性能和稳定性。"
     },
     {
       "id": "jx-nav-blocker",
