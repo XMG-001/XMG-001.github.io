@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-25T10:34:50.482Z",
+  "generatedAt": "2026-11-26T02:10:33.613Z",
   "modules": [
     {
       "id": "jx-work-assistant",
       "name": "JX Work Assistant",
-      "version": "0.6.0",
-      "releaseNotes": "优化插件上下文，存储结构等。"
+      "version": "0.6.1",
+      "releaseNotes": "新增自动deploy功能，修复部分bug"
     },
     {
       "id": "example",
@@ -40,8 +40,8 @@
     {
       "id": "jx-ga4-monitor",
       "name": "JX - GA4 事件监控",
-      "version": "26.11.25",
-      "releaseNotes": "优化了虚拟列表及状态管理等功能，提升了性能和稳定性。"
+      "version": "26.11.26",
+      "releaseNotes": "迭代。"
     },
     {
       "id": "jx-nav-blocker",
