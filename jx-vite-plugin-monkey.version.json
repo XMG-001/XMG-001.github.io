@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T02:10:33.613Z",
+  "generatedAt": "2026-11-26T02:22:04.996Z",
   "modules": [
     {
       "id": "jx-work-assistant",
@@ -40,8 +40,8 @@
     {
       "id": "jx-ga4-monitor",
       "name": "JX - GA4 事件监控",
-      "version": "26.11.26",
-      "releaseNotes": "迭代。"
+      "version": "26.11.27",
+      "releaseNotes": "调整列设置【事件】。"
     },
     {
       "id": "jx-nav-blocker",
