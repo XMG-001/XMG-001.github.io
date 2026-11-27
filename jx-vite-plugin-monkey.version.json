@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-26T07:29:15.068Z",
+  "generatedAt": "2026-11-27T01:52:36.101Z",
   "modules": [
     {
       "id": "jx-work-assistant",
       "name": "JX Work Assistant",
-      "version": "0.6.2",
-      "releaseNotes": "新增utils.genID方法，并注入到插件上下文中。"
+      "version": "0.6.3",
+      "releaseNotes": "更新utils.genID方法。"
     },
     {
       "id": "example",
