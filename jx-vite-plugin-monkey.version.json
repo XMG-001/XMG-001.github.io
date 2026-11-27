@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-27T01:52:36.101Z",
+  "generatedAt": "2026-11-27T06:12:50.048Z",
   "modules": [
     {
       "id": "jx-work-assistant",
       "name": "JX Work Assistant",
-      "version": "0.6.3",
-      "releaseNotes": "更新utils.genID方法。"
+      "version": "0.6.4",
+      "releaseNotes": "envRule 配置更新；样式调整，优化运行环境状态面板。"
     },
     {
       "id": "example",
