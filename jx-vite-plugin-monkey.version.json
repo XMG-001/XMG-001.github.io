@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-28T09:17:06.884Z",
+  "generatedAt": "2026-11-28T09:30:44.094Z",
   "modules": [
     {
       "id": "jx-work-assistant",
       "name": "JX Work Assistant",
-      "version": "0.7.0",
-      "releaseNotes": "控制中心配置布局、草稿模块更新。"
+      "version": "0.7.1",
+      "releaseNotes": "查找更新版本：add 新插件检测。"
     },
     {
       "id": "example",
