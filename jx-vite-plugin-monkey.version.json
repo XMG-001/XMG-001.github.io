@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-27T06:12:50.048Z",
+  "generatedAt": "2026-11-28T09:17:06.884Z",
   "modules": [
     {
       "id": "jx-work-assistant",
       "name": "JX Work Assistant",
-      "version": "0.6.4",
-      "releaseNotes": "envRule 配置更新；样式调整，优化运行环境状态面板。"
+      "version": "0.7.0",
+      "releaseNotes": "控制中心配置布局、草稿模块更新。"
     },
     {
       "id": "example",
@@ -48,6 +48,12 @@
       "name": "JX - 页面跳转拦截器",
       "version": "26.11.9",
       "releaseNotes": "unsafeWindow版本。"
+    },
+    {
+      "id": "jx-reader",
+      "name": "JX Reader",
+      "version": "26.11.28",
+      "releaseNotes": "初始版本"
     },
     {
       "id": "jx-var-hook",
