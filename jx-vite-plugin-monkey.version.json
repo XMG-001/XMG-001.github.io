@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-28T09:30:44.094Z",
+  "generatedAt": "2026-11-28T10:32:38.331Z",
   "modules": [
     {
       "id": "jx-work-assistant",
@@ -52,8 +52,8 @@
     {
       "id": "jx-reader",
       "name": "JX Reader",
-      "version": "26.11.28",
-      "releaseNotes": "初始版本"
+      "version": "26.11.281",
+      "releaseNotes": "优化阅读器"
     },
     {
       "id": "jx-var-hook",
